@@ -6,7 +6,7 @@ $colors_secondary: #fafafa;
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500; 
+  font-weight: 400; 
   margin: 0;
   text-decoration: none;
 }
@@ -29,5 +29,12 @@ body {
     flex-direction: column;
     text-align: center;
     width: 33%;
+    #name {
+      font-style: italic;
+    }
   }
+}
+
+p {
+  font-weight: 300;
 }

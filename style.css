@@ -2,7 +2,7 @@
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0;
   text-decoration: none;
 }
@@ -26,6 +26,13 @@ body div {
   flex-direction: column;
   text-align: center;
   width: 33%;
+}
+body div #name {
+  font-style: italic;
+}
+
+p {
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=style.css.map */
