@@ -1,2 +1,14 @@
 /* Created by Blake Weissman */
 
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  // font-weight: $font-weight; 
+  margin: 0;
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
