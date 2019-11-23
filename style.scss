@@ -16,7 +16,7 @@ a {
   cursor: pointer;
   font-weight: 600;
   text-transform: uppercase;
-  &:hover {
+  &:hover, i:hover {
     text-decoration: underline;
   }
 }
@@ -43,8 +43,8 @@ body {
     }
     div {
       flex-direction: row;
-      * {
-        margin-right: 8px;
+      a {
+        margin-right: 15px;
       }
     }
   }

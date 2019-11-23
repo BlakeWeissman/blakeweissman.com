@@ -13,7 +13,7 @@ a {
   font-weight: 600;
   text-transform: uppercase;
 }
-a:hover {
+a:hover, a i:hover {
   text-decoration: underline;
 }
 
@@ -39,8 +39,8 @@ body div #name {
 body div div {
   flex-direction: row;
 }
-body div div * {
-  margin-right: 8px;
+body div div a {
+  margin-right: 15px;
 }
 
 i {
