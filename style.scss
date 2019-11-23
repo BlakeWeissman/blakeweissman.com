@@ -1,9 +1,12 @@
 /* Created by Blake Weissman */
 
+$colors_primary: #212121;
+$colors_secondary: #fafafa;
+
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-  // font-weight: $font-weight; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; 
   margin: 0;
   text-decoration: none;
 }
@@ -11,4 +14,20 @@
 a {
   color: inherit;
   cursor: pointer;
+}
+
+body {
+  align-items: center;
+  background: $colors_primary;
+  color: $colors_secondary;
+  display: flex;
+  justify-content: space-around;
+  min-height: 100vh;
+  div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+  }
 }

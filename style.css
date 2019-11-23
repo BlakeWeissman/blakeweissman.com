@@ -1,7 +1,8 @@
 /* Created by Blake Weissman */
 * {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   margin: 0;
   text-decoration: none;
 }
@@ -9,6 +10,22 @@
 a {
   color: inherit;
   cursor: pointer;
+}
+
+body {
+  align-items: center;
+  background: #212121;
+  color: #fafafa;
+  display: flex;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+body div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 33%;
 }
 
 /*# sourceMappingURL=style.css.map */
