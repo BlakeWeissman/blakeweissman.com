@@ -10,6 +10,11 @@
 a {
   color: inherit;
   cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 body {
@@ -21,14 +26,25 @@ body {
   min-height: 100vh;
 }
 body div {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  text-align: center;
   width: 33%;
+}
+body div a {
+  margin-bottom: 15px;
 }
 body div #name {
   font-style: italic;
+}
+body div div {
+  flex-direction: row;
+}
+body div div * {
+  margin-right: 8px;
+}
+
+i {
+  font-size: 1.5em;
 }
 
 p {

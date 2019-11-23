@@ -14,6 +14,11 @@ $colors_secondary: #fafafa;
 a {
   color: inherit;
   cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 body {
@@ -24,15 +29,29 @@ body {
   justify-content: space-around;
   min-height: 100vh;
   div {
-    align-items: center;
     display: flex;
     flex-direction: column;
-    text-align: center;
     width: 33%;
+    * {
+      // margin-bottom: 10px;
+    }
+    a {   
+      margin-bottom: 15px;
+    }
     #name {
       font-style: italic;
     }
+    div {
+      flex-direction: row;
+      * {
+        margin-right: 8px;
+      }
+    }
   }
+}
+
+i {
+  font-size: 1.5em
 }
 
 p {
