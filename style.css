@@ -10,6 +10,7 @@
 a {
   color: inherit;
   cursor: pointer;
+  margin-top: 10px;
   text-transform: uppercase;
 }
 a:hover, a i:hover {
@@ -46,9 +47,14 @@ p {
 }
 #about div {
   flex-direction: row;
+  margin-top: 5px;
 }
 #about div a {
   margin-right: 15px;
+}
+
+#copyright {
+  margin-top: 13px;
 }
 
 #name {

@@ -14,6 +14,8 @@ $colors_secondary: #fafafa;
 a {
   color: inherit;
   cursor: pointer;
+  
+  margin-top: 10px;
   text-transform: uppercase;
   &:hover, i:hover {
     text-decoration: underline;
@@ -49,10 +51,15 @@ p {
   width: 30%;
   div {
     flex-direction: row;
+    margin-top: 5px;
     a {
       margin-right: 15px;
     }
   }
+}
+
+#copyright {
+  margin-top: 13px;
 }
 
 #name {
