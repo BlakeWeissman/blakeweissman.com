@@ -24,10 +24,10 @@ a:hover, a i:hover {
 
 body {
   background: #fafafa;
-  color: #424242;
+  color: #212121;
   min-height: 100vh;
   padding: 0 6%;
-  padding-top: 20px;
+  padding-top: 25px;
 }
 body div {
   align-items: flex-start;
@@ -40,8 +40,8 @@ i.fas, i.fab {
 }
 
 img {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  margin-bottom: 5px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 p {
@@ -63,8 +63,8 @@ p {
 #about div a {
   margin-right: 15px;
 }
-#about h1 {
-  white-space: nowrap;
+#about img {
+  width: 100%;
 }
 
 #copyright {
@@ -84,9 +84,6 @@ p {
   position: fixed;
   width: 60%;
 }
-#projects h1 {
-  margin-bottom: 10px;
-}
 #projects div {
   display: block;
   margin-bottom: 20px;
@@ -102,15 +99,21 @@ p {
 #projects div p {
   margin-bottom: 10px;
 }
+#projects h1 {
+  margin-bottom: 10px;
+}
+#projects img {
+  width: 33%;
+}
 
 .button, #projects div a {
-  border: 2px solid #424242;
+  border: 2px solid #212121;
   display: inline-block;
   padding: 4px 9px;
   text-decoration: none !important;
 }
 .button:hover, #projects div a:hover {
-  background: #424242;
+  background: #212121;
   color: #fafafa;
 }
 
