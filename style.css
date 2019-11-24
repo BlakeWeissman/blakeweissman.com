@@ -17,10 +17,11 @@ a:hover, a i:hover {
 }
 
 body {
-  background: #212121;
-  color: #fafafa;
+  background: #fafafa;
+  color: #212121;
   min-height: 100vh;
   padding: 0 6%;
+  padding-top: 50px;
 }
 body div {
   align-items: flex-start;
@@ -28,21 +29,22 @@ body div {
   flex-direction: column;
 }
 
-i {
+i.fas, i.fab {
   font-size: 1.5em;
 }
 
 img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin-bottom: 5px;
 }
 
 p {
   margin-top: 5px;
+  font-weight: 400;
 }
 
 #about {
   height: 100%;
-  padding-top: 20px;
   position: fixed;
   width: 30%;
 }
@@ -56,23 +58,22 @@ p {
 #about div a {
   margin-right: 15px;
 }
+#about h1 {
+  font-style: italic;
+  white-space: nowrap;
+}
 
 #copyright {
   margin-top: 13px;
 }
 
-#name {
-  font-style: italic;
-  white-space: nowrap;
-}
-
 #projects {
   float: right;
-  padding: 20px 0;
-  width: 60%;
+  padding-bottom: 20px;
+  width: 63%;
 }
 #projects:before {
-  background: linear-gradient(transparent, #212121);
+  background: linear-gradient(transparent, #fafafa);
   bottom: 0;
   content: "";
   height: 20px;
@@ -92,7 +93,6 @@ p {
 }
 #projects div img {
   float: left;
-  margin-bottom: 5px;
   margin-right: 15px;
 }
 #projects div p {
@@ -100,14 +100,14 @@ p {
 }
 
 .button, #projects div a {
-  border: 1px solid #fafafa;
+  border: 1px solid #212121;
   display: inline-block;
   padding: 5px 10px;
   text-decoration: none !important;
 }
 .button:hover, #projects div a:hover {
-  background: #fafafa;
-  color: #212121;
+  background: #212121;
+  color: #fafafa;
 }
 
 /*# sourceMappingURL=style.css.map */

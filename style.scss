@@ -1,9 +1,7 @@
 /* Created by Blake Weissman */
 
-$colors_primary: #212121;
-$colors_secondary: #fafafa;
-
-$body-top-bottom-padding: 20px;
+$colors_primary: #fafafa;
+$colors_secondary: #212121;
 
 * {
   box-sizing: border-box;
@@ -27,6 +25,7 @@ body {
   color: $colors_secondary;
   min-height: 100vh;
   padding: 0 6%;
+  padding-top: 50px;
   div {
     align-items: flex-start;
     display: flex;
@@ -35,20 +34,23 @@ body {
 }
 
 i {
-  font-size: 1.5em
+  &.fas, &.fab {
+    font-size: 1.5em
+  }
 }
 
 img {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-bottom: 5px;
 }
 
 p {
   margin-top: 5px;
+  font-weight: 400;
 }
 
 #about {
   height: 100%;
-  padding-top: $body-top-bottom-padding;
   position: fixed;
   width: 30%;
   a {
@@ -61,26 +63,26 @@ p {
       margin-right: 15px;
     }
   }
+  h1 {
+    font-style: italic;
+    white-space: nowrap;
+  }
 }
 
 #copyright {
   margin-top: 13px;
 }
 
-#name {
-  font-style: italic;
-  white-space: nowrap;
-}
-
 #projects {
+  $padding-bottom: 20px;
   float: right;
-  padding: $body-top-bottom-padding 0;
-  width: 60%;
+  padding-bottom: $padding-bottom;
+  width: 63%;
   &:before {
     background: linear-gradient(transparent, $colors_primary);
     bottom: 0;
     content: '';
-    height: $body-top-bottom-padding;
+    height: $padding-bottom;
     position: fixed;
     width: 60%;
   }
@@ -97,7 +99,6 @@ p {
     }
     img {
       float: left;
-      margin-bottom: 5px;
       margin-right: 15px;
     }
     p {
