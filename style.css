@@ -2,7 +2,7 @@
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
   text-decoration: none;
 }
@@ -10,7 +10,6 @@
 a {
   color: inherit;
   cursor: pointer;
-  font-weight: 600;
   text-transform: uppercase;
 }
 a:hover, a i:hover {
@@ -23,23 +22,10 @@ body {
   min-height: 100vh;
   padding: 20px 40px;
 }
-body #about {
-  position: fixed;
-  width: 30%;
-}
-body #projects {
-  float: right;
-  width: 60%;
-}
 body div {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-}
-body div a {
-  margin-bottom: 15px;
-}
-body div #name {
-  font-style: italic;
 }
 body div div {
   flex-direction: row;
@@ -52,8 +38,19 @@ i {
   font-size: 1.5em;
 }
 
-p {
-  font-weight: 300;
+#about {
+  position: fixed;
+  width: 30%;
+}
+
+#name {
+  font-style: italic;
+  white-space: nowrap;
+}
+
+#projects {
+  float: right;
+  width: 60%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,7 +6,7 @@ $colors_secondary: #fafafa;
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400; 
+  font-weight: 500; 
   margin: 0;
   text-decoration: none;
 }
@@ -14,7 +14,6 @@ $colors_secondary: #fafafa;
 a {
   color: inherit;
   cursor: pointer;
-  font-weight: 600;
   text-transform: uppercase;
   &:hover, i:hover {
     text-decoration: underline;
@@ -22,33 +21,14 @@ a {
 }
 
 body {
-  // align-items: center;
   background: $colors_primary;
   color: $colors_secondary;
-  // display: flex;
-  // justify-content: space-around;
   min-height: 100vh;
   padding: 20px 40px;
-  #about {
-    position: fixed;
-    width: 30%;
-  }
-  #projects {
-    float: right;
-    width: 60%;
-  }
   div {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
-    * {
-      // margin-bottom: 10px;
-    }
-    a {   
-      margin-bottom: 15px;
-    }
-    #name {
-      font-style: italic;
-    }
     div {
       flex-direction: row;
       a {
@@ -62,6 +42,17 @@ i {
   font-size: 1.5em
 }
 
-p {
-  font-weight: 300;
+#about {
+  position: fixed;
+  width: 30%;
+}
+
+#name {
+  font-style: italic;
+  white-space: nowrap;
+}
+
+#projects {
+  float: right;
+  width: 60%;
 }
