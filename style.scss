@@ -22,16 +22,24 @@ a {
 }
 
 body {
-  align-items: center;
+  // align-items: center;
   background: $colors_primary;
   color: $colors_secondary;
-  display: flex;
-  justify-content: space-around;
+  // display: flex;
+  // justify-content: space-around;
   min-height: 100vh;
+  padding: 20px 40px;
+  #about {
+    position: fixed;
+    width: 30%;
+  }
+  #projects {
+    float: right;
+    width: 60%;
+  }
   div {
     display: flex;
     flex-direction: column;
-    width: 33%;
     * {
       // margin-bottom: 10px;
     }
