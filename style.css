@@ -41,11 +41,9 @@ i.fas, i.fab {
 
 img {
   border-radius: 10px;
-  margin-bottom: 10px;
 }
 
 p {
-  margin-top: 5px;
   font-weight: 400;
 }
 
@@ -54,21 +52,24 @@ p {
   width: 30%;
 }
 #about a {
-  margin-top: 10px;
+  margin-top: 13px;
 }
 #about div {
   flex-direction: row;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 #about div a {
   margin-right: 15px;
 }
 #about img {
+  margin-bottom: 10px;
   width: 100%;
 }
-
-#copyright {
-  margin-top: 13px;
+#about p {
+  margin-top: 5px;
+}
+#about #copyright {
+  margin-top: 16px;
 }
 
 #projects {
@@ -94,7 +95,8 @@ p {
 }
 #projects div img {
   float: left;
-  margin-right: 15px;
+  margin-bottom: 3px;
+  margin-right: 18px;
 }
 #projects div p {
   margin-bottom: 10px;
