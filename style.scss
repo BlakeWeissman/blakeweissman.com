@@ -3,6 +3,8 @@
 $colors_primary: #212121;
 $colors_secondary: #fafafa;
 
+$body-top-bottom-padding: 20px;
+
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
@@ -14,8 +16,6 @@ $colors_secondary: #fafafa;
 a {
   color: inherit;
   cursor: pointer;
-  
-  margin-top: 10px;
   text-transform: uppercase;
   &:hover, i:hover {
     text-decoration: underline;
@@ -26,7 +26,7 @@ body {
   background: $colors_primary;
   color: $colors_secondary;
   min-height: 100vh;
-  padding: 20px 40px;
+  padding: 0 6%;
   div {
     align-items: flex-start;
     display: flex;
@@ -47,8 +47,13 @@ p {
 }
 
 #about {
+  height: 100%;
+  padding-top: $body-top-bottom-padding;
   position: fixed;
   width: 30%;
+  a {
+    margin-top: 10px;
+  }
   div {
     flex-direction: row;
     margin-top: 5px;
@@ -69,7 +74,16 @@ p {
 
 #projects {
   float: right;
+  padding: $body-top-bottom-padding 0;
   width: 60%;
+  &:before {
+    background: linear-gradient(transparent, $colors_primary);
+    bottom: 0;
+    content: '';
+    height: $body-top-bottom-padding;
+    position: fixed;
+    width: 60%;
+  }
   h1 {
     margin-bottom: 10px;
   }
@@ -86,13 +100,15 @@ p {
       margin-bottom: 5px;
       margin-right: 15px;
     }
+    p {
+      margin-bottom: 10px;
+    }
   }
 }
 
 .button {
   border: 1px solid $colors_secondary;
   display: inline-block;
-  margin-top: 10px;
   padding: 5px 10px;
   text-decoration: none !important;
   &:hover {

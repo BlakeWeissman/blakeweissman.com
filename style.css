@@ -10,7 +10,6 @@
 a {
   color: inherit;
   cursor: pointer;
-  margin-top: 10px;
   text-transform: uppercase;
 }
 a:hover, a i:hover {
@@ -21,7 +20,7 @@ body {
   background: #212121;
   color: #fafafa;
   min-height: 100vh;
-  padding: 20px 40px;
+  padding: 0 6%;
 }
 body div {
   align-items: flex-start;
@@ -42,8 +41,13 @@ p {
 }
 
 #about {
+  height: 100%;
+  padding-top: 20px;
   position: fixed;
   width: 30%;
+}
+#about a {
+  margin-top: 10px;
 }
 #about div {
   flex-direction: row;
@@ -64,6 +68,15 @@ p {
 
 #projects {
   float: right;
+  padding: 20px 0;
+  width: 60%;
+}
+#projects:before {
+  background: linear-gradient(transparent, #212121);
+  bottom: 0;
+  content: "";
+  height: 20px;
+  position: fixed;
   width: 60%;
 }
 #projects h1 {
@@ -82,11 +95,13 @@ p {
   margin-bottom: 5px;
   margin-right: 15px;
 }
+#projects div p {
+  margin-bottom: 10px;
+}
 
 .button, #projects div a {
   border: 1px solid #fafafa;
   display: inline-block;
-  margin-top: 10px;
   padding: 5px 10px;
   text-decoration: none !important;
 }
