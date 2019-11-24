@@ -1,7 +1,13 @@
 /* Created by Blake Weissman */
+#projects div, #about {
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 20px;
+}
+
 * {
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   margin: 0;
   text-decoration: none;
@@ -21,7 +27,7 @@ body {
   color: #212121;
   min-height: 100vh;
   padding: 0 6%;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 body div {
   align-items: flex-start;
@@ -44,7 +50,6 @@ p {
 }
 
 #about {
-  height: 100%;
   position: fixed;
   width: 30%;
 }
