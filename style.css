@@ -27,20 +27,24 @@ body div {
   display: flex;
   flex-direction: column;
 }
-body div div {
-  flex-direction: row;
-}
-body div div a {
-  margin-right: 15px;
-}
 
 i {
   font-size: 1.5em;
 }
 
+img {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
 #about {
   position: fixed;
   width: 30%;
+}
+#about div {
+  flex-direction: row;
+}
+#about div a {
+  margin-right: 15px;
 }
 
 #name {
@@ -51,6 +55,12 @@ i {
 #projects {
   float: right;
   width: 60%;
+}
+#projects div {
+  display: block;
+}
+#projects div img {
+  float: left;
 }
 
 /*# sourceMappingURL=style.css.map */
