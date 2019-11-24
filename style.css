@@ -7,7 +7,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Slab", sans-serif;
   font-weight: 500;
   margin: 0;
   text-decoration: none;
@@ -24,7 +24,7 @@ a:hover, a i:hover {
 
 body {
   background: #fafafa;
-  color: #212121;
+  color: #424242;
   min-height: 100vh;
   padding: 0 6%;
   padding-top: 20px;
@@ -64,7 +64,6 @@ p {
   margin-right: 15px;
 }
 #about h1 {
-  font-style: italic;
   white-space: nowrap;
 }
 
@@ -105,13 +104,13 @@ p {
 }
 
 .button, #projects div a {
-  border: 1px solid #212121;
+  border: 2px solid #424242;
   display: inline-block;
-  padding: 5px 10px;
+  padding: 4px 9px;
   text-decoration: none !important;
 }
 .button:hover, #projects div a:hover {
-  background: #212121;
+  background: #424242;
   color: #fafafa;
 }
 

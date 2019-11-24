@@ -1,7 +1,7 @@
 /* Created by Blake Weissman */
 
 $colors_primary: #fafafa;
-$colors_secondary: #212121;
+$colors_secondary: #424242;
 
 %card {
   background: #ffffff;
@@ -11,7 +11,7 @@ $colors_secondary: #212121;
 
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   font-weight: 500; 
   margin: 0;
   text-decoration: none;
@@ -70,7 +70,7 @@ p {
     }
   }
   h1 {
-    font-style: italic;
+    //font-style: italic;
     white-space: nowrap;
   }
 }
@@ -115,9 +115,9 @@ p {
 }
 
 .button {
-  border: 1px solid $colors_secondary;
+  border: 2px solid $colors_secondary;
   display: inline-block;
-  padding: 5px 10px;
+  padding: 4px 9px;
   text-decoration: none !important;
   &:hover {
     background: $colors_secondary;
