@@ -5,7 +5,16 @@
   padding: 20px;
 }
 
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
+  animation: fadein 0.75s ease;
   box-sizing: border-box;
   font-family: "Roboto Slab", sans-serif;
   font-weight: 500;
@@ -49,7 +58,7 @@ p {
 
 #about {
   position: fixed;
-  width: 30%;
+  width: 33%;
 }
 #about a {
   margin-top: 13px;
@@ -75,7 +84,7 @@ p {
 #projects {
   float: right;
   padding-bottom: 20px;
-  width: 63%;
+  margin-left: 40%;
 }
 #projects:before {
   background: linear-gradient(transparent, #fafafa);
@@ -113,6 +122,7 @@ p {
   display: inline-block;
   padding: 4px 9px;
   text-decoration: none !important;
+  transition: background 0.1s ease, color 0.1s ease;
 }
 .button:hover, #projects div a:hover {
   background: #212121;
