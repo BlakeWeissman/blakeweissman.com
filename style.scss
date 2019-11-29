@@ -38,7 +38,7 @@ a {
       color: $colors_primary;
     }
   }
-  &:hover, i:hover {
+  &:hover {
     text-decoration: underline;
   }
 }
@@ -50,13 +50,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  text-align: center;
-}
-
-i {
-  &.fas, &.fab {
-    font-size: 1.5em
-  }
 }
 
 img {
@@ -71,7 +64,7 @@ p {
 }
 
 #about {
-  align-items: center;
+  align-items: flex-start;
   background: #ffffff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   display: flex;
@@ -79,11 +72,9 @@ p {
   margin: 3% 10%;
   padding: 20px;
   div {
-    flex-direction: row;
-    margin-bottom: 8px;
-    margin-top: 15px;
-    a {
-      margin: 0px 8px;
-    }
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    margin-top: 5px;
   }
 }
