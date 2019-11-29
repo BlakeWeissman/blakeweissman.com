@@ -1,10 +1,4 @@
 /* Created by Blake Weissman */
-#projects div, #about {
-  background: #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  padding: 20px;
-}
-
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -25,7 +19,19 @@
 a {
   color: inherit;
   cursor: pointer;
+  margin-top: 13px;
   text-transform: uppercase;
+}
+a.button {
+  border: 2px solid #212121;
+  display: inline-block;
+  padding: 4px 9px;
+  text-decoration: none !important;
+  transition: background 0.1s ease, color 0.1s ease;
+}
+a.button:hover {
+  background: #212121;
+  color: #fafafa;
 }
 a:hover, a i:hover {
   text-decoration: underline;
@@ -34,14 +40,11 @@ a:hover, a i:hover {
 body {
   background: #fafafa;
   color: #212121;
-  min-height: 100vh;
-  padding: 0 6%;
-  padding-top: 25px;
-}
-body div {
-  align-items: flex-start;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  text-align: center;
 }
 
 i.fas, i.fab {
@@ -49,84 +52,32 @@ i.fas, i.fab {
 }
 
 img {
-  border-radius: 10px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+  max-width: 250px;
 }
 
 p {
   font-weight: 400;
+  margin-top: 5px;
 }
 
 #about {
-  position: fixed;
-  width: 33%;
-}
-#about a {
-  margin-top: 13px;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: flex;
+  flex-direction: column;
+  margin: 3% 10%;
+  padding: 20px;
 }
 #about div {
   flex-direction: row;
-  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-top: 15px;
 }
 #about div a {
-  margin-right: 15px;
-}
-#about img {
-  margin-bottom: 10px;
-  width: 100%;
-}
-#about p {
-  margin-top: 5px;
-}
-#about #copyright {
-  margin-top: 16px;
-}
-
-#projects {
-  float: right;
-  padding-bottom: 20px;
-  margin-left: 40%;
-}
-#projects:before {
-  background: linear-gradient(transparent, #fafafa);
-  bottom: 0;
-  content: "";
-  height: 20px;
-  position: fixed;
-  width: 60%;
-}
-#projects div {
-  display: block;
-  margin-bottom: 20px;
-  width: 100%;
-}
-#projects div a {
-  margin-bottom: 5px;
-}
-#projects div img {
-  float: left;
-  margin-bottom: 3px;
-  margin-right: 18px;
-}
-#projects div p {
-  margin-bottom: 10px;
-}
-#projects h1 {
-  margin-bottom: 10px;
-}
-#projects img {
-  width: 33%;
-}
-
-.button, #projects div a {
-  border: 2px solid #212121;
-  display: inline-block;
-  padding: 4px 9px;
-  text-decoration: none !important;
-  transition: background 0.1s ease, color 0.1s ease;
-}
-.button:hover, #projects div a:hover {
-  background: #212121;
-  color: #fafafa;
+  margin: 0px 8px;
 }
 
 /*# sourceMappingURL=style.css.map */
