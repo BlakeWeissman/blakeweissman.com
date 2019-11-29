@@ -17,13 +17,16 @@
   display: flex;
   flex-direction: column;
   margin: 20px 10%;
-  max-width: 600px;
+  max-width: 500px;
   padding: 20px 30px;
 }
 #about div {
   display: flex;
   flex-direction: column;
   margin-bottom: 18px;
+  margin-top: 13px;
+}
+#about div a {
   margin-top: 5px;
 }
 
@@ -40,6 +43,7 @@ a {
   cursor: pointer;
   margin-top: 13px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 a.button {
   border: 2px solid #212121;
@@ -70,11 +74,15 @@ img {
   border-radius: 100%;
   margin-bottom: 10px;
   max-width: 250px;
+  width: 100%;
 }
 
 p {
   font-weight: 400;
   margin-top: 5px;
+}
+p a {
+  white-space: normal;
 }
 
 /*# sourceMappingURL=style.css.map */

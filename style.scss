@@ -26,13 +26,16 @@ $about-margin: $about-margin-top-bottom $about-margin-left-right;
   display: flex;
   flex-direction: column;
   margin: $about-margin;
-  max-width: 600px;
+  max-width: 500px;
   padding: 20px 30px;
   div {
     display: flex;
     flex-direction: column;
     margin-bottom: 18px;
-    margin-top: 5px;
+    margin-top: 13px;
+    a {
+      margin-top: 5px
+    }
   }
 }
 
@@ -49,6 +52,7 @@ a {
   cursor: pointer;
   margin-top: 13px;
   text-transform: uppercase;
+  white-space: nowrap;
   &.button {
     $transition: 0.1s ease; 
     border: 2px solid $colors_secondary;
@@ -80,9 +84,13 @@ img {
   border-radius: 100%;
   margin-bottom: 10px;
   max-width: 250px;
+  width: 100%;
 }
 
 p {
   font-weight: 400;
   margin-top: 5px;
+  a {
+    white-space: normal;
+  }
 }
