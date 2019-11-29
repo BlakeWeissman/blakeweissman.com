@@ -6,6 +6,7 @@ $colors_secondary: #212121;
 $about-margin-left-right: 10%;
 $about-margin-top-bottom: 20px;
 $about-margin: $about-margin-top-bottom $about-margin-left-right;
+$font-weight: 500;
 
 @keyframes intro {
   from {
@@ -26,23 +27,20 @@ $about-margin: $about-margin-top-bottom $about-margin-left-right;
   display: flex;
   flex-direction: column;
   margin: $about-margin;
-  max-width: 500px;
+  max-width: 450px;
   padding: 20px 30px;
   div {
     display: flex;
     flex-direction: column;
-    margin-bottom: 18px;
-    margin-top: 13px;
-    a {
-      margin-top: 5px
-    }
+    margin-bottom: 15px;
+    margin-top: 5px;
   }
 }
 
 * {
   box-sizing: border-box;
-  font-family: 'Roboto Slab', sans-serif;
-  font-weight: 500; 
+  font-family: 'Work Sans', sans-serif;
+  font-weight: $font-weight; 
   margin: 0;
   text-decoration: none;
 }
@@ -50,12 +48,13 @@ $about-margin: $about-margin-top-bottom $about-margin-left-right;
 a {
   color: inherit;
   cursor: pointer;
-  margin-top: 13px;
+  margin-top: 10px;
   text-transform: uppercase;
   white-space: nowrap;
   &.button {
     $transition: 0.1s ease; 
     border: 2px solid $colors_secondary;
+    border-radius: 5px;
     display: inline-block;
     padding: 4px 9px;
     text-decoration: none !important;
@@ -80,16 +79,26 @@ body {
   min-height: 100vh;
 }
 
+footer {
+  text-align: center;
+  width: 100%;
+  p {
+    margin: 0;
+  }
+}
+
 img {
   border-radius: 100%;
+  margin: 0 auto;
   margin-bottom: 10px;
   max-width: 250px;
   width: 100%;
 }
 
 p {
-  font-weight: 400;
-  margin-top: 5px;
+  font-weight: $font-weight - 100;
+  margin-top: 2px;
+  width: 100%;
   a {
     white-space: normal;
   }
