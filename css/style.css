@@ -8,9 +8,41 @@
 }
 
 #about {
+  align-items: center;
   background: #212121;
   color: #fafafa;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  padding: 0 10%;
+}
+#about p {
+  margin-bottom: 13px;
+}
+#about h1 {
+  border: 2px solid;
+  font-size: 3.5em;
+  font-weight: 300;
+  margin-bottom: 13px;
+}
+#about div {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+}
+#about div a {
+  margin-bottom: 13px;
+}
+#about div div a {
+  margin-bottom: 10px;
+}
+#about img {
+  border-radius: 100%;
+  max-width: 250px;
+  margin-bottom: 20px;
 }
 
 a {
