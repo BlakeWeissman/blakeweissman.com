@@ -1,4 +1,15 @@
 /* Created by Blake Weissman */
+@keyframes arrow {
+  0% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  40% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+}
 @keyframes intro {
   from {
     opacity: 0;
@@ -9,86 +20,160 @@
     margin-top: 0px;
   }
 }
+.button {
+  border: 1px solid #242424;
+}
+.button:hover {
+  background: #242424;
+  color: #fafafa;
+}
+
+footer, nav, #intro {
+  background: #242424;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: #fafafa;
+  padding: 20px 0;
+}
+footer .button, nav .button, #intro .button {
+  border: 1px solid #fafafa;
+}
+footer .button:hover, nav .button:hover, #intro .button:hover {
+  background: #fafafa;
+  color: #242424;
+}
+
 * {
   box-sizing: border-box;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   margin: 0;
   text-decoration: none;
 }
 
-#about {
+#content {
   align-items: center;
-  background: #212121;
-  color: #fafafa;
+  background: #fafafa;
+  color: #242424;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  justify-content: center;
-  padding: 0 10%;
+  padding: 30px 10%;
+  padding-bottom: 45px;
 }
-#about div {
-  align-items: center;
-  animation: intro 1s ease 0.1s 1 backwards;
-  text-align: center;
+#content * {
+  max-width: 505px;
+}
+#content div {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  max-width: 650px;
+  text-align: left;
 }
-#about div a {
-  margin-bottom: 13px;
+#content h1 {
+  margin-top: 10px;
+  text-transform: uppercase;
 }
-#about div div {
-  animation: none;
+#content h2 {
+  margin-bottom: 5px;
 }
-#about div div a {
+#content img {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin-bottom: 10px;
+  margin-top: 8px;
+  max-width: 250px;
+}
+#content p {
   margin-bottom: 10px;
 }
-#about h1 {
-  border: 4px solid;
+#content .button {
+  margin-bottom: 10px;
+}
+
+#intro {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding-bottom: 20px;
+  position: relative;
+}
+#intro div {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 650px;
+  text-align: center;
+}
+#intro div h1 {
+  border: 2px solid;
   font-size: 3.5em;
-  font-weight: 400;
-  margin-bottom: 13px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  padding: 5px;
   white-space: nowrap;
 }
-#about img {
-  border: 4px solid;
+#intro div p {
+  margin-bottom: 15px;
+}
+#intro img {
+  border: 2px solid;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  margin-bottom: 20px;
-  max-width: 200px;
+  margin-bottom: 15px;
+  max-width: 150px;
 }
 
 a {
   color: inherit;
   cursor: pointer;
-  text-transform: uppercase;
-  white-space: nowrap;
 }
-a:hover {
+a:not(.button):hover {
   text-decoration: underline;
 }
-a:not(.button) {
-  font-weight: 600;
-}
-a.button {
-  border: 2px solid #fafafa;
-  border-radius: 5px;
+
+arrow {
+  animation: arrow 2s infinite;
+  border: solid;
+  border-width: 0 2px 2px 0;
   display: inline-block;
-  padding: 4px 9px;
-  text-decoration: none;
-  transition: background 0.1s ease, color 0.1s ease;
-}
-a.button:hover {
-  background: #fafafa;
-  color: #212121;
+  padding: 10px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
-p {
-  margin-bottom: 13px;
+nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
-p a {
-  white-space: normal;
+nav * {
+  font-size: 1.1em;
+  margin: 0 5px;
+}
+
+footer {
+  text-align: center;
+}
+
+.button {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px 10px;
+  transition: background 0.1s ease, color 0.1s ease;
+}
+
+.pin {
+  background-color: #242424;
+  bottom: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: #fafafa;
+  position: fixed;
+  right: 30px;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=style.css.map */
