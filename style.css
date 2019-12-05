@@ -20,26 +20,10 @@
     margin-top: 0px;
   }
 }
-.button {
-  border: 1px solid #242424;
-}
-.button:hover {
+footer, #intro {
   background: #242424;
-  color: #fafafa;
-}
-
-footer, nav, #intro {
-  background: #242424;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   color: #fafafa;
   padding: 20px 0;
-}
-footer .button, nav .button, #intro .button {
-  border: 1px solid #fafafa;
-}
-footer .button:hover, nav .button:hover, #intro .button:hover {
-  background: #fafafa;
-  color: #242424;
 }
 
 * {
@@ -47,6 +31,7 @@ footer .button:hover, nav .button:hover, #intro .button:hover {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   margin: 0;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -56,6 +41,7 @@ footer .button:hover, nav .button:hover, #intro .button:hover {
   color: #242424;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   padding: 30px 10%;
   padding-bottom: 45px;
 }
@@ -63,14 +49,20 @@ footer .button:hover, nav .button:hover, #intro .button:hover {
   max-width: 505px;
 }
 #content div {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  text-align: left;
+}
+#content div div {
+  display: flex;
+  flex-direction: row;
+}
+#content div div a {
+  margin: 0 10px;
+  margin-top: 5px;
 }
 #content h1 {
   margin-top: 10px;
-  text-transform: uppercase;
 }
 #content h2 {
   margin-bottom: 5px;
@@ -81,20 +73,21 @@ footer .button:hover, nav .button:hover, #intro .button:hover {
   margin-top: 8px;
   max-width: 250px;
 }
-#content p {
-  margin-bottom: 10px;
+#content p i {
+  font-size: 1em;
 }
 #content .button {
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 #intro {
   align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
   position: relative;
 }
 #intro div {
@@ -104,7 +97,14 @@ footer .button:hover, nav .button:hover, #intro .button:hover {
   flex-direction: column;
   justify-content: center;
   max-width: 650px;
-  text-align: center;
+}
+#intro div div {
+  display: flex;
+  flex: 0;
+  flex-direction: row;
+}
+#intro div div a {
+  margin: 0 10px;
 }
 #intro div h1 {
   border: 2px solid;
@@ -115,13 +115,14 @@ footer .button:hover, nav .button:hover, #intro .button:hover {
   white-space: nowrap;
 }
 #intro div p {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 #intro img {
   border: 2px solid;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  margin-bottom: 15px;
+  margin-bottom: 23px;
   max-width: 150px;
 }
 
@@ -131,6 +132,10 @@ a {
 }
 a:not(.button):hover {
   text-decoration: underline;
+}
+
+a, h1 {
+  text-transform: uppercase;
 }
 
 arrow {
@@ -143,27 +148,19 @@ arrow {
   -webkit-transform: rotate(45deg);
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-}
-nav * {
+i {
   font-size: 1.1em;
-  margin: 0 5px;
-}
-
-footer {
-  text-align: center;
 }
 
 .button {
-  border-radius: 5px;
+  border: 1px solid #242424;
   display: inline-block;
   padding: 5px 10px;
   transition: background 0.1s ease, color 0.1s ease;
+}
+.button:hover {
+  background: #242424;
+  color: #fafafa;
 }
 
 .pin {
