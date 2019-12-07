@@ -75,6 +75,15 @@
       <p>&copy;2019 Blake Weissman</p>
     </footer>
     <script>
+      // Show / hide the pinned arrow based on scroll position.
+      window.addEventListener('scroll', function() {
+        var pinnedArrowStyle = document.querySelector('.pinned-arrow').style;
+        if (window.scrollY > 100) {
+          pinnedArrowStyle.opacity = '1';
+          return;
+        }
+        pinnedArrowStyle.opacity = '0';
+      });
     </script>
   </body>
 </html>

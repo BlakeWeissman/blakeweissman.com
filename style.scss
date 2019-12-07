@@ -209,10 +209,13 @@ p {
   // line-height: 30px;
 }
 
+
+$transition: 0.1s ease;
+$button-transition: background $transition, color $transition; 
+
 %button {
-  $transition: 0.1s ease; 
   border: 1px solid $colors_secondary;
-  transition: background $transition, color $transition;
+  transition: $button-transition;
 }
 
 .action {
@@ -237,6 +240,8 @@ p {
   z-index: 10;
   padding: 10px 15px;
   font-size: 1.2em;
+  opacity: 0;
+  transition: $button-transition , opacity 0.2s ease;
   &:hover {
     background-color: $colors_primary;
     color: $colors_secondary;
