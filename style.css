@@ -22,7 +22,7 @@
 }
 footer, #intro {
   background: #242424;
-  color: #fafafa;
+  color: #ffffff;
   padding: 20px 0;
 }
 
@@ -37,16 +37,14 @@ footer, #intro {
 
 #content {
   align-items: center;
-  background: #fafafa;
+  background: #ffffff;
   color: #242424;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  padding: 30px 10%;
-  padding-bottom: 45px;
+  padding: 40px 5%;
 }
 #content * {
-  max-width: 505px;
+  max-width: 800px;
 }
 #content div {
   align-items: center;
@@ -55,29 +53,45 @@ footer, #intro {
 }
 #content div div {
   display: flex;
-  flex-direction: row;
-}
-#content div div a {
-  margin: 0 10px;
-  margin-top: 5px;
+  flex-direction: column;
 }
 #content h1 {
-  margin-top: 10px;
+  font-size: 2.5em;
+}
+#content h1 {
+  margin-bottom: 3px;
+  margin-top: 30px;
+}
+#content h1:first-of-type {
+  margin-top: 0px;
 }
 #content h2 {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
+  margin-top: 13px;
 }
 #content img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  margin-bottom: 10px;
-  margin-top: 8px;
   max-width: 250px;
+  margin-top: 25px;
+}
+#content img:first-of-type {
+  margin-top: 8px;
+}
+#content p {
+  line-height: 30px;
 }
 #content p i {
-  font-size: 1em;
+  font-size: 0.9em;
 }
-#content .button {
-  margin: 10px 0;
+#content .action {
+  margin-top: 13px;
+}
+#content a, #content p {
+  font-size: 1.1em;
+}
+
+.icon-arrow-down {
+  animation: arrow 2s infinite;
 }
 
 #intro {
@@ -90,13 +104,15 @@ footer, #intro {
   padding-bottom: 60px;
   position: relative;
 }
+#intro a, #intro p {
+  font-size: 1.2em;
+}
 #intro div {
   align-items: center;
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  max-width: 650px;
 }
 #intro div div {
   display: flex;
@@ -108,11 +124,12 @@ footer, #intro {
 }
 #intro div h1 {
   border: 2px solid;
-  font-size: 3.5em;
-  font-weight: 300;
-  margin-bottom: 10px;
-  padding: 5px;
+  font-size: 4.25em;
+  font-weight: 200;
+  margin-bottom: 13px;
+  line-height: 72%;
   white-space: nowrap;
+  padding: 25px;
 }
 #intro div p {
   margin-bottom: 20px;
@@ -122,19 +139,22 @@ footer, #intro {
   border: 2px solid;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  margin-bottom: 23px;
-  max-width: 150px;
+  margin-bottom: 25px;
+  max-width: 175px;
 }
 
 a {
   color: inherit;
   cursor: pointer;
 }
-a:not(.button):hover {
+a:not(.action, .pinned-arrow) {
+  font-style: italic;
+}
+a:not(.action, .pinned-arrow):hover {
   text-decoration: underline;
 }
 
-a, h1 {
+h1 {
   text-transform: uppercase;
 }
 
@@ -148,29 +168,39 @@ arrow {
   -webkit-transform: rotate(45deg);
 }
 
-i {
-  font-size: 1.1em;
+footer {
+  margin-top: 15px;
 }
 
-.button {
+.pinned-arrow, .action {
   border: 1px solid #242424;
-  display: inline-block;
-  padding: 5px 10px;
   transition: background 0.1s ease, color 0.1s ease;
 }
-.button:hover {
+
+.action {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 5px 15px;
+}
+.action:hover {
   background: #242424;
-  color: #fafafa;
+  color: #ffffff;
 }
 
-.pin {
+.pinned-arrow {
   background-color: #242424;
-  bottom: 20px;
+  bottom: 30px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  color: #fafafa;
+  color: #ffffff;
   position: fixed;
   right: 30px;
   z-index: 10;
+  padding: 10px 15px;
+  font-size: 1.2em;
+}
+.pinned-arrow:hover {
+  background-color: #ffffff;
+  color: #242424;
 }
 
 /*# sourceMappingURL=style.css.map */

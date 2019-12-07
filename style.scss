@@ -1,6 +1,6 @@
 /* Created by Blake Weissman */
 
-$colors_primary: #fafafa;
+$colors_primary: #ffffff;
 $colors_secondary: #242424;
 
 $font-weight: 400;
@@ -44,53 +44,76 @@ $font-weight: 400;
 }
 
 #content {
+  $h1-padding-top: 45px;
+  $padding-top-bottom: 10px;
   align-items: center;
   background: $colors_primary;
   color: $colors_secondary;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  padding: 30px 10%;
-  padding-bottom: 45px;
+  padding: 40px 5%;
   * {
-    max-width: 505px;
+    max-width: 800px;
   }
   div {
     align-items: center;
     display: flex;
     flex-direction: column;
+    // padding-bottom: 15px;
     div {
       display: flex;
-      flex-direction: row;
-      a {
-        margin: 0 10px;
-        margin-top: 5px;
-      }
+      flex-direction: column;
     }
   }
   h1 {
-    margin-top: 10px;
+    font-size: 2.5em;
+  }
+  h1 {
+    margin-bottom: 3px;
+    margin-top: 30px;
+    &:first-of-type{
+      margin-top: 0px;
+    }
   }
   h2 {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
+    margin-top: 13px;
   }
   img {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    margin-bottom: 10px;
-    margin-top: 8px;
+    // margin: 15px;
     max-width: 250px;
-  }
-  p {
-    i {
-      font-size: 1em;
+    margin-top: 25px;
+    &:first-of-type{
+      margin-top: 8px;
     }
   }
-  .button {
-    margin: 10px 0;
+  p {
+    line-height: 30px;
+    // margin-bottom: 5px;
+    i {
+      font-size: 0.9em;
+    }
   }
+  .action {
+    // margin-bottom: 13px;
+    margin-top: 13px;
+  }
+
+  
+
+  a, p {
+    font-size: 1.1em;
+  }
+}
+.icon-arrow-down {
+  animation: arrow 2s infinite;
 }
 
 #intro {
+  a, p {
+    font-size: 1.2em;
+  }
   @extend %alt;
   $border: 2px solid;
   align-items: center;
@@ -110,7 +133,7 @@ $font-weight: 400;
     flex: 1;
     flex-direction: column;
     justify-content: center;
-    max-width: 650px;
+    // max-width: 650px;
     div {
       display: flex;
       flex: 0;
@@ -121,11 +144,14 @@ $font-weight: 400;
     }
     h1 {
       border: $border;
-      font-size: 3.5em;
-      font-weight: $font-weight - 100;
-      margin-bottom: 10px;
-      padding: 5px;
+      font-size: 4.25em;
+      font-weight: $font-weight - 200;
+      margin-bottom: 13px;
+      //padding: 5px;
+      line-height: 72%;
       white-space: nowrap;
+      padding: 25px;
+      // font-weight: 200;
     }
     p {
       margin-bottom: 20px;
@@ -136,23 +162,28 @@ $font-weight: 400;
     border: $border;
     border-radius: 100%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    margin-bottom: 23px;
-    max-width: 150px;
+    margin-bottom: 25px;
+    max-width: 175px;
   }
 }
 
 a {
   color: inherit;
   cursor: pointer;
-  &:not(.button) {
+  &:not(.action, .pinned-arrow) {
+    font-style: italic;
     &:hover {
       text-decoration: underline;
     }
   }
 }
 
-a, h1 {
+h1 {
   text-transform: uppercase;
+}
+
+h1, h2 {
+  //font-weight: $font-weight - 100;
 }
 
 arrow {
@@ -167,30 +198,47 @@ arrow {
 
 footer {
   @extend %alt;
+  margin-top: 15px
 }
 
 i {
-  font-size: 1.1em
+  //font-size: 1.1em
 }
 
-.button {
+p {
+  // line-height: 30px;
+}
+
+%button {
   $transition: 0.1s ease; 
   border: 1px solid $colors_secondary;
-  display: inline-block;
-  padding: 5px 10px;
   transition: background $transition, color $transition;
+}
+
+.action {
+  @extend %button;
+  text-transform: uppercase; 
+  display: inline-block;
+  padding: 5px 15px;
   &:hover {
     background: $colors_secondary;
     color: $colors_primary;
   }
 }
 
-.pin {
+.pinned-arrow {
+  @extend %button;
   background-color: $colors_secondary;
-  bottom: 20px;
+  bottom: 30px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   color: $colors_primary;
   position: fixed;
   right: 30px;
   z-index: 10;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  &:hover {
+    background-color: $colors_primary;
+    color: $colors_secondary;
+  }
 }
