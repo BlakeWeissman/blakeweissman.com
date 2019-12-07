@@ -1,5 +1,5 @@
 /* Created by Blake Weissman */
-@keyframes arrow {
+@keyframes arrow-idle {
   0% {
     transform: rotate(45deg) translate(0, 0);
   }
@@ -13,17 +13,23 @@
 @keyframes intro {
   from {
     opacity: 0;
-    margin-top: -15px;
   }
   to {
     opacity: 1;
-    margin-top: 0px;
   }
 }
 footer, #intro {
   background: #242424;
-  color: #ffffff;
-  padding: 20px 0;
+  color: #fafafa;
+}
+
+.pinned-arrow, .action {
+  border: 1px solid #242424;
+  transition: background 0.1s ease, color 0.1s ease;
+}
+
+footer a, #content a, footer p, #content p {
+  font-size: 1.1em;
 }
 
 * {
@@ -36,12 +42,13 @@ footer, #intro {
 }
 
 #content {
+  animation: intro 0.5s ease 0.1s 1 backwards;
   align-items: center;
-  background: #ffffff;
+  background: #fafafa;
   color: #242424;
   display: flex;
   flex-direction: column;
-  padding: 40px 5%;
+  padding: 40px 10%;
 }
 #content * {
   max-width: 800px;
@@ -57,10 +64,8 @@ footer, #intro {
 }
 #content h1 {
   font-size: 2.5em;
-}
-#content h1 {
   margin-bottom: 3px;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 #content h1:first-of-type {
   margin-top: 0px;
@@ -71,8 +76,8 @@ footer, #intro {
 }
 #content img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  max-width: 250px;
   margin-top: 25px;
+  max-width: 250px;
 }
 #content img:first-of-type {
   margin-top: 8px;
@@ -84,22 +89,14 @@ footer, #intro {
   font-size: 0.9em;
 }
 #content .action {
+  margin-bottom: 15px;
   margin-top: 13px;
-}
-#content a, #content p {
-  font-size: 1.1em;
-}
-
-.icon-arrow-down {
-  animation: arrow 2s infinite;
 }
 
 #intro {
-  align-items: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   min-height: 100vh;
   padding-bottom: 60px;
   position: relative;
@@ -109,33 +106,43 @@ footer, #intro {
 }
 #intro div {
   align-items: center;
+  animation: intro 0.5s ease 0.1s 1 backwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#intro div div {
+  align-items: center;
+  animation: none;
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: center;
+  min-height: auto;
 }
-#intro div div {
+#intro div div div {
+  animation: none;
   display: flex;
   flex: 0;
   flex-direction: row;
 }
-#intro div div a {
+#intro div div div a {
   margin: 0 10px;
 }
-#intro div h1 {
+#intro div div h1 {
   border: 2px solid;
   font-size: 4.25em;
   font-weight: 200;
-  margin-bottom: 13px;
   line-height: 72%;
-  white-space: nowrap;
+  margin-bottom: 13px;
   padding: 25px;
+  white-space: nowrap;
 }
-#intro div p {
+#intro div div p {
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-#intro img {
+#intro div img {
   border: 2px solid;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -147,19 +154,15 @@ a {
   color: inherit;
   cursor: pointer;
 }
-a:not(.action, .pinned-arrow) {
+a:not(.action) {
   font-style: italic;
 }
-a:not(.action, .pinned-arrow):hover {
+a:not(.action):hover {
   text-decoration: underline;
 }
 
-h1 {
-  text-transform: uppercase;
-}
-
 arrow {
-  animation: arrow 2s infinite;
+  animation: arrow-idle 2s infinite 1.5s;
   border: solid;
   border-width: 0 2px 2px 0;
   display: inline-block;
@@ -169,39 +172,38 @@ arrow {
 }
 
 footer {
-  margin-top: 15px;
+  margin-top: 5px;
+  padding: 20px 0;
 }
 
-.pinned-arrow, .action {
-  border: 1px solid #242424;
-  transition: background 0.1s ease, color 0.1s ease;
+h1 {
+  text-transform: uppercase;
 }
 
 .action {
-  text-transform: uppercase;
   display: inline-block;
-  padding: 5px 15px;
+  padding: 7px 15px;
+  text-transform: uppercase;
 }
 .action:hover {
   background: #242424;
-  color: #ffffff;
+  color: #fafafa;
 }
 
 .pinned-arrow {
   background-color: #242424;
   bottom: 30px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  color: #ffffff;
+  color: #fafafa;
+  font-size: 1.2em;
+  padding: 10px 15px;
   position: fixed;
   right: 30px;
-  z-index: 10;
-  padding: 10px 15px;
-  font-size: 1.2em;
-  opacity: 0;
   transition: background 0.1s ease, color 0.1s ease, opacity 0.2s ease;
+  z-index: 10;
 }
 .pinned-arrow:hover {
-  background-color: #ffffff;
+  background-color: #fafafa;
   color: #242424;
 }
 
