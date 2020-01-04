@@ -1,11 +1,15 @@
 /* Created by Blake Weissman */
+p a:hover, a a:hover, header div div div a:hover {
+  text-decoration: underline;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   margin: 0;
   text-decoration: none;
   text-align: center;
-  color: #000000;
+  color: #1c1c1c;
 }
 
 header {
@@ -29,18 +33,38 @@ header div div {
   flex: 1 1 0%;
   justify-content: center;
 }
+header div div * {
+  margin-bottom: 15px;
+}
 header div div div {
   flex: initial;
   flex-direction: row;
+  margin-top: 7px;
 }
-header div div div * {
-  margin: 0 5px;
+header div div div a {
+  margin: 0 10px;
 }
 
 img {
   display: block;
   box-shadow: 6px 6px 21px 0px rgba(0, 0, 0, 0.26), -6px -6px 21px 0px rgba(194, 194, 194, 0.26);
   width: 100%;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+p, a {
+  font-size: 1.1em;
+  text-shadow: 6px 6px 21px rgba(0, 0, 0, 0.26), -6px -6px 21px rgba(194, 194, 194, 0.26);
+}
+p a, a a {
+  font-weight: 500;
+}
+
+i {
+  color: inherit;
 }
 
 arrow {
@@ -55,8 +79,18 @@ arrow {
 }
 
 .btn {
-  border: 1px solid black;
+  border: 1px solid #1c1c1c;
   padding: 7px 15px;
+  white-space: nowrap;
+  transition: background 0.1s ease 0s, color 0.1s ease 0s, box-shadow 0.1s ease 0s;
+}
+.btn:hover {
+  background: #212121;
+  background: -moz-linear-gradient(-45deg, #212121 0%, #1c1c1c 100%);
+  background: -webkit-linear-gradient(-45deg, #212121 0%, #1c1c1c 100%);
+  background: linear-gradient(135deg, #212121 0%, #1c1c1c 100%);
+  color: #ffffff;
+  box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.26);
 }
 
 #profile {
