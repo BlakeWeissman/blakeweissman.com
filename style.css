@@ -5,6 +5,7 @@
   margin: 0;
   text-decoration: none;
   text-align: center;
+  color: #000000;
 }
 
 header {
@@ -28,6 +29,13 @@ header div div {
   flex: 1 1 0%;
   justify-content: center;
 }
+header div div div {
+  flex: initial;
+  flex-direction: row;
+}
+header div div div * {
+  margin: 0 5px;
+}
 
 img {
   display: block;
@@ -44,6 +52,11 @@ arrow {
   border-image: initial;
   border-width: 0px 2px 2px 0px;
   padding: 10px;
+}
+
+.btn {
+  border: 1px solid black;
+  padding: 7px 15px;
 }
 
 #profile {
