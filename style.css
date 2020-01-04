@@ -1,4 +1,33 @@
 /* Created by Blake Weissman */
+@keyframes arrow-idle {
+  0% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  40% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+}
+@keyframes intro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes intro-header {
+  from {
+    opacity: 0;
+    padding-bottom: 15px;
+  }
+  to {
+    opacity: 1;
+    padding-bottom: 0px;
+  }
+}
 p a:hover, a a:hover, header div div div a:hover {
   text-decoration: underline;
 }
@@ -30,6 +59,9 @@ header div {
   align-items: center;
   justify-content: space-between;
   margin: 0 25px;
+}
+header div#about {
+  animation: intro-header 0.5s ease 0.1s 1 backwards;
 }
 header div div {
   flex: 1 1 0%;
@@ -71,6 +103,7 @@ i {
 }
 
 arrow {
+  animation: arrow-idle 2s infinite 1.5s;
   display: inline-block;
   transform: rotate(45deg);
   animation: 2s ease 1.5s infinite normal none running arrow-idle;
