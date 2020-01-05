@@ -167,9 +167,10 @@ h1 {
 #projects {
     @extend %section;
     animation: intro 0.5s ease 0.1s 1 backwards;
-    position: relative;
-    bottom: 10%;
+    position: absolute;
+    top: 90%;
     z-index: -1;
+    width: 100%;
     img { 
         @extend %display-img;
         margin-bottom: 15px;
