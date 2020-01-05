@@ -1,5 +1,7 @@
 /* Created by Blake Weissman */
 
+$font-weight: 400;
+
 @keyframes arrow-idle {
     0% {
         transform: rotate(45deg) translate(0, 0);
@@ -32,10 +34,38 @@
     }
 }
 
-%underlineOnHover {
+@mixin background-gradient($color1, $color2) {
+    background: $color1;
+    background: -moz-linear-gradient(-45deg, $color1 0%, $color2 100%);
+    background: -webkit-linear-gradient(-45deg, $color1 0%,$color2 100%);
+    background: linear-gradient(135deg, $color1 0%,$color2 100%);
+}
+
+%underline-on-hover {
     &:hover {
         text-decoration: underline;
     }
+}
+
+%section {
+    display: flex;
+    justify-content: center;
+    div {
+        max-width: 750px;
+        margin: 0 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+%display-img {
+    max-width: 250px;
+}
+
+%top-layer {
+    @include background-gradient(#ffffff, #d3d3d3);
+    box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
 }
 
 * {
@@ -45,28 +75,19 @@
     text-decoration: none;
     text-align: center;
     color: #1c1c1c;
-}
-
-body {
+    font-weight: $font-weight;
 }
 
 header {
+    @extend %top-layer;
+    @extend %section;
     height: 100vh;
-    background: #ffffff;
-    background: -moz-linear-gradient(-45deg, #ffffff 0%, #d3d3d3 100%);
-    background: -webkit-linear-gradient(-45deg, #ffffff 0%,#d3d3d3 100%);
-    background: linear-gradient(135deg, #ffffff 0%,#d3d3d3 100%);
     display: flex;
     justify-content: center;
-    box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
-    padding-bottom: 40px;
+    padding-bottom: 60px;
+    margin-bottom: 30px;
     div {
-        display: flex;
-        flex-direction: column;
-        max-width: 750px;
-        align-items: center;
         justify-content: space-between;
-        margin: 0 25px;
         &#about {   
             animation: intro-header 0.5s ease 0.1s 1 backwards;
         }
@@ -83,7 +104,7 @@ header {
                 margin-top: 7px;
                 a {
                     margin: 0 10px;
-                    @extend %underlineOnHover;
+                    @extend %underline-on-hover;
                 }
             }
         }
@@ -104,8 +125,8 @@ p, a {
     font-size: 1.1em;
     text-shadow: 6px 6px 21px rgba(0, 0, 0, 0.26), -6px -6px 21px rgba(194, 194, 194, 0.26);
     & a {
-        font-weight: 500;
-        @extend %underlineOnHover;
+        font-weight: $font-weight + 100;
+        @extend %underline-on-hover;
     }
 }
 
@@ -125,24 +146,38 @@ arrow {
     padding: 10px;
 }
 
-.btn {
+.button {
+    $transition-values: 0.1s ease 0s;
     border: 1px solid #1c1c1c;
     padding: 7px 15px;
     white-space: nowrap;
-    transition: background 0.1s ease 0s, color 0.1s ease 0s, box-shadow 0.1s ease 0s;
-    &:hover {
-        background: #212121;
-        background: -moz-linear-gradient(-45deg, #212121 0%, #1c1c1c 100%); 
-        background: -webkit-linear-gradient(-45deg, #212121 0%,#1c1c1c 100%); 
-        background: linear-gradient(135deg, #212121 0%,#1c1c1c 100%); 
+    transition: background $transition-values, color $transition-values, box-shadow $transition-values;
+    &:hover {  
+        @include background-gradient(#212121, #1c1c1c);
         color: #ffffff;
         box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.26);
     }
 }
 
+h1 {
+    text-transform: uppercase;
+}
+
+content {
+    @extend %section;
+    animation: intro-header 0.5s ease 0.1s 1 backwards;
+    img { 
+        @extend %display-img;
+    }
+}
+
+footer {
+    @extend %top-layer;
+}
+
 #profile {
+    @extend %display-img;
     width: 15%;
     min-width: 150px;
     border-radius: 100%;
-    max-width: 250px;
 }
