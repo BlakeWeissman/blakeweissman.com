@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
   </head>
   <body>
-    <header>
+    <header data-parallax="-0.5">
       <div id="about">
         <div>
           <img id="profile" src="img/profile.png">
@@ -56,5 +56,13 @@
     <footer>
       &copy;2020 Blake Weissman
     </footer>
+    <script>
+      window.addEventListener('scroll', function() {
+        var target = document.querySelectorAll("[data-parallax]");
+        for (var i = 0; i < target.length; i++) {
+          target[i].style.transform = 'translate3d(0px, ' + (window.pageYOffset * target[i].dataset.parallax) + 'px, 0px)';
+        }
+      });
+    </script>
   </body>
 </html>

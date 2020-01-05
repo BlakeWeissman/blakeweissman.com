@@ -71,7 +71,6 @@ header {
   display: flex;
   justify-content: center;
   padding-bottom: 60px;
-  margin-bottom: 30px;
 }
 header div {
   justify-content: space-between;
@@ -153,6 +152,9 @@ h1 {
 
 #projects {
   animation: intro 0.5s ease 0.1s 1 backwards;
+  position: relative;
+  bottom: 10%;
+  z-index: -1;
 }
 #projects img {
   margin-bottom: 15px;
