@@ -6,7 +6,8 @@
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css"/>
+    <link rel="icon" type="image/png" href="img/favicon.png">
   </head>
   <body>
     <header data-parallax="-0.5">
@@ -53,16 +54,22 @@
         <a class="button">Learn More</a>
       </div>
     </div>
-    <footer>
+    <!-- <footer>
       &copy;2020 Blake Weissman
-    </footer>
+    </footer> -->
     <script>
-      window.addEventListener('scroll', function() {
-        var target = document.querySelectorAll("[data-parallax]");
-        for (var i = 0; i < target.length; i++) {
-          target[i].style.transform = 'translate3d(0px, ' + (window.pageYOffset * target[i].dataset.parallax) + 'px, 0px)';
+       var types = ['scroll', 'resize'], 
+       updateParallax = function() {
+        if (window.pageYOffset / document.body.scrollHeight < 0.18) {
+          var target = document.querySelectorAll("[data-parallax]");
+          for (var i = 0; i < target.length; i++) {
+            target[i].style.transform = 'translate3d(0px, ' + (window.pageYOffset * target[i].dataset.parallax) + 'px, 0px)';
+          }
         }
-      });
+      }
+      for (let i = 0; i < types.length; i++) {
+        window.addEventListener(types[i], updateParallax);
+      }
     </script>
   </body>
 </html>
