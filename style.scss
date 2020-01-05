@@ -1,6 +1,7 @@
 /* Created by Blake Weissman */
 
 $font-weight: 400;
+$projects-top-bottom-padding: 30px;
 
 @keyframes arrow-idle {
     0% {
@@ -85,7 +86,7 @@ header {
     display: flex;
     justify-content: center;
     padding-bottom: 60px;
-    margin-bottom: 30px;
+    margin-bottom: $projects-top-bottom-padding;
     div {
         justify-content: space-between;
         &#about {   
@@ -161,13 +162,22 @@ arrow {
 
 h1 {
     text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 2.25em;
 }
 
-content {
+#projects {
     @extend %section;
-    animation: intro-header 0.5s ease 0.1s 1 backwards;
+    animation: intro 0.5s ease 0.1s 1 backwards;
     img { 
         @extend %display-img;
+        margin-bottom: 15px;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+    .button {
+        margin-bottom: $projects-top-bottom-padding;
     }
 }
 

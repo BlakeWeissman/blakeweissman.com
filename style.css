@@ -32,11 +32,11 @@ p a:hover, a a:hover, header div div div a:hover {
   text-decoration: underline;
 }
 
-content, header {
+#projects, header {
   display: flex;
   justify-content: center;
 }
-content div, header div {
+#projects div, header div {
   max-width: 750px;
   margin: 0 25px;
   display: flex;
@@ -44,7 +44,7 @@ content div, header div {
   align-items: center;
 }
 
-#profile, content img {
+#profile, #projects img {
   max-width: 250px;
 }
 
@@ -147,11 +147,23 @@ arrow {
 
 h1 {
   text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 2.25em;
 }
 
-content {
-  animation: intro-header 0.5s ease 0.1s 1 backwards;
+#projects {
+  animation: intro 0.5s ease 0.1s 1 backwards;
 }
+#projects img {
+  margin-bottom: 15px;
+}
+#projects p {
+  margin-bottom: 15px;
+}
+#projects .button {
+  margin-bottom: 30px;
+}
+
 #profile {
   width: 15%;
   min-width: 150px;
