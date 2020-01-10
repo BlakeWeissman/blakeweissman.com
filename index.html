@@ -1,41 +1,72 @@
-<!-- Created by Blake Weissman -->
+<!--Created by Blake Weissman-->
 
-<!DOCTYPE html>
 <html>
   <head>
     <title>Blake Weissman</title>
-    <link href="css/all.css" rel="stylesheet" >
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css"/>
+    <link rel="icon" type="image/png" href="img/favicon.png">
   </head>
   <body>
-    <div id="about">
-      <img src="profile.jpg">
-      <h1>Blake Weissman</h1>
-      <p>
-        An eighteen year old self-taught software developer who is passionate about technology, computer science, and computer design. Currently working at <a href="http://www.sulzer-us.com/" target="_blank">Sulzer US, LLC</a> as a front-end developer.
-      </p>
-      <a class='button' href="resume.pdf" target="_blank">
-        View Resume
-      </a>
-      <div>
-        <a href="mailto:contact@blakeweissman.com">
-          <i class="fas fa-envelope"></i> contact@blakeweissman.com
-        </a>
-        <a href="tel:2019788242" target="_blank">
-          <i class="fas fa-phone-alt"></i> (201) 978-8242
-        </a>
-        <a href="https://www.linkedin.com/in/blakeweissman/" target="_blank">
-          <i class="fab fa-linkedin-in"></i> blakeweissman
-        </a>
-        <a href="https://github.com/BlakeWeissman" target="_blank">
-          <i class="fab fa-github"></i> BlakeWeissman
+    <section id="about">
+      <div id="content">
+        <div>
+          <img id="profile" src="img/profile.png">
+          <img src="img/logo.svg">
+          <p>
+            An eighteen year old self-taught software developer who is passionate about technology, computer science, and computer design. Currently working at <a href="http://www.sulzer-us.com/" target="_blank">Sulzer US, LLC</a> as a front-end developer.
+          </p>
+          <a class="button" href="resume.pdf">
+            <i class="icon-doc"></i>&nbsp;View Resume
+          </a>
+          <div>
+            <a href="mailto:contact@blakeweissman.com">
+              <i class="icon-envelope"></i>
+            </a>
+            <a href="tel:2019788242">
+              <i class="icon-phone"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/blakeweissman/" target="_blank">
+              <i class="icon-social-linkedin"></i>
+            </a>
+            <a href="https://github.com/BlakeWeissman" target="_blank">
+              <i class="icon-social-github"></i>
+            </a>
+          </div>
+        </div>
+        <a href="#verton">
+          <arrow></arrow>
         </a>
       </div>
-      <footer>
-        <p>&copy;2019 <b>Blake Weissman</b></p>
-      </footer>
-    </div>
+    </section>
+    <section id="verton">
+      <div id="content">
+        <img src="img/verton.png">
+        <div>
+          <h1>Verton</h1>
+          <p>Verton is a customizable digital assistant for Windows built with C#, .NET, WPF, and XAML. Using a built-in command creator, users can create and edit their own custom commands for the application.</p>
+          <a class="button" href="http://vertonai.com/" target="_blank">Learn More</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      &copy;2020 Blake Weissman
+    </footer>
+    <!-- <script>
+       var types = ['scroll', 'resize'], 
+       updateParallax = function() {
+        if (window.pageYOffset / document.body.scrollHeight < 0.18) {
+          var target = document.querySelectorAll("[data-parallax]");
+          for (var i = 0; i < target.length; i++) {
+            target[i].style.transform = 'translate3d(0px, ' + (window.pageYOffset * target[i].dataset.parallax) + 'px, 0px)';
+          }
+        }
+      }
+      for (let i = 0; i < types.length; i++) {
+        window.addEventListener(types[i], updateParallax);
+      }
+    </script> -->
   </body>
 </html>

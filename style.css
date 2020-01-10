@@ -1,0 +1,191 @@
+/* Created by Blake Weissman */
+@keyframes arrow-idle {
+  0% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  40% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+}
+@keyframes intro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes intro-header {
+  from {
+    opacity: 0;
+    padding-bottom: 15px;
+  }
+  to {
+    opacity: 1;
+    padding-bottom: 0px;
+  }
+}
+p a:hover, a a:hover, #about div div div a:hover {
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+section:not(#about) {
+  min-height: 50vh;
+}
+
+#about {
+  height: 100vh;
+  display: flex;
+  padding-bottom: 60px;
+  justify-content: center;
+  text-align: center;
+}
+#about .button {
+  border: 1px solid #1c1c1c;
+  padding: 8px 20px;
+  white-space: nowrap;
+  border-radius: 4px;
+  background: #1c1c1c;
+  padding: 7px 15px;
+  transition: background 0.1s ease 0s, color 0.1s ease 0s, box-shadow 0.1s ease 0s;
+  color: #ffffff;
+  display: inline-block;
+}
+#about .button:hover {
+  background: #ffffff;
+  color: #1c1c1c;
+}
+#about p, #about a {
+  color: #1c1c1c;
+}
+#about div {
+  justify-content: space-between;
+  max-width: 750px;
+  margin: 0 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about div#content {
+  animation: intro-header 0.5s ease 0.1s 1 backwards;
+}
+#about div div {
+  flex: 1 1 0%;
+  justify-content: center;
+  margin: 0;
+}
+#about div div * {
+  margin-bottom: 15px;
+}
+#about div div div {
+  flex: initial;
+  flex-direction: row;
+  margin-top: 7px;
+}
+#about div div div a {
+  margin: 0 10px;
+}
+#about #profile {
+  max-width: 150px;
+  border-radius: 100%;
+}
+#about img {
+  display: block;
+  box-shadow: 6px 6px 21px 0px rgba(0, 0, 0, 0.26), -6px -6px 21px 0px rgba(194, 194, 194, 0.26);
+  width: 100%;
+}
+
+#verton {
+  background: #252525;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+#verton .button {
+  border: 1px solid #ffffff;
+  padding: 8px 20px;
+  white-space: nowrap;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 7px 15px;
+  transition: background 0.1s ease 0s, color 0.1s ease 0s, box-shadow 0.1s ease 0s;
+  color: #252525;
+  display: inline-block;
+}
+#verton .button:hover {
+  background: #252525;
+  color: #ffffff;
+}
+#verton * {
+  color: #ffffff;
+}
+#verton #content {
+  max-width: 750px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#verton #content div {
+  width: 450px;
+}
+#verton img {
+  margin-right: 50px;
+  width: 250px;
+}
+#verton p {
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+p, a {
+  font-size: 1.1em;
+}
+p a, a a {
+  font-weight: 500;
+}
+
+i {
+  color: inherit;
+}
+
+arrow {
+  animation: arrow-idle 2s infinite 1.5s;
+  display: inline-block;
+  transform: rotate(45deg);
+  animation: 2s ease 1.5s infinite normal none running arrow-idle;
+  border-style: solid;
+  border-color: initial;
+  border-image: initial;
+  border-width: 0px 2px 2px 0px;
+  padding: 10px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2.25em;
+  font-weight: 500;
+}
+
+footer {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  padding: 25px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+/*# sourceMappingURL=style.css.map */
