@@ -133,7 +133,6 @@ section:not(#about) {
     background: #252525;
     display: flex;
     justify-content: center;
-    padding-left: 25px;
     align-items: center;
     * {
         color: #ffffff;
@@ -146,15 +145,14 @@ section:not(#about) {
         flex-wrap: wrap;   
         div {
             flex: 1 1;
-            margin-right: 25px;
             margin-bottom: 25px;
+            margin: 0 25px;
         }
     }
     img {
         width: 100%;
         max-width: 250px;
-        padding-right: 25px;
-        margin: 25px 0;
+        margin: 25px;
     }
     p {
         margin-bottom: 15px;
