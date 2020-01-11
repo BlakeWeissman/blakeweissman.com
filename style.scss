@@ -81,7 +81,7 @@ section:not(#about) {
 
 #about {
     @include set-button-colors(#1c1c1c, #ffffff);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     padding-bottom: 60px;
     justify-content: center;
@@ -92,7 +92,7 @@ section:not(#about) {
     div {
         justify-content: space-between;
         max-width: 750px;
-        margin: 0 25px;
+        margin: 25px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -103,6 +103,7 @@ section:not(#about) {
             flex: 1 1 0%;
             justify-content: center;
             margin: 0;
+            margin-bottom: 25px;
             * {   
                 margin-bottom: 15px;
             }

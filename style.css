@@ -45,7 +45,7 @@ section:not(#about) {
 }
 
 #about {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   padding-bottom: 60px;
   justify-content: center;
@@ -72,7 +72,7 @@ section:not(#about) {
 #about div {
   justify-content: space-between;
   max-width: 750px;
-  margin: 0 25px;
+  margin: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,6 +84,7 @@ section:not(#about) {
   flex: 1 1 0%;
   justify-content: center;
   margin: 0;
+  margin-bottom: 25px;
 }
 #about div div * {
   margin-bottom: 15px;
