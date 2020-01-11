@@ -42,17 +42,18 @@ p a:hover, a a:hover, #about div div div a:hover {
 
 section {
   justify-content: center;
+  display: flex;
 }
 section #content {
   max-width: 750px;
 }
-section:not(#about) {
+section:not(#about):not(#top-of-site) {
   min-height: 50vh;
+  align-items: center;
 }
 
 #about {
   min-height: 100vh;
-  display: flex;
   padding-bottom: 60px;
   text-align: center;
 }
@@ -112,7 +113,6 @@ section:not(#about) {
 
 #verton {
   background: #252525;
-  display: flex;
   align-items: center;
 }
 #verton .button {
@@ -202,7 +202,6 @@ footer {
 #top-of-site {
   position: fixed;
   height: 100%;
-  display: flex;
   width: 100%;
   pointer-events: none;
 }
