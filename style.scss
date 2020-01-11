@@ -133,7 +133,8 @@ section:not(#about) {
     background: #252525;
     display: flex;
     justify-content: center;
-    padding: 25px;
+    padding-left: 25px;
+    align-items: center;
     * {
         color: #ffffff;
     }
@@ -144,12 +145,16 @@ section:not(#about) {
         align-items: center;
         flex-wrap: wrap;   
         div {
-            width: 450px;
+            flex: 1 1;
+            margin-right: 25px;
+            margin-bottom: 25px;
         }
     }
     img {
-        margin-right: 50px;
-        width: 250px;
+        width: 100%;
+        max-width: 250px;
+        padding-right: 25px;
+        margin: 25px 0;
     }
     p {
         margin-bottom: 15px;
@@ -193,6 +198,6 @@ h1 {
 footer {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
     text-align: center;
-    padding: 25px 0;
+    padding: 25px;
     border-top: 1px solid #e0e0e0;
 }
