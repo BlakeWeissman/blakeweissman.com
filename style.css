@@ -40,6 +40,12 @@ p a:hover, a a:hover, #about div div div a:hover {
   font-weight: 400;
 }
 
+section {
+  justify-content: center;
+}
+section #content {
+  max-width: 750px;
+}
 section:not(#about) {
   min-height: 50vh;
 }
@@ -48,12 +54,10 @@ section:not(#about) {
   min-height: 100vh;
   display: flex;
   padding-bottom: 60px;
-  justify-content: center;
   text-align: center;
 }
 #about .button {
   border: 1px solid #1c1c1c;
-  padding: 8px 20px;
   white-space: nowrap;
   border-radius: 4px;
   background: #1c1c1c;
@@ -71,7 +75,6 @@ section:not(#about) {
 }
 #about div {
   justify-content: space-between;
-  max-width: 750px;
   margin: 25px;
   display: flex;
   flex-direction: column;
@@ -110,12 +113,10 @@ section:not(#about) {
 #verton {
   background: #252525;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 #verton .button {
   border: 1px solid #ffffff;
-  padding: 8px 20px;
   white-space: nowrap;
   border-radius: 4px;
   background: #ffffff;
@@ -132,7 +133,6 @@ section:not(#about) {
   color: #ffffff;
 }
 #verton #content {
-  max-width: 750px;
   flex-direction: row;
   display: flex;
   align-items: center;
@@ -190,6 +190,52 @@ footer {
   text-align: center;
   padding: 25px;
   border-top: 1px solid #e0e0e0;
+}
+
+#test {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #e0e0e0;
+}
+
+#top-of-site {
+  position: fixed;
+  height: 100%;
+  display: flex;
+  width: 100%;
+  pointer-events: none;
+}
+#top-of-site .button {
+  border: 1px solid #ffffff;
+  white-space: nowrap;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 7px 15px;
+  transition: background 0.1s ease 0s, color 0.1s ease 0s, box-shadow 0.1s ease 0s;
+  color: #1c1c1c;
+  display: inline-block;
+}
+#top-of-site .button:hover {
+  background: #1c1c1c;
+  color: #ffffff;
+}
+#top-of-site div {
+  width: 750px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  margin: 25px;
+}
+#top-of-site a {
+  box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
+  bottom: 20px;
+  right: 30px;
+  pointer-events: initial;
+}
+#top-of-site .button {
+  border-radius: 100%;
+  padding: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
