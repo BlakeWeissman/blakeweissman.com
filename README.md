@@ -1,4 +1,4 @@
-# blakeweissman.com (In Development)
+# blakeweissman.com
 New version of Blake Weissman's personal website. Built with HTML, SCSS, and JavaScript. 
 
 https://blakeweissman.com/
