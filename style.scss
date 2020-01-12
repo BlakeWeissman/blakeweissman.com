@@ -2,6 +2,8 @@
 
 $font-weight: 400;
 $transition-values: 0.1s ease 0s;
+$primary-color: #ffffff;
+$secondary-color: #1c1c1c;
 
 @keyframes arrow-idle {
     0% {
@@ -35,13 +37,6 @@ $transition-values: 0.1s ease 0s;
     }
 }
 
-@mixin background-gradient($color1, $color2) {
-    background: $color1;
-    background: -moz-linear-gradient(-45deg, $color1 0%, $color2 100%);
-    background: -webkit-linear-gradient(-45deg, $color1 0%,$color2 100%);
-    background: linear-gradient(135deg, $color1 0%,$color2 100%);
-}
-
 @mixin set-button-colors($color1, $color2) {
     .button {
         border: 1px solid $color1;
@@ -49,13 +44,12 @@ $transition-values: 0.1s ease 0s;
         border-radius: 4px;
         background: $color1;
         padding: 7px 15px;
-        transition: background $transition-values, color $transition-values, box-shadow $transition-values;
+        transition: background $transition-values, color $transition-values;
         color: $color2;
         display: inline-block;
         &:hover {  
             background: $color2;
             color: $color1;
-            // box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.26);
         }
     }
 }
@@ -68,6 +62,10 @@ $transition-values: 0.1s ease 0s;
 
 %intro-animation {
     animation: intro 0.5s ease 0.1s 1 backwards;
+}
+
+%box-shadow {
+    box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
 }
 
 * {
@@ -100,12 +98,13 @@ section {
 }
 
 #about {
-    @include set-button-colors(#1c1c1c, #ffffff);
+    @include set-button-colors($secondary-color, $primary-color);
     min-height: 100vh;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
     text-align: center;
+    padding-top: 60px;
     p, a {
-        color: #1c1c1c;
+        color: $secondary-color;
     }
     div {
         justify-content: space-between;
@@ -140,18 +139,20 @@ section {
         border-radius: 100%;
     }
     img {
+        @extend %box-shadow;
         display: block;
-        box-shadow: 6px 6px 21px 0px rgba(0, 0, 0, 0.26), -6px -6px 21px 0px rgba(194, 194, 194, 0.26);
         width: 100%;
     }
 }
 
 #verton {
-    @include set-button-colors(#ffffff, #252525);
-    background: #252525;
+    $verton-primary: #ffffff;
+    $verton-secondary: #252525;
+    @include set-button-colors($verton-primary, $verton-secondary);
+    background: $verton-secondary;
     align-items: center;
     * {
-        color: #ffffff;
+        color: $verton-primary
     }
     #content {
         flex-direction: row;
@@ -198,7 +199,7 @@ arrow {
     border-style: solid;
     border-color: initial;
     border-image: initial;
-    border-width: 0px 2px 2px 0px;
+    border-width: 0px 1.5px 1.5px 0px;
     padding: 10px;
 }
 
@@ -219,7 +220,7 @@ footer {
 }
 
 #top-of-site {
-    @include set-button-colors(#ffffff, #1c1c1c);
+    @include set-button-colors($primary-color, $secondary-color);
     position: fixed;
     height: 100%;
     width: 100%;
@@ -231,13 +232,11 @@ footer {
         display: flex;
         margin: 25px;
     }
-    a {
-        box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
+    .button {
+        @extend %box-shadow;
         bottom: 20px;
         right: 30px;
         pointer-events: initial;
-    }
-    .button {
         border-radius: 100%;
         padding: 15px;
         transition: opacity $transition-values;
