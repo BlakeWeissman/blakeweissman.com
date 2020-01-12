@@ -48,10 +48,6 @@ footer p, section:not(#about) #content {
   font-weight: 400;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 section {
   justify-content: center;
   display: flex;
