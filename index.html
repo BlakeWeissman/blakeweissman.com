@@ -61,5 +61,18 @@
         &copy;2020 Blake Weissman
       </p>
     </footer>
+    <script>
+      showOrHideTopOfSiteButton = function() {
+        console.log('wew');
+        var topOfSiteButton =  document.getElementById("top-of-site").getElementsByTagName('a')[0];
+        if (window.scrollY > 100) {
+          topOfSiteButton.style.opacity = '1';
+          return;
+        }
+        topOfSiteButton.style.opacity = '0';
+      }
+      showOrHideTopOfSiteButton();
+      window.addEventListener('scroll', showOrHideTopOfSiteButton);
+    </script>
   </body>
 </html>

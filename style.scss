@@ -1,6 +1,7 @@
 /* Created by Blake Weissman */
 
 $font-weight: 400;
+$transition-values: 0.1s ease 0s;
 
 @keyframes arrow-idle {
     0% {
@@ -43,7 +44,6 @@ $font-weight: 400;
 
 @mixin set-button-colors($color1, $color2) {
     .button {
-        $transition-values: 0.1s ease 0s;
         border: 1px solid $color1;
         white-space: nowrap;
         border-radius: 4px;
@@ -66,6 +66,10 @@ $font-weight: 400;
     }
 }
 
+%intro-animation {
+    animation: intro 0.5s ease 0.1s 1 backwards;
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
@@ -84,9 +88,14 @@ section {
     #content {
         max-width: 750px;
     }
-    &:not(#about):not(#top-of-site) {
-        min-height: 50vh;
-        align-items: center;
+    &:not(#about) {
+        &:not(#top-of-site) {
+            min-height: 50vh;
+            align-items: center;
+        }
+        #content {
+            @extend %intro-animation;
+        }
     }
 }
 
@@ -204,8 +213,8 @@ footer {
     text-align: center;
     padding: 25px;
     border-top: 1px solid #e0e0e0;
-    a {
-        color: #1c1c1c;
+    p {
+        @extend %intro-animation;
     }
 }
 
@@ -231,5 +240,6 @@ footer {
     .button {
         border-radius: 100%;
         padding: 15px;
+        transition: opacity $transition-values;
     }
 }
