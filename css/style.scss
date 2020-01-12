@@ -141,13 +141,13 @@ section {
 }
 
 #verton {
-    $verton-primary: #ffffff;
-    $verton-secondary: #252525;
-    @include set-button-colors($verton-primary, $verton-secondary);
-    background: $verton-secondary;
+    $primary: #ffffff;
+    $secondary: #252525;
+    @include set-button-colors($primary, $secondary);
+    background: $secondary;
     align-items: center;
     * {
-        color: $verton-primary
+        color: $primary
     }
     #content {
         flex-direction: row;
@@ -165,6 +165,73 @@ section {
         max-width: 300px;
         margin: 25px auto;
         padding: 0 25px;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+#dfab {
+    $primary: #ffffff;
+    $secondary: #16687D;
+    @include set-button-colors($primary, $secondary);
+    background: $secondary;
+    align-items: center;
+    * {
+        color: $primary
+    }
+    #content {
+        flex-direction: row-reverse;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap; 
+        padding: 25px;  
+        div {
+            flex: 1 1;
+        }
+    }
+    img {
+        @extend %box-shadow;
+        width: 100%;
+        max-width: 400px;
+        margin: 25px auto;
+        margin-left: 25px;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+#wolfson {
+    $primary: #000000;
+    $secondary: #ffffff;
+    @include set-button-colors($primary, $secondary);
+    @extend %intro-animation;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../img/wolfson.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    * {
+        color: $primary
+    }
+    #content { 
+        padding: 0 25px;
+        padding-bottom: 25px;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;   
+        div {
+            flex: 1 1;
+        }
+    }
+    img {
+        @extend %box-shadow;
+        width: 100%;
+        max-width: 400px;
+        margin: 25px auto;
     }
     p {
         margin-bottom: 15px;
