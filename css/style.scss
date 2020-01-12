@@ -185,17 +185,20 @@ section {
         display: flex;
         align-items: center;
         flex-wrap: wrap; 
-        padding: 25px;  
         div {
             flex: 1 1;
+            margin: 0 25px;
+            margin-bottom: 25px;
         }
+    }
+    wrapper {
+        margin: 25px auto;
+        padding: 0 25px;
     }
     img {
         @extend %box-shadow;
         width: 100%;
         max-width: 400px;
-        margin: 25px auto;
-        margin-left: 25px;
     }
     p {
         margin-bottom: 15px;

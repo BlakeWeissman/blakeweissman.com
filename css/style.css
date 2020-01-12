@@ -185,16 +185,19 @@ section:not(#about):not(#top-of-site) {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding: 25px;
 }
 #dfab #content div {
   flex: 1 1;
+  margin: 0 25px;
+  margin-bottom: 25px;
+}
+#dfab wrapper {
+  margin: 25px auto;
+  padding: 0 25px;
 }
 #dfab img {
   width: 100%;
   max-width: 400px;
-  margin: 25px auto;
-  margin-left: 25px;
 }
 #dfab p {
   margin-bottom: 15px;
