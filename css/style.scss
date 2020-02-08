@@ -89,6 +89,7 @@ section {
         }
         #content {
             @extend %intro-animation;
+            padding: 30px 0;
         }
     }
 }
