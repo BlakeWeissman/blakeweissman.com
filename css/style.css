@@ -60,7 +60,7 @@ section:not(#about):not(#top-of-site) {
   align-items: center;
 }
 section:not(#about) #content {
-  padding: 30px 0;
+  padding: 30px 25px;
 }
 
 #about {
@@ -271,7 +271,7 @@ arrow {
   border-style: solid;
   border-color: initial;
   border-image: initial;
-  border-width: 0px 1.5px 1.5px 0px;
+  border-width: 0px 1px 1px 0px;
   padding: 10px;
 }
 
