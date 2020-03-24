@@ -150,14 +150,14 @@ section:not(#about) #content {
 }
 #verton #content div {
   flex: 1 1;
-  margin: 0 25px;
+  margin: 0;
   margin-bottom: 25px;
 }
 #verton img {
   width: 100%;
   max-width: 300px;
   margin: 25px auto;
-  padding: 0 25px;
+  padding: 0;
 }
 #verton p {
   margin-bottom: 15px;
@@ -192,14 +192,14 @@ section:not(#about) #content {
 }
 #material-nutrition #content div {
   flex: 1 1;
-  margin: 0 25px;
+  margin: 0;
   margin-bottom: 25px;
 }
 #material-nutrition img {
   width: 100%;
   max-width: 300px;
   margin: 25px auto;
-  padding: 0 25px;
+  padding: 0;
 }
 #material-nutrition p {
   margin-bottom: 15px;
@@ -234,12 +234,12 @@ section:not(#about) #content {
 }
 #dfab #content div {
   flex: 1 1;
-  margin: 0 25px;
+  margin: 0;
   margin-bottom: 25px;
 }
 #dfab wrapper {
   margin: 25px auto;
-  padding: 0 25px;
+  padding: 0;
 }
 #dfab img {
   width: 100%;
