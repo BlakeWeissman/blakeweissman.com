@@ -185,7 +185,7 @@ section:not(#about) #content {
   color: #ffffff;
 }
 #material-nutrition #content {
-  flex-direction: row;
+  flex-direction: row-reverse;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
