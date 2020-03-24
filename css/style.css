@@ -59,10 +59,6 @@ section:not(#about):not(#top-of-site) {
   min-height: 50vh;
   align-items: center;
 }
-section:not(#about) #content {
-  padding: 30px 25px;
-}
-
 #about {
   min-height: 100vh;
   padding-bottom: 88px;
@@ -147,17 +143,18 @@ section:not(#about) #content {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 #verton #content div {
   flex: 1 1;
-  margin: 0;
+  margin: 0 25px;
   margin-bottom: 25px;
 }
 #verton img {
   width: 100%;
   max-width: 300px;
   margin: 25px auto;
-  padding: 0;
+  padding: 0 25px;
 }
 #verton p {
   margin-bottom: 15px;
@@ -193,14 +190,14 @@ section:not(#about) #content {
 }
 #material-nutrition #content div {
   flex: 1 1;
-  margin: 0;
+  margin: 0 25px;
   margin-bottom: 25px;
 }
 #material-nutrition img {
   width: 100%;
   max-width: 300px;
   margin: 25px auto;
-  padding: 0;
+  padding: 0 25px;
 }
 #material-nutrition p {
   margin-bottom: 15px;
@@ -235,12 +232,12 @@ section:not(#about) #content {
 }
 #dfab #content div {
   flex: 1 1;
-  margin: 0;
+  margin: 0 25px;
   margin-bottom: 25px;
 }
 #dfab wrapper {
   margin: 25px auto;
-  padding: 0;
+  padding: 0 25px;
 }
 #dfab img {
   width: 100%;
@@ -282,6 +279,7 @@ section:not(#about) #content {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  padding: 30px 25px;
 }
 #wolfson #content div {
   flex: 1 1;
