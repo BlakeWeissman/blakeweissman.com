@@ -189,6 +189,7 @@ section:not(#about) #content {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 #material-nutrition #content div {
   flex: 1 1;
