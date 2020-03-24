@@ -163,6 +163,48 @@ section:not(#about) #content {
   margin-bottom: 15px;
 }
 
+#material-nutrition {
+  background: #00695b;
+  align-items: center;
+}
+#material-nutrition .button {
+  border: 1px solid #ffffff;
+  white-space: nowrap;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 7px 15px;
+  transition: background 0.1s ease 0s, color 0.1s ease 0s;
+  color: #00695b;
+  display: inline-block;
+}
+#material-nutrition .button:hover {
+  background: #00695b;
+  color: #ffffff;
+}
+#material-nutrition * {
+  color: #ffffff;
+}
+#material-nutrition #content {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#material-nutrition #content div {
+  flex: 1 1;
+  margin: 0 25px;
+  margin-bottom: 25px;
+}
+#material-nutrition img {
+  width: 100%;
+  max-width: 300px;
+  margin: 25px auto;
+  padding: 0 25px;
+}
+#material-nutrition p {
+  margin-bottom: 15px;
+}
+
 #dfab {
   background: #16687D;
   align-items: center;

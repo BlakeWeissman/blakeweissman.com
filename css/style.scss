@@ -172,6 +172,37 @@ section {
     }
 }
 
+#material-nutrition {
+    $primary: #ffffff;
+    $secondary: #00695b;
+    @include set-button-colors($primary, $secondary);
+    background: $secondary;
+    align-items: center;
+    * {
+        color: $primary
+    }
+    #content {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;   
+        div {
+            flex: 1 1;
+            margin: 0 25px;
+            margin-bottom: 25px;
+        }
+    }
+    img {
+        width: 100%;
+        max-width: 300px;
+        margin: 25px auto;
+        padding: 0 25px;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+}
+
 #dfab {
     $primary: #ffffff;
     $secondary: #16687D;
