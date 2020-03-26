@@ -74,7 +74,7 @@ section:not(#about):not(#top-of-site) {
   color: #ffffff;
   display: inline-block;
   margin-right: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 #about .button:hover {
   background: #ffffff;
@@ -133,7 +133,7 @@ section:not(#about):not(#top-of-site) {
   color: #252525;
   display: inline-block;
   margin-right: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 #verton .button:hover {
   background: #252525;
@@ -178,7 +178,7 @@ section:not(#about):not(#top-of-site) {
   color: #00695b;
   display: inline-block;
   margin-right: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 #material-nutrition .button:hover {
   background: #00695b;
@@ -223,7 +223,7 @@ section:not(#about):not(#top-of-site) {
   color: #16687D;
   display: inline-block;
   margin-right: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 #dfab .button:hover {
   background: #16687D;
@@ -273,7 +273,7 @@ section:not(#about):not(#top-of-site) {
   color: #ffffff;
   display: inline-block;
   margin-right: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 #wolfson .button:hover {
   background: #ffffff;
@@ -354,7 +354,7 @@ footer {
   color: #1c1c1c;
   display: inline-block;
   margin-right: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 #top-of-site .button:hover {
   background: #1c1c1c;
