@@ -47,6 +47,7 @@ $secondary-color: #1c1c1c;
         transition: background $transition-values, color $transition-values;
         color: $color2;
         display: inline-block;
+        margin-right: 12px;
         &:hover {  
             background: $color2;
             color: $color1;

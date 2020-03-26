@@ -73,6 +73,7 @@ section:not(#about):not(#top-of-site) {
   transition: background 0.1s ease 0s, color 0.1s ease 0s;
   color: #ffffff;
   display: inline-block;
+  margin-right: 12px;
 }
 #about .button:hover {
   background: #ffffff;
@@ -130,6 +131,7 @@ section:not(#about):not(#top-of-site) {
   transition: background 0.1s ease 0s, color 0.1s ease 0s;
   color: #252525;
   display: inline-block;
+  margin-right: 12px;
 }
 #verton .button:hover {
   background: #252525;
@@ -173,6 +175,7 @@ section:not(#about):not(#top-of-site) {
   transition: background 0.1s ease 0s, color 0.1s ease 0s;
   color: #00695b;
   display: inline-block;
+  margin-right: 12px;
 }
 #material-nutrition .button:hover {
   background: #00695b;
@@ -216,6 +219,7 @@ section:not(#about):not(#top-of-site) {
   transition: background 0.1s ease 0s, color 0.1s ease 0s;
   color: #16687D;
   display: inline-block;
+  margin-right: 12px;
 }
 #dfab .button:hover {
   background: #16687D;
@@ -264,6 +268,7 @@ section:not(#about):not(#top-of-site) {
   transition: background 0.1s ease 0s, color 0.1s ease 0s;
   color: #ffffff;
   display: inline-block;
+  margin-right: 12px;
 }
 #wolfson .button:hover {
   background: #ffffff;
@@ -343,6 +348,7 @@ footer {
   transition: background 0.1s ease 0s, color 0.1s ease 0s;
   color: #1c1c1c;
   display: inline-block;
+  margin-right: 12px;
 }
 #top-of-site .button:hover {
   background: #1c1c1c;
