@@ -56,10 +56,11 @@ section #content {
   max-width: 750px;
 }
 section:not(#about):not(#top-of-site) {
-  min-height: 50vh;
+  min-height: 45vh;
   align-items: center;
 }
 #about {
+  background: linear-gradient(#ffffff, #f2f2f2);
   min-height: 100vh;
   padding-bottom: 88px;
   text-align: center;

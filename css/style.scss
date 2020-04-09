@@ -6,340 +6,341 @@ $primary-color: #ffffff;
 $secondary-color: #1c1c1c;
 
 @keyframes arrow-idle {
-    0% {
-        transform: rotate(45deg) translate(0, 0);
-    }
-    20% {
-        transform: rotate(45deg) translate(10px, 10px);
-    }
-    40% {
-        transform: rotate(45deg) translate(0, 0);
-    }
+  0% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  40% {
+    transform: rotate(45deg) translate(0, 0);
+  }
 }
 
 @keyframes intro {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
   
 @keyframes intro-header {
-    from {
-        opacity: 0;
-        padding-bottom: 15px;
-    }
-    to {
-        opacity: 1;
-        padding-bottom: 0px;
-    }
+  from {
+    opacity: 0;
+    padding-bottom: 15px;
+  }
+  to {
+    opacity: 1;
+    padding-bottom: 0px;
+  }
 }
 
 @mixin set-button-colors($color1, $color2) {
-    .button {
-        border: 1px solid $color1;
-        white-space: nowrap;
-        border-radius: 4px;
-        background: $color1;
-        padding: 7px 15px;
-        transition: background $transition-values, color $transition-values;
-        color: $color2;
-        display: inline-block;
-        margin-right: 12px;
-        margin-bottom: 14px;
-        &:hover {  
-            background: $color2;
-            color: $color1;
-        }
+  .button {
+    border: 1px solid $color1;
+    white-space: nowrap;
+    border-radius: 4px;
+    background: $color1;
+    padding: 7px 15px;
+    transition: background $transition-values, color $transition-values;
+    color: $color2;
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 14px;
+    &:hover {  
+      background: $color2;
+      color: $color1;
     }
+  }
 }
 
 %underline-on-hover {
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 %intro-animation {
-    animation: intro 0.5s ease 0.1s 1 backwards;
+  animation: intro 0.5s ease 0.1s 1 backwards;
 }
 
 %box-shadow {
-    box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
 }
 
 * {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    text-decoration: none;
-    font-weight: $font-weight;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  text-decoration: none;
+  font-weight: $font-weight;
 }
 
 section {
-    justify-content: center;
-    display: flex;
+  justify-content: center;
+  display: flex;
+  #content {
+    max-width: 750px;
+  }
+  &:not(#about) {
+    &:not(#top-of-site) {
+      min-height: 45vh;
+      align-items: center;
+    }
     #content {
-        max-width: 750px;
+      @extend %intro-animation;
     }
-    &:not(#about) {
-        &:not(#top-of-site) {
-            min-height: 45vh;
-            align-items: center;
-        }
-        #content {
-            @extend %intro-animation;
-        }
-    }
+  }
 }
 
 #about {
-    @include set-button-colors($secondary-color, $primary-color);
-    min-height: 100vh;
-    padding-bottom: 88px;
-    text-align: center;
-    p, a {
-        color: $secondary-color;
+  @include set-button-colors($secondary-color, $primary-color);
+  background: linear-gradient(#ffffff, #f2f2f2);;
+  min-height: 100vh;
+  padding-bottom: 88px;
+  text-align: center;
+  p, a {
+    color: $secondary-color;
+  }
+  div {
+    justify-content: space-between;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &#content {   
+      animation: intro-header 0.5s ease 0.1s 1 backwards;
     }
     div {
-        justify-content: space-between;
-        margin: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &#content {   
-            animation: intro-header 0.5s ease 0.1s 1 backwards;
+      flex: 1 1 0%;
+      justify-content: center;
+      margin: 0;
+      margin-bottom: 25px;
+      * {   
+        margin-bottom: 15px;
+      }
+      div {
+        flex: initial;
+        flex-direction: row;
+        margin-top: 7px;
+        a {
+          margin: 0 10px;
+          @extend %underline-on-hover;
         }
-        div {
-            flex: 1 1 0%;
-            justify-content: center;
-            margin: 0;
-            margin-bottom: 25px;
-            * {   
-                margin-bottom: 15px;
-            }
-            div {
-                flex: initial;
-                flex-direction: row;
-                margin-top: 7px;
-                a {
-                    margin: 0 10px;
-                    @extend %underline-on-hover;
-                }
-            }
-        }
+      }
     }
-    #profile {
-        max-width: 150px;
-        border-radius: 100%;
-    }
-    img {
-        @extend %box-shadow;
-        display: block;
-        width: 100%;
-    }
+  }
+  #profile {
+    max-width: 150px;
+    border-radius: 100%;
+  }
+  img {
+    @extend %box-shadow;
+    display: block;
+    width: 100%;
+  }
 }
 
 #verton {
-    $primary: #ffffff;
-    $secondary: #252525;
-    @include set-button-colors($primary, $secondary);
-    background: $secondary;
+  $primary: #ffffff;
+  $secondary: #252525;
+  @include set-button-colors($primary, $secondary);
+  background: $secondary;
+  align-items: center;
+  * {
+    color: $primary
+  }
+  #content {
+    flex-direction: row;
+    display: flex;
     align-items: center;
-    * {
-        color: $primary
+    flex-wrap: wrap;  
+    justify-content: center; 
+    div {
+      flex: 1 1;
+      margin: 0 25px;
+      margin-bottom: 25px;
     }
-    #content {
-        flex-direction: row;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;  
-        justify-content: center; 
-        div {
-            flex: 1 1;
-            margin: 0 25px;
-            margin-bottom: 25px;
-        }
-    }
-    img {
-        width: 100%;
-        max-width: 300px;
-        margin: 25px auto;
-        padding: 0 25px;
-    }
-    p {
-        margin-bottom: 15px;
-    }
+  }
+  img {
+    width: 100%;
+    max-width: 300px;
+    margin: 25px auto;
+    padding: 0 25px;
+  }
+  p {
+    margin-bottom: 15px;
+  }
 }
 
 #material-nutrition {
-    $primary: #ffffff;
-    $secondary: #00695b;
-    @include set-button-colors($primary, $secondary);
-    background: $secondary;
+  $primary: #ffffff;
+  $secondary: #00695b;
+  @include set-button-colors($primary, $secondary);
+  background: $secondary;
+  align-items: center;
+  * {
+    color: $primary
+  }
+  #content {
+    flex-direction: row-reverse;
+    display: flex;
     align-items: center;
-    * {
-        color: $primary
+    flex-wrap: wrap; 
+    justify-content: center;  
+    div {
+      flex: 1 1;
+      margin: 0 25px;
+      margin-bottom: 25px;
     }
-    #content {
-        flex-direction: row-reverse;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap; 
-        justify-content: center;  
-        div {
-            flex: 1 1;
-            margin: 0 25px;
-            margin-bottom: 25px;
-        }
-    }
-    img {
-        width: 100%;
-        max-width: 300px;
-        margin: 25px auto;
-        padding: 0 25px;
-    }
-    p {
-        margin-bottom: 15px;
-    }
+  }
+  img {
+    width: 100%;
+    max-width: 300px;
+    margin: 25px auto;
+    padding: 0 25px;
+  }
+  p {
+    margin-bottom: 15px;
+  }
 }
 
 #dfab {
-    $primary: #ffffff;
-    $secondary: #16687D;
-    @include set-button-colors($primary, $secondary);
-    background: $secondary;
+  $primary: #ffffff;
+  $secondary: #16687D;
+  @include set-button-colors($primary, $secondary);
+  background: $secondary;
+  align-items: center;
+  * {
+    color: $primary
+  }
+  #content {
+    flex-direction: row-reverse;
+    display: flex;
     align-items: center;
-    * {
-        color: $primary
+    flex-wrap: wrap; 
+    div {
+      flex: 1 1;
+      margin: 0 25px;
+      margin-bottom: 25px;
     }
-    #content {
-        flex-direction: row-reverse;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap; 
-        div {
-            flex: 1 1;
-            margin: 0 25px;
-            margin-bottom: 25px;
-        }
-    }
-    wrapper {
-        margin: 25px auto;
-        padding: 0 25px;
-    }
-    img {
-        @extend %box-shadow;
-        width: 100%;
-        max-width: 400px;
-    }
-    p {
-        margin-bottom: 15px;
-    }
+  }
+  wrapper {
+    margin: 25px auto;
+    padding: 0 25px;
+  }
+  img {
+    @extend %box-shadow;
+    width: 100%;
+    max-width: 400px;
+  }
+  p {
+    margin-bottom: 15px;
+  }
 }
 
 #wolfson {
-    $primary: #000000;
-    $secondary: #ffffff;
-    @include set-button-colors($primary, $secondary);
-    @extend %intro-animation;
-    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../img/wolfson.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  $primary: #000000;
+  $secondary: #ffffff;
+  @include set-button-colors($primary, $secondary);
+  @extend %intro-animation;
+  background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../img/wolfson.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  text-align: center;
+  * {
+    color: $primary
+  }
+  #content { 
+    padding: 0 25px;
+    padding-bottom: 25px;
+    flex-direction: column;
+    display: flex;
     align-items: center;
-    text-align: center;
-    * {
-        color: $primary
+    flex-wrap: wrap;
+    padding: 30px 25px;
+    div {
+      flex: 1 1;
     }
-    #content { 
-        padding: 0 25px;
-        padding-bottom: 25px;
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 30px 25px;
-        div {
-            flex: 1 1;
-        }
-    }
-    img {
-        @extend %box-shadow;
-        width: 100%;
-        max-width: 400px;
-        margin: 25px auto;
-    }
-    p {
-        margin-bottom: 15px;
-    }
+  }
+  img {
+    @extend %box-shadow;
+    width: 100%;
+    max-width: 400px;
+    margin: 25px auto;
+  }
+  p {
+    margin-bottom: 15px;
+  }
 }
 
 p {
-    line-height: 1.5em;
+  line-height: 1.5em;
 }
 
 p, a {
-    font-size: 1.1em;
-    a {
-        @extend %underline-on-hover;
-    }
+  font-size: 1.1em;
+  a {
+    @extend %underline-on-hover;
+  }
 }
 
 i {
-    color: inherit;
+  color: inherit;
 }
 
 arrow {
-    animation: arrow-idle 2s infinite 1.5s;
-    display: inline-block;
-    transform: rotate(45deg);
-    animation: 2s ease 1.5s infinite normal none running arrow-idle;
-    border-style: solid;
-    border-color: initial;
-    border-image: initial;
-    border-width: 0px 1px 1px 0px;
-    padding: 10px;
+  animation: arrow-idle 2s infinite 1.5s;
+  display: inline-block;
+  transform: rotate(45deg);
+  animation: 2s ease 1.5s infinite normal none running arrow-idle;
+  border-style: solid;
+  border-color: initial;
+  border-image: initial;
+  border-width: 0px 1px 1px 0px;
+  padding: 10px;
 }
 
 h1 {
-    text-transform: uppercase;
-    font-size: 2.25em;
-    font-weight: $font-weight + 100;
+  text-transform: uppercase;
+  font-size: 2.25em;
+  font-weight: $font-weight + 100;
 }
 
 footer {
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
-    text-align: center;
-    padding: 25px;
-    border-top: 1px solid #e0e0e0;
-    p {
-        @extend %intro-animation;
-    }
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #e0e0e0;
+  p {
+    @extend %intro-animation;
+  }
 }
 
 #top-of-site {
-    @include set-button-colors($primary-color, $secondary-color);
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-    div {
-        width: 750px;
-        align-items: flex-end;
-        justify-content: flex-end;
-        display: flex;
-        margin: 25px;
-    }
-    .button {
-        @extend %box-shadow;
-        bottom: 20px;
-        right: 30px;
-        pointer-events: initial;
-        border-radius: 100%;
-        padding: 15px;
-        transition: opacity $transition-values;
-    }
+  @include set-button-colors($primary-color, $secondary-color);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  div {
+    width: 750px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+    margin: 25px;
+  }
+  .button {
+    @extend %box-shadow;
+    bottom: 20px;
+    right: 30px;
+    pointer-events: initial;
+    border-radius: 100%;
+    padding: 15px;
+    transition: opacity $transition-values;
+  }
 }
