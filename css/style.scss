@@ -1,346 +1,101 @@
-/* Created by Blake Weissman */
-
-$font-weight: 400;
+$logo-font-size: 40px;
+$logo-border-width: $logo-font-size * 0.1;
+$content-width: (($logo-font-size * 11.079) * 1.1) + ($logo-border-width * 2);
 $transition-values: 0.1s ease 0s;
-$primary-color: #ffffff;
-$secondary-color: #1c1c1c;
 
-@keyframes arrow-idle {
-    0% {
-        transform: rotate(45deg) translate(0, 0);
+@mixin set-button-colors($color1, $color2, $color3: $color2) {
+	.button {
+		border: 1px solid $color1;
+		white-space: nowrap;
+		border-radius: 4px;
+		background: $color1;
+		padding: 7px 15px;
+		transition: background $transition-values, color $transition-values;
+		color: $color3;
+		display: inline-block;
+		&:hover {
+			background: $color2;
+      color: $color1;
     }
-    20% {
-        transform: rotate(45deg) translate(10px, 10px);
-    }
-    40% {
-        transform: rotate(45deg) translate(0, 0);
-    }
-}
-
-@keyframes intro {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-}
-  
-@keyframes intro-header {
-    from {
-        opacity: 0;
-        padding-bottom: 15px;
-    }
-    to {
-        opacity: 1;
-        padding-bottom: 0px;
-    }
-}
-
-@mixin set-button-colors($color1, $color2) {
-    .button {
-        border: 1px solid $color1;
-        white-space: nowrap;
-        border-radius: 4px;
-        background: $color1;
-        padding: 7px 15px;
-        transition: background $transition-values, color $transition-values;
-        color: $color2;
-        display: inline-block;
-        margin-right: 12px;
-        margin-bottom: 14px;
-        &:hover {  
-            background: $color2;
-            color: $color1;
-        }
-    }
-}
-
-%underline-on-hover {
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-%intro-animation {
-    animation: intro 0.5s ease 0.1s 1 backwards;
-}
-
-%box-shadow {
-    box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
+  }
 }
 
 * {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    text-decoration: none;
-    font-weight: $font-weight;
+	box-sizing: border-box;
+  font-family: 'montserrat', sans-serif;
+  margin: 0;
+  text-decoration: none;
+  font-weight: 600;
+	letter-spacing: 0.1em;
 }
 
-section {
-    justify-content: center;
-    display: flex;
-    #content {
-        max-width: 750px;
-    }
-    &:not(#about) {
-        &:not(#top-of-site) {
-            min-height: 50vh;
-            align-items: center;
-        }
-        #content {
-            @extend %intro-animation;
-        }
-    }
-}
-
-#about {
-    @include set-button-colors($secondary-color, $primary-color);
-    background: linear-gradient(#ffffff, #f2f2f2);
-    min-height: 100vh;
-    padding-bottom: 88px;
-    text-align: center;
-    p, a {
-        color: $secondary-color;
-    }
-    div {
-        justify-content: space-between;
-        margin: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &#content {   
-            animation: intro-header 0.5s ease 0.1s 1 backwards;
-        }
-        div {
-            flex: 1 1 0%;
-            justify-content: center;
-            margin: 0;
-            margin-bottom: 25px;
-            * {   
-                margin-bottom: 15px;
-            }
-            div {
-                flex: initial;
-                flex-direction: row;
-                margin-top: 7px;
-                a {
-                    margin: 0 10px;
-                    @extend %underline-on-hover;
-                }
-            }
-        }
-    }
-    #profile {
-        max-width: 150px;
-        border-radius: 100%;
-    }
-    img {
-        @extend %box-shadow;
-        display: block;
-        width: 100%;
-    }
-}
-
-#verton {
-    $primary: #ffffff;
-    $secondary: #252525;
-    @include set-button-colors($primary, $secondary);
-    background: $secondary;
-    align-items: center;
-    * {
-        color: $primary
-    }
-    #content {
-        flex-direction: row;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;  
-        justify-content: center; 
-        div {
-            flex: 1 1;
-            margin: 0 25px;
-            margin-bottom: 25px;
-        }
-    }
-    img {
-        width: 100%;
-        max-width: 300px;
-        margin: 25px auto;
-        padding: 0 25px;
-    }
-    p {
-        margin-bottom: 15px;
-    }
-}
-
-#material-nutrition {
-    $primary: #ffffff;
-    $secondary: #00695b;
-    @include set-button-colors($primary, $secondary);
-    background: $secondary;
-    align-items: center;
-    * {
-        color: $primary
-    }
-    #content {
-        flex-direction: row-reverse;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap; 
-        justify-content: center;  
-        div {
-            flex: 1 1;
-            margin: 0 25px;
-            margin-bottom: 25px;
-        }
-    }
-    img {
-        width: 100%;
-        max-width: 300px;
-        margin: 25px auto;
-        padding: 0 25px;
-    }
-    p {
-        margin-bottom: 15px;
-    }
-}
-
-#dfab {
-    $primary: #ffffff;
-    $secondary: #16687D;
-    @include set-button-colors($primary, $secondary);
-    background: $secondary;
-    align-items: center;
-    * {
-        color: $primary
-    }
-    #content {
-        flex-direction: row-reverse;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap; 
-        div {
-            flex: 1 1;
-            margin: 0 25px;
-            margin-bottom: 25px;
-        }
-    }
-    wrapper {
-        margin: 25px auto;
-        padding: 0 25px;
-    }
-    img {
-        @extend %box-shadow;
-        width: 100%;
-        max-width: 400px;
-    }
-    p {
-        margin-bottom: 15px;
-    }
-}
-
-#wolfson {
-    $primary: #000000;
-    $secondary: #ffffff;
-    @include set-button-colors($primary, $secondary);
-    @extend %intro-animation;
-    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../img/wolfson.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    align-items: center;
-    text-align: center;
-    * {
-        color: $primary
-    }
-    #content { 
-        padding: 0 25px;
-        padding-bottom: 25px;
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 30px 25px;
-        div {
-            flex: 1 1;
-        }
-    }
-    img {
-        @extend %box-shadow;
-        width: 100%;
-        max-width: 400px;
-        margin: 25px auto;
-    }
-    p {
-        margin-bottom: 15px;
-    }
-}
-
-p {
-    line-height: 1.5em;
+h1, h6 {
+	text-transform: uppercase;
 }
 
 p, a {
-    font-size: 1.1em;
-    a {
-        @extend %underline-on-hover;
-    }
+	font-weight: 500;
+	font-size: 1.1em;
+	line-height: 25px;
 }
 
-i {
-    color: inherit;
+.content {
+	// margin: 0 auto;
+	width: $content-width;
 }
 
-arrow {
-    animation: arrow-idle 2s infinite 1.5s;
-    display: inline-block;
-    transform: rotate(45deg);
-    animation: 2s ease 1.5s infinite normal none running arrow-idle;
-    border-style: solid;
-    border-color: initial;
-    border-image: initial;
-    border-width: 0px 1px 1px 0px;
-    padding: 10px;
+#logo {
+	h1 {
+		border: $logo-border-width solid #fff;
+		font-size: $logo-font-size;
+		padding: ($logo-font-size * 0.1) 0;
+	}
+	h6 {
+		@function content-width-ratio($factor) {
+			@return $factor * $content-width;
+		}
+		margin-top: content-width-ratio(0.01614608982069767254);
+		font-size: content-width-ratio(0.0395);
+	}
 }
 
-h1 {
-    text-transform: uppercase;
-    font-size: 2.25em;
-    font-weight: $font-weight + 100;
+img#profile {
+		max-width: 150px;
+    border-radius: 100%;
 }
 
-footer {
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
-    text-align: center;
-    padding: 25px;
-    border-top: 1px solid #e0e0e0;
-    p {
-        @extend %intro-animation;
-    }
-}
-
-#top-of-site {
-    @include set-button-colors($primary-color, $secondary-color);
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-    div {
-        width: 750px;
-        align-items: flex-end;
-        justify-content: flex-end;
-        display: flex;
-        margin: 25px;
-    }
-    .button {
-        @extend %box-shadow;
-        bottom: 20px;
-        right: 30px;
-        pointer-events: initial;
-        border-radius: 100%;
-        padding: 15px;
-        transition: opacity $transition-values;
-    }
+#about {
+	@include set-button-colors(#ffffff, transparent, #1a1a1a);
+	background: radial-gradient(#1a1a1a, #121212);
+	min-height: 100vh;
+	text-align: center;
+	color: #ffffff !important;
+	justify-content: center;
+  display: flex;
+	.content {
+		justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+		#primary {
+			flex: 1 1 0%;
+			justify-content: center;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	p {
+		margin-top: 10px;
+	}
+	#social {
+		display: contents;
+		a {
+			color: #ffffff;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }

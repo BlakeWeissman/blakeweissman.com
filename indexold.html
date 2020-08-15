@@ -1,0 +1,117 @@
+<!--Created by Blake Weissman-->
+
+<html style="scroll-behavior: smooth;">
+  <head>
+    <title>Blake Weissman</title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/simple-line-icons.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
+    <link href="img/favicon.png"rel="icon" type="image/png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="An eighteen year old self-taught software developer and lifelong technology enthusiast. Has been programming since the age of ten and is currently working at Sulzer US, LLC as a software developer.">
+    <meta name="keywords" content="blake, blake weissman, weissman">
+    <meta name="author" content="Blake Weissman">
+    <script src="smoothscroll.min.js"></script>
+  </head>
+  <body>
+    <section id="top-of-site">
+      <div id="content">
+        <a href="#about" class="button"><i class="icon-arrow-up"></i></a>
+      </div>
+    </section>
+    <section id="about">
+      <div id="content">
+        <div>
+          <img id="profile" src="img/profile.png">
+          <img src="img/logo.svg" style="background: #ffffff;">
+          <p>
+            Self-taught software developer who is deeply passionate about technology and computer science. Loves to build and create new things and solve interesting problems. 
+          </p>
+          <a class="button" href="resume.pdf" target="_blank">
+            <i class="icon-doc"></i>&nbsp;
+            View Resume
+          </a>
+          <div>
+            <a href="mailto:contact@blakeweissman.com" title="contact@blakeweissman.com">
+              <i class="icon-envelope"></i>
+            </a>
+            <a href="tel:2019788242" title="(201) 978-8242">
+              <i class="icon-phone"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/blakeweissman/" target="_blank" title="LinkedIn">
+              <i class="icon-social-linkedin"></i>
+            </a>
+            <a href="https://github.com/BlakeWeissman" target="_blank" title="GitHub">
+              <i class="icon-social-github"></i>
+            </a>
+          </div>
+        </div>
+        <a href="#material-nutrition">
+          <arrow></arrow>
+        </a>
+      </div>
+    </section>
+    <section id="material-nutrition">
+      <div id="content">
+        <wrapper>
+          <img src="img/material-nutrition.png">
+        </wrapper>
+        <div>
+          <h1>Material Nutrition</h1>
+          <p>An intuitive and easy-to-use calorie, macro, and nutrition tracker inspired by material design. Users can easily set and follow caloric and macronutrient goals, track daily nutritional intake, and plan out future meals. Built with Angular and Firebase.</p>
+          <a class="button" href="https://material-nutrition.web.app/" target="_blank">View App</a>
+          <a class="button" href="https://github.com/BlakeWeissman/MaterialNutrition" target="_blank">GitHub Repo</a>
+        </div>
+      </div>
+    </section>
+    <section id="verton">
+      <div id="content">
+        <img src="img/verton.png">
+        <div>
+          <h1>Verton</h1>
+          <p>Verton is a digital assistant for Windows with a focus on user-customizability, built with C#, .NET, WPF, and XAML. Using a built-in command creator, users can easily create and edit their own custom voice and text commands.</p>
+          <a class="button" href="https://vertonai.com/" target="_blank">Learn More</a>
+        </div>
+      </div>
+    </section>
+    <section id="dfab">
+      <div id="content">
+        <wrapper>
+          <img src="img/dfab-site.png">
+        </wrapper>
+        <div>
+          <h1>D|FAB SLE Website</h1>
+          <p>D|FAB Structured Learning Experiences (SLEs) provide high school seniors the opportunity to learn professional skills in a relevant work setting.</p>
+          <a class="button" href="http://hths.hcstonline.org/dfab-sle/" target="_blank">View Site</a>
+        </div>
+      </div>
+    </section>
+    <section id="wolfson">
+      <div id="content">
+        <img src="img/wolfson-site.png">
+        <div>
+          <h1>Wolfson Capital Inc. Website</h1>
+          <p>Wolfson Capital Inc. is a commercial real estate finance company that arranges acquisition, construction, loans, and investments.</p>
+          <a class="button" href="https://www.wolfsoncapital.com/" target="_blank">View Site</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>
+        &copy;2020 Blake Weissman
+      </p>
+    </footer>
+    <script>
+      showOrHideTopOfSiteButton = function() {
+        var topOfSiteButton =  document.getElementById("top-of-site").getElementsByTagName('a')[0];
+        if (window.scrollY > 100) {
+          topOfSiteButton.style.opacity = '1';
+          return;
+        }
+        topOfSiteButton.style.opacity = '0';
+      }
+      showOrHideTopOfSiteButton();
+      window.addEventListener('scroll', showOrHideTopOfSiteButton);
+    </script>
+  </body>
+</html>
