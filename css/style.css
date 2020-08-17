@@ -11,12 +11,12 @@ h1, h6 {
 
 p, a, ul, li {
   font-weight: 500;
-  font-size: 0.9em;
+  font-size: 14.4px;
   line-height: 1.5em; }
 
 .content {
   margin: auto;
-  width: 890px; }
+  max-width: 890px; }
 
 /*
 body > .content {
@@ -110,53 +110,80 @@ img#profile {
 
 #navbar {
   background: transparent;
-  height: 75px;
+  height: 95px;
   transition: 0.1s ease 0s;
   position: fixed;
   width: 100%;
   z-index: 2;
   color: #ffffff; }
   #navbar .content {
-    padding: 12.5px 25px;
+    padding: 0 25px;
     display: flex;
     align-items: center;
-    justify-content: space-between; }
-  #navbar #logo {
-    margin: 0 auto; }
+    justify-content: space-between;
+    height: 95px; }
+  #navbar a {
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    padding: 38.5px 12px; }
+    #navbar a:hover {
+      background: #ffffff;
+      color: #121212; }
 
+/*
 .hidden {
-  visibility: hidden; }
+  visibility: hidden;
+}
 
-nav {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1; }
-  nav a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block; }
-    nav a:hover {
-      background-color: #ddd; }
+#nav-wrapper {
+	display: none;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.75);
+	z-index: 3;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	nav {
+		background-color: #f1f1f1;
+		max-width: 160px;
+		height: 100vh;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	}
+
+	& a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		&:hover {
+			background-color: #ddd;
+		}
+	}
+}
 
 #nav-menu {
-  position: absolute; }
-  #nav-menu button {
-    background: transparent;
-    padding: 0;
-    border: none;
-    color: #ffffff; }
-    #nav-menu button i {
-      width: 11.63px; }
-  #nav-menu:hover nav {
-    display: block; }
-  #nav-menu:hover button {
-    background-color: #ffffff;
-    color: #121212; }
-
+	$bars-font-size: 13.3333px;
+	position: absolute;
+	& button {
+		background: transparent;
+		padding: 0;
+		border: none;
+		color: #ffffff;
+		i {
+			width: $bars-font-size * 0.87225218063045157612;
+		}
+	}
+	&:hover #nav-wrapper {
+		display: block;
+	}
+	&:hover button {
+		background-color: #ffffff;
+		color: #121212;
+	}
+}
+*/
 @media only screen and (max-width: 309.6725px) {
   body > .content {
     justify-content: center; } }

@@ -4,6 +4,9 @@ $transition-values: 0.1s ease 0s;
 $site-margin: 25px;
 $logo-width: (($logo-font-size * 11.079) * 1.1) + ($logo-border-width * 2);
 $content-width: 890px;
+$paragraph-font-size: 14.4px;
+$navbar-height: 95px;
+
 
 @mixin set-button-colors($color1, $color2, $color3: $color2) {
 	.button {
@@ -37,13 +40,13 @@ h1, h6 {
 
 p, a, ul, li {
 	font-weight: 500;
-	font-size: 0.9em;
+	font-size: $paragraph-font-size;
 	line-height: 1.5em;
 }
 
 .content {
 	margin: auto;
-	width: $content-width;
+	max-width: $content-width;
 }
 
 /*
@@ -146,34 +149,55 @@ img#profile {
 
 #navbar {
 	background: transparent;
-	height: 75px;
+	height: $navbar-height;
   transition: $transition-values;
 	position: fixed;
 	width: 100%;
 	z-index: 2;
 	color: #ffffff;
 	.content {
-		padding: ($site-margin * 0.5) $site-margin;
+		padding: 0 $site-margin;
 		display: flex;
     align-items: center;
     justify-content: space-between;
+		height: $navbar-height;
 	}
-	#logo {
-		margin: 0 auto;
+	a {
+		text-transform: uppercase;
+		// margin-left: 10px;
+		text-align: center;
+		color: #ffffff;
+		padding: (($navbar-height - ($paragraph-font-size / 0.8)) * 0.5) 12px;
+		&:hover {
+			// text-decoration: underline;
+			background: #ffffff;
+			color: #121212;
+		}
 	}
 }
 
+
+/*
 .hidden {
   visibility: hidden;
 }
 
-nav {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+#nav-wrapper {
+	display: none;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.75);
+	z-index: 3;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	nav {
+		background-color: #f1f1f1;
+		max-width: 160px;
+		height: 100vh;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	}
+
 	& a {
 		color: black;
 		padding: 12px 16px;
@@ -197,7 +221,7 @@ nav {
 			width: $bars-font-size * 0.87225218063045157612;
 		}
 	}
-	&:hover nav {
+	&:hover #nav-wrapper {
 		display: block;
 	}
 	&:hover button {
@@ -205,7 +229,7 @@ nav {
 		color: #121212;
 	}
 }
-
+*/
 
 
 
