@@ -6,6 +6,9 @@
   font-weight: 600;
   letter-spacing: 0.1em; }
 
+body {
+  background: #fafafa; }
+
 h1, h6 {
   text-transform: uppercase; }
 
@@ -14,9 +17,17 @@ p, a, ul, li {
   font-size: 14.4px;
   line-height: 1.5em; }
 
+a {
+  color: inherit; }
+
 .content {
   margin: auto;
   max-width: 890px; }
+
+body > .content {
+  padding: 12.5px; }
+  body > .content h1 {
+    padding: 0 12.5px; }
 
 /*
 body > .content {
@@ -41,7 +52,7 @@ body > .content {
   width: 309.6725px;
   text-align: center; }
   #logo h1 {
-    border: 2.5px solid #fff;
+    border: 2.5px solid;
     font-size: 25px;
     padding: 2.5px 0; }
   #logo h6 {
@@ -49,87 +60,99 @@ body > .content {
     font-size: 12.23206375px; }
 
 img#profile {
-  max-width: 125px;
+  max-width: 150px;
   border-radius: 100%;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); }
 
 #about {
-  background: radial-gradient(#1a1a1a, #121212);
-  min-height: 100vh;
-  text-align: left;
-  color: #ffffff !important;
-  justify-content: center;
-  display: flex; }
+  color: #121212;
+  background: #ffffff;
+  box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
+  margin-bottom: 25px; }
   #about .button {
-    border: 1px solid #ffffff;
+    border: 1px solid #121212;
     white-space: nowrap;
     border-radius: 4px;
-    background: transparent;
-    padding: 5px 14px;
+    background: #121212;
+    padding: 7px 13px;
     transition: background 0.1s ease 0s, color 0.1s ease 0s;
     color: #ffffff;
-    display: inline-block; }
+    display: inline-block;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    text-transform: uppercase; }
     #about .button:hover {
       background: #ffffff;
-      color: #1a1a1a; }
+      color: #121212; }
+    #about .button i {
+      margin-right: 2px; }
   #about .content {
     justify-content: space-between;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25px; }
-    #about .content #primary {
-      flex: 1 1 0%;
-      justify-content: center;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start; }
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 25px;
+    padding-top: 95px;
+    /*#primary {
+		/*	flex: 1 1 0%;
+			justify-content: center;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		*/ }
+  #about #desc {
+    width: 50%; }
   #about p {
     margin: 10px 0; }
-  #about .arrow {
-    color: #ffffff; }
   #about #social {
     display: flex;
     flex-direction: column;
     margin-top: 13px; }
     #about #social a {
-      color: #ffffff;
       margin-bottom: 5px; }
       #about #social a:hover {
         text-decoration: underline; }
+  #about #logo {
+    margin-bottom: 10px; }
 
+/*
 .section-title {
-  width: 100%;
-  text-align: center;
+	width: 100%;
+	text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(https://www.omniwcinc.com/images/team1.jpg) 50% 0 repeat-y fixed;
-  background-size: cover !important; }
-  .section-title h1 {
-    padding: 40px 25px;
-    color: #ffffff; }
-
+  background-size: cover !important;
+	h1 {
+		padding: 40px $site-margin;
+		color: #ffffff;
+	}
+}
+*/
 #navbar {
   background: transparent;
   height: 95px;
   transition: 0.1s ease 0s;
   position: fixed;
   width: 100%;
-  z-index: 2;
-  color: #ffffff; }
+  z-index: 2; }
   #navbar .content {
     padding: 0 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 95px; }
+    height: 100%; }
   #navbar a {
     text-transform: uppercase;
-    text-align: center;
-    color: #ffffff;
-    padding: 38.5px 12px; }
+    margin-left: 20px; }
     #navbar a:hover {
-      background: #ffffff;
-      color: #121212; }
+      text-decoration: underline; }
+
+hr {
+  width: 19px;
+  height: 2px;
+  background: #121212;
+  border: none; }
 
 /*
 .hidden {

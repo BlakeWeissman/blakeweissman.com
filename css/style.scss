@@ -7,21 +7,26 @@ $content-width: 890px;
 $paragraph-font-size: 14.4px;
 $navbar-height: 95px;
 
-
 @mixin set-button-colors($color1, $color2, $color3: $color2) {
 	.button {
 		border: 1px solid $color1;
 		white-space: nowrap;
 		border-radius: 4px;
-		background: $color3;
-		padding: 5px 14px;
+		background: $color1;
+		//5px 14px
+		padding: 7px 13px;
 		transition: background $transition-values, color $transition-values;
-		color: $color1;
+		color: $color3;
 		display: inline-block;
+		box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0,0,0,.12);
+		text-transform: uppercase;
 		&:hover {
-			background: $color1;
-      color: $color2;
+			background: $color2;
+      color: $color1;
     }
+		i {
+			margin-right: 2px;
+		}
   }
 }
 
@@ -34,6 +39,10 @@ $navbar-height: 95px;
 	letter-spacing: 0.1em;
 }
 
+body {
+	background: #fafafa;
+}
+
 h1, h6 {
 	text-transform: uppercase;
 }
@@ -44,9 +53,20 @@ p, a, ul, li {
 	line-height: 1.5em;
 }
 
+a {
+	color: inherit;
+}
+
 .content {
 	margin: auto;
 	max-width: $content-width;
+}
+
+body > .content {
+	padding: $site-margin * 0.5;
+	h1 {
+		padding: 0 ($site-margin * 0.5);
+	}
 }
 
 /*
@@ -73,7 +93,7 @@ body > .content {
 	width: $logo-width;
 	text-align: center;
 	h1 {
-		border: $logo-border-width solid #fff;
+		border: $logo-border-width solid;
 		font-size: $logo-font-size;
 		padding: ($logo-font-size * 0.1) 0;
 	}
@@ -87,55 +107,62 @@ body > .content {
 }
 
 img#profile {
-	max-width: 125px;
+	max-width: 150px;
 	border-radius: 100%;
 	margin-bottom: 15px;
+	box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0,0,0,.12);
 }
 
 #about {
-	@include set-button-colors(#ffffff, #1a1a1a, transparent);
-	background: radial-gradient(#1a1a1a, #121212);
-	min-height: 100vh;
-	text-align: left;
-	color: #ffffff !important;
-	justify-content: center;
-  display: flex;
+	@include set-button-colors(#121212, #ffffff);
+	// background: radial-gradient(#1a1a1a, #121212);
+  // background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/code.jpg) no-repeat center center fixed;
+	color: #121212;
+	background: #ffffff;
+	box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
+	margin-bottom: $site-margin;
+	//background-size: cover;
 	.content {
-		justify-content: space-between;
+    justify-content: space-between;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-		padding: $site-margin;
-		// width: $logo-width;
-		#primary {
-			flex: 1 1 0%;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: $site-margin;
+		padding-top: $navbar-height;
+		/*#primary {
+		/*	flex: 1 1 0%;
 			justify-content: center;
 			margin: 0;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
 		}
+		*/
+	}
+	#desc {
+		width: 50%;
 	}
 	p {
 		margin: 10px 0;
-	}
-	.arrow {
-		color: #ffffff;
 	}
 	#social {
 		display: flex;
 		flex-direction: column;
 		margin-top: 13px;
 		a {
-			color: #ffffff;
+			// color: #ffffff;
 			margin-bottom: 5px;
 			&:hover {
 				text-decoration: underline;
 			}
 		}
 	}
+	#logo {
+		margin-bottom: 10px;
+	}
 }
 
+/*
 .section-title {
 	width: 100%;
 	text-align: center;
@@ -146,6 +173,8 @@ img#profile {
 		color: #ffffff;
 	}
 }
+*/
+
 
 #navbar {
 	background: transparent;
@@ -154,26 +183,32 @@ img#profile {
 	position: fixed;
 	width: 100%;
 	z-index: 2;
-	color: #ffffff;
+	// color: #f;
 	.content {
 		padding: 0 $site-margin;
 		display: flex;
     align-items: center;
     justify-content: space-between;
-		height: $navbar-height;
+		height: 100%;
+		// height: $navbar-height;
 	}
 	a {
 		text-transform: uppercase;
-		// margin-left: 10px;
-		text-align: center;
-		color: #ffffff;
-		padding: (($navbar-height - ($paragraph-font-size / 0.8)) * 0.5) 12px;
+		margin-left: 20px;
+		// text-align: center;
+		// color: #ffffff;
+		// padding: (($navbar-height - ($paragraph-font-size / 0.8)) * 0.5) 12px;
 		&:hover {
-			// text-decoration: underline;
-			background: #ffffff;
-			color: #121212;
+			text-decoration: underline;
 		}
 	}
+}
+
+hr {
+  width: 19px;
+  height: 2px;
+	background: #121212;
+	border: none;
 }
 
 
