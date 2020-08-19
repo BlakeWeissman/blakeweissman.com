@@ -31,6 +31,20 @@ $site-margin-fraction: $site-margin * 0.5;
   }
 }
 
+$card-layout-factor: 2.5 * $site-margin;
+@mixin card-layout($main-width) {
+	.main {
+		flex: 0 0 ($content-width * $main-width) - $card-layout-factor;
+	}
+	.img-wrap {
+		flex: 0 0 ($content-width * (1 - $main-width)) - $card-layout-factor;
+	}
+}
+
+@function card-layout-img-width($main-width) {
+	@return ($content-width * (1 - $main-width)) - $card-layout-factor;
+}
+
 @mixin element-colors($color1, $color2) {
 	@include set-button-colors($color1, $color2);
 	hr {
@@ -74,11 +88,11 @@ a {
 
 body > .content {
 	padding: $site-margin-fraction;
+	margin-bottom: 34px;
 	.main, .card, .img-wrap, h1 {
-		margin: 0 $site-margin-fraction
+		margin: 0 $site-margin-fraction;
 	}
 	h1 {
-		margin-top: 56px;
 		margin-bottom: 20px;
 	}
 	h2, hr {
@@ -116,7 +130,7 @@ img#profile {
 #about {
 	@include element-colors(#121212, #ffffff);
 	box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
-	margin-bottom: -20px;
+	margin-bottom: 25px;
 	.content {
     justify-content: space-between;
     display: flex;
@@ -184,11 +198,12 @@ hr {
 }
 
 .card {
-	$main-width: 0.66;
 	box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
 	display: flex;
-	padding: $site-margin $site-margin * 0.5;
-	margin-bottom: 37px !important;
+	padding: 30px $site-margin * 0.5;
+	&:not(:last-child) {
+		margin-bottom: 37px !important;
+	}
 	img {
 		position: absolute;
 		/*
@@ -204,13 +219,11 @@ hr {
 	.main {
 		display: flex;
 		flex-direction: column;
-		flex: 0 0 ($content-width * $main-width) - ($site-margin * 2.5);
 	}
 	.img-wrap {
 		padding: 0;
     position: relative;
     overflow: hidden;
-		flex: 0 0 ($content-width * (1 - $main-width)) - ($site-margin * 2.5);
 		/*
 		&:first-child img {
 			left: 0;
@@ -227,9 +240,6 @@ hr {
 		}
 		*/
 	}
-	.text {
-
-	}
 	.buttons {
 		display: flex;
 		flex-direction: row;
@@ -243,6 +253,7 @@ footer {
 	text-align: center;
   padding: 25px;
   border-top: 1px solid #e0e0e0;
+	background: #ffffff;
 }
 
 #material-nutrition {
@@ -261,12 +272,20 @@ footer {
 	@include element-colors(#ffffff, #222222);
 }
 
+#material-nutrition, #verton {
+	@include card-layout(0.66);
+}
+
 #dfab, #wolfson {
+	$main-width: 0.6;
+	@include card-layout($main-width);
 	img {
     width: 100%;
 		top: 0;
 		bottom: 0;
 		height: auto;
+		// box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
+		// width: card-layout-img-width($main-width) - 29px;
 	}
 }
 
