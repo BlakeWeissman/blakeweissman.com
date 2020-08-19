@@ -118,5 +118,18 @@
 			</div>
 		</div>
 
+		<script>
+			changeNavbar = function() {
+				var navbar = document.getElementById("navbar");
+				if (window.scrollY > 1) {
+					navbar.classList.add("scroll");
+				} else {
+					navbar.classList.remove("scroll");
+				}
+			}
+			changeNavbar();
+			window.addEventListener('scroll', changeNavbar);
+		</script>
+
 	</body>
 </html>

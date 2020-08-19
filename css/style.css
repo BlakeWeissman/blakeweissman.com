@@ -116,6 +116,11 @@ img#profile {
     #navbar a:hover {
       text-decoration: underline; }
 
+.scroll {
+  background: #121212 !important;
+  color: #ffffff;
+  box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26); }
+
 hr {
   width: 19px;
   height: 2px;
