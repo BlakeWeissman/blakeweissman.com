@@ -6,6 +6,7 @@ $logo-width: (($logo-font-size * 11.079) * 1.1) + ($logo-border-width * 2);
 $content-width: 890px;
 $paragraph-font-size: 14.4px;
 $navbar-height: 95px;
+$site-margin-fraction: $site-margin * 0.5;
 
 @mixin set-button-colors($color1, $color2, $color3: $color2) {
 	.button {
@@ -72,9 +73,8 @@ a {
 }
 
 body > .content {
-	$site-margin-fraction: $site-margin * 0.5;
 	padding: $site-margin-fraction;
-	hr, h1, h2, p, .buttons, .card, img {
+	.main, .card, .img-wrap, h1 {
 		margin: 0 $site-margin-fraction
 	}
 	h1 {
@@ -184,6 +184,7 @@ hr {
 }
 
 .card {
+	$main-width: 0.66;
 	box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
 	display: flex;
 	padding: $site-margin $site-margin * 0.5;
@@ -198,24 +199,31 @@ hr {
     height: 100%;
 		left: 0;
 		right: 0;
-		margin: 0 auto !important;
+		margin: auto !important;
 	}
 	.main {
 		display: flex;
 		flex-direction: column;
-		flex: 0 0 66%;
+		flex: 0 0 ($content-width * $main-width) - ($site-margin * 2.5);
 	}
 	.img-wrap {
 		padding: 0;
     position: relative;
     overflow: hidden;
-		flex: 0 0 33%;
+		flex: 0 0 ($content-width * (1 - $main-width)) - ($site-margin * 2.5);
 		/*
 		&:first-child img {
 			left: 0;
 		}
 		&:last-child img {
 			right: 0;
+		}
+
+		&:first-child {
+			margin-left: $site-margin-fraction;
+		}
+		&:last-child {
+			margin-right: $site-margin-fraction;
 		}
 		*/
 	}
@@ -249,6 +257,18 @@ footer {
 	@include element-colors(#ffffff, #16687D);
 }
 
+#wolfson {
+	@include element-colors(#ffffff, #222222);
+}
+
+#dfab, #wolfson {
+	img {
+    width: 100%;
+		top: 0;
+		bottom: 0;
+		height: auto;
+	}
+}
 
 @media only screen and (max-width: $logo-width) {
 	body > .content {

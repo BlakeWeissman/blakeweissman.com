@@ -26,7 +26,7 @@ a {
 
 body > .content {
   padding: 12.5px; }
-  body > .content hr, body > .content h1, body > .content h2, body > .content p, body > .content .buttons, body > .content .card, body > .content img {
+  body > .content .main, body > .content .card, body > .content .img-wrap, body > .content h1 {
     margin: 0 12.5px; }
   body > .content h1 {
     margin-top: 56px;
@@ -142,22 +142,29 @@ hr {
     height: 100%;
     left: 0;
     right: 0;
-    margin: 0 auto !important; }
+    margin: auto !important; }
   .card .main {
     display: flex;
     flex-direction: column;
-    flex: 0 0 66%; }
+    flex: 0 0 524.9px; }
   .card .img-wrap {
     padding: 0;
     position: relative;
     overflow: hidden;
-    flex: 0 0 33%;
+    flex: 0 0 240.1px;
     /*
 		&:first-child img {
 			left: 0;
 		}
 		&:last-child img {
 			right: 0;
+		}
+
+		&:first-child {
+			margin-left: $site-margin-fraction;
+		}
+		&:last-child {
+			margin-right: $site-margin-fraction;
 		}
 		*/ }
   .card .buttons {
@@ -236,6 +243,34 @@ footer {
       margin-right: 2px; }
   #dfab hr {
     background: #ffffff; }
+
+#wolfson {
+  background: #222222;
+  color: #ffffff; }
+  #wolfson .button {
+    border: 1px solid #ffffff;
+    white-space: nowrap;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 7px 13px;
+    transition: background 0.1s ease 0s, color 0.1s ease 0s;
+    color: #222222;
+    display: inline-block;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    text-transform: uppercase; }
+    #wolfson .button:hover {
+      background: #222222;
+      color: #ffffff; }
+    #wolfson .button i {
+      margin-right: 2px; }
+  #wolfson hr {
+    background: #ffffff; }
+
+#dfab img, #wolfson img {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  height: auto; }
 
 @media only screen and (max-width: 309.6725px) {
   body > .content {
