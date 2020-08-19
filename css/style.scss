@@ -30,6 +30,15 @@ $navbar-height: 95px;
   }
 }
 
+@mixin element-colors($color1, $color2) {
+	@include set-button-colors($color1, $color2);
+	hr {
+		background: $color1;
+	}
+	background: $color2;
+	color: $color1;
+}
+
 * {
 	box-sizing: border-box;
   font-family: 'montserrat', sans-serif;
@@ -43,11 +52,11 @@ body {
 	background: #fafafa;
 }
 
-h1, h6 {
+h1, h2, h6 {
 	text-transform: uppercase;
 }
 
-p, a, ul, li {
+p, a, ul, li, i {
 	font-weight: 500;
 	font-size: $paragraph-font-size;
 	line-height: 1.5em;
@@ -63,31 +72,21 @@ a {
 }
 
 body > .content {
-	padding: $site-margin * 0.5;
+	$site-margin-fraction: $site-margin * 0.5;
+	padding: $site-margin-fraction;
+	hr, h1, h2, p, .buttons, .card, img {
+		margin: 0 $site-margin-fraction
+	}
 	h1 {
-		padding: 0 ($site-margin * 0.5);
+		margin-bottom: 20px;
+	}
+	h2, hr {
+		margin-bottom: 10px;
+	}
+	p {
+		margin-bottom: 12px;
 	}
 }
-
-/*
-body > .content {
-	flex-direction: row;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	padding: $site-margin * 0.5;
-	div, img {
-		margin: $site-margin * 0.5;
-	}
-	img {
-		// width: ($logo-width * 0.33) - ($site-margin * 2);
-	}
-	div {
-		// width: ($logo-width * 0.66) - ($site-margin * 2);
-	}
-}
-*/
 
 #logo {
 	width: $logo-width;
@@ -114,14 +113,9 @@ img#profile {
 }
 
 #about {
-	@include set-button-colors(#121212, #ffffff);
-	// background: radial-gradient(#1a1a1a, #121212);
-  // background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/code.jpg) no-repeat center center fixed;
-	color: #121212;
-	background: #ffffff;
+	@include element-colors(#121212, #ffffff);
 	box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
 	margin-bottom: $site-margin;
-	//background-size: cover;
 	.content {
     justify-content: space-between;
     display: flex;
@@ -129,15 +123,6 @@ img#profile {
     align-items: flex-start;
     padding: $site-margin;
 		padding-top: $navbar-height;
-		/*#primary {
-		/*	flex: 1 1 0%;
-			justify-content: center;
-			margin: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		*/
 	}
 	#desc {
 		width: 50%;
@@ -150,7 +135,6 @@ img#profile {
 		flex-direction: column;
 		margin-top: 13px;
 		a {
-			// color: #ffffff;
 			margin-bottom: 5px;
 			&:hover {
 				text-decoration: underline;
@@ -162,20 +146,6 @@ img#profile {
 	}
 }
 
-/*
-.section-title {
-	width: 100%;
-	text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(https://www.omniwcinc.com/images/team1.jpg) 50% 0 repeat-y fixed;
-  background-size: cover !important;
-	h1 {
-		padding: 40px $site-margin;
-		color: #ffffff;
-	}
-}
-*/
-
-
 #navbar {
 	background: transparent;
 	height: $navbar-height;
@@ -183,21 +153,16 @@ img#profile {
 	position: fixed;
 	width: 100%;
 	z-index: 2;
-	// color: #f;
 	.content {
 		padding: 0 $site-margin;
 		display: flex;
     align-items: center;
     justify-content: space-between;
 		height: 100%;
-		// height: $navbar-height;
 	}
 	a {
 		text-transform: uppercase;
 		margin-left: 20px;
-		// text-align: center;
-		// color: #ffffff;
-		// padding: (($navbar-height - ($paragraph-font-size / 0.8)) * 0.5) 12px;
 		&:hover {
 			text-decoration: underline;
 		}
@@ -207,74 +172,64 @@ img#profile {
 hr {
   width: 19px;
   height: 2px;
-	background: #121212;
 	border: none;
 }
 
-
-/*
-.hidden {
-  visibility: hidden;
-}
-
-#nav-wrapper {
-	display: none;
-	position: fixed;
-	background: rgba(0, 0, 0, 0.75);
-	z-index: 3;
-	height: 100vh;
-	width: 100vw;
-	top: 0;
-	left: 0;
-	nav {
-		background-color: #f1f1f1;
-		max-width: 160px;
-		height: 100vh;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+.card {
+	box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
+	display: flex;
+	padding: $site-margin $site-margin * 0.5;
+	margin-bottom: 37px !important;
+	img {
+		position: absolute;
+		/*
+		left: 0;
+    top: 0;
+    min-height: 100%;
+		*/
+    height: 100%;
+		left: 0;
+		right: 0;
+		margin: 0 auto !important;
 	}
-
-	& a {
-		color: black;
-		padding: 12px 16px;
-		text-decoration: none;
-		display: block;
-		&:hover {
-			background-color: #ddd;
-		}
+	.main {
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 66%;
 	}
-}
-
-#nav-menu {
-	$bars-font-size: 13.3333px;
-	position: absolute;
-	& button {
-		background: transparent;
+	.img-wrap {
 		padding: 0;
-		border: none;
-		color: #ffffff;
-		i {
-			width: $bars-font-size * 0.87225218063045157612;
+    position: relative;
+    overflow: hidden;
+		flex: 0 0 33%;
+		/*
+		&:first-child img {
+			left: 0;
+		}
+		&:last-child img {
+			right: 0;
+		}
+		*/
+	}
+	.text {
+
+	}
+	.buttons {
+		display: flex;
+		flex-direction: row;
+		.button {
+			margin-right: 25px;
 		}
 	}
-	&:hover #nav-wrapper {
-		display: block;
-	}
-	&:hover button {
-		background-color: #ffffff;
-		color: #121212;
-	}
 }
-*/
 
+#material-nutrition {
+	@include element-colors(#ffffff, #00695b);
+}
 
-
-
-
-
-
-
-
-
+#verton {
+	@include element-colors(#ffffff, #252525);
+}
 
 
 @media only screen and (max-width: $logo-width) {
