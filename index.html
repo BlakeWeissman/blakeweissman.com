@@ -116,7 +116,37 @@
 					</div>
 				</div>
 			</div>
+
+			<h1>
+				Freelance Work
+			</h1>
+			<div class="card" id="dfab">
+				<div class="main">
+					<div class="text">
+						<h2>
+							HTHS D|FAB SLE Website
+						</h2>
+						<hr>
+						<p>
+							A responsive and easy-to-use calorie and nutrition tracker that syncs user data across browsers. Easily set and follow caloric and macronutrient goals, track daily nutritional intake, and plan out future meals. <i>(TypeScript/JavaScript, Angular, HTML5, SASS/CSS3, Firebase)</i>
+						</p>
+					</div>
+					<div class="buttons">
+						<a class="button">
+							View Site
+						</a>
+					</div>
+				</div>
+				<div class="img-wrap">
+					<img src="img/dfab.png">
+				</div>
+			</div>
 		</div>
+
+		<footer>
+			<p>
+			</p>
+		</footer>
 
 		<script>
 			changeNavbar = function() {
@@ -129,6 +159,7 @@
 			}
 			changeNavbar();
 			window.addEventListener('scroll', changeNavbar);
+			document.getElementsByTagName("footer")[0].getElementsByTagName("p")[0].appendChild(document.createTextNode("\u00A9" + (new Date()).getFullYear() + " Blake Weissman"));
 		</script>
 
 	</body>

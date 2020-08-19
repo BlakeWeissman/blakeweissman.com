@@ -78,6 +78,7 @@ body > .content {
 		margin: 0 $site-margin-fraction
 	}
 	h1 {
+		margin-top: 56px;
 		margin-bottom: 20px;
 	}
 	h2, hr {
@@ -115,7 +116,7 @@ img#profile {
 #about {
 	@include element-colors(#121212, #ffffff);
 	box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
-	margin-bottom: $site-margin;
+	margin-bottom: -20px;
 	.content {
     justify-content: space-between;
     display: flex;
@@ -230,12 +231,22 @@ hr {
 	}
 }
 
+footer {
+	text-align: center;
+  padding: 25px;
+  border-top: 1px solid #e0e0e0;
+}
+
 #material-nutrition {
 	@include element-colors(#ffffff, #00695b);
 }
 
 #verton {
 	@include element-colors(#ffffff, #252525);
+}
+
+#dfab{
+	@include element-colors(#ffffff, #16687D);
 }
 
 
