@@ -27,6 +27,7 @@
 						Developer | Designer | Technologist
 					</h6>
 				</div>
+				<!--
 				<nav>
 					<a href="#about">
 						About
@@ -34,7 +35,11 @@
 					<a href="#projects">
 						Projects
 					</a>
+					<a href="freelance">
+						Freelance Work
+					</a>
 				</nav>
+				-->
 			</div>
 		</div>
 
@@ -174,7 +179,7 @@
 		<script>
 			changeNavbar = function() {
 				var navbar = document.getElementById("navbar");
-				if (window.scrollY > 1) {
+				if (window.scrollY) {
 					navbar.classList.add("scroll");
 				} else {
 					navbar.classList.remove("scroll");
