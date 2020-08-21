@@ -75,7 +75,7 @@
     margin: auto;
     max-width: 890px; }
     .content p {
-      margin-bottom: 12px; }
+      margin-bottom: -2px; }
   body > .content {
     padding: 12.5px;
     margin-bottom: 34px; }
@@ -160,7 +160,8 @@
       justify-content: space-between;
       background: transparent;
       border: none;
-      padding: 0; }
+      padding: 0;
+      margin-left: 70px; }
       #navbar button span {
         position: relative;
         display: block;
@@ -217,11 +218,13 @@
 				margin-right: $site-margin-fraction;
 			}
 			*/ }
-    .card .buttons {
-      display: flex;
-      flex-direction: row; }
-      .card .buttons .button {
-        margin-right: 25px; }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .buttons .button {
+      margin-right: 25px;
+      margin-top: 14px; }
   footer {
     text-align: center;
     padding: 25px;
@@ -327,9 +330,9 @@
       margin-right: 2px; }
   .content {
     margin: auto;
-    max-width: 760px; }
+    max-width: 790px; }
     .content p {
-      margin-bottom: 12px; }
+      margin-bottom: -2px; }
   body > .content {
     padding: 12.5px;
     margin-bottom: 34px; }
@@ -414,7 +417,8 @@
       justify-content: space-between;
       background: transparent;
       border: none;
-      padding: 0; }
+      padding: 0;
+      margin-left: 70px; }
       #navbar button span {
         position: relative;
         display: block;
@@ -471,11 +475,13 @@
 				margin-right: $site-margin-fraction;
 			}
 			*/ }
-    .card .buttons {
-      display: flex;
-      flex-direction: row; }
-      .card .buttons .button {
-        margin-right: 25px; }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .buttons .button {
+      margin-right: 25px;
+      margin-top: 14px; }
   footer {
     text-align: center;
     padding: 25px;
@@ -530,18 +536,21 @@
         background: #222222;
         color: #ffffff; }
   #material-nutrition .main, #verton .main {
-    flex: 0 0 439.1px; }
+    flex: 0 0 458.9px; }
   #material-nutrition .img-wrap, #verton .img-wrap {
-    flex: 0 0 195.9px; }
+    flex: 0 0 206.1px; }
   #dfab .main, #wolfson .main {
-    flex: 0 0 393.5px; }
+    flex: 0 0 411.5px; }
   #dfab .img-wrap, #wolfson .img-wrap {
-    flex: 0 0 241.5px; }
+    flex: 0 0 253.5px; }
   .logo-height {
     height: 60.3020844894px;
     background: green; } }
 
-@media only screen and (max-width: 785px) {
+.profile.show-mobile {
+  margin-top: 0px !important; }
+
+@media only screen and (max-width: 815px) {
   .card {
     flex-direction: column-reverse !important; }
     .card .img-wrap {
@@ -659,7 +668,13 @@
   .show-mobile {
     display: block; }
   .hide-mobile {
-    display: none; } }
+    display: none; }
+  #about .content {
+    padding-top: 95.3px; }
+  #dfab .img-wrap, #wolfson .img-wrap {
+    flex: auto !important; }
+    #dfab .img-wrap img, #wolfson .img-wrap img {
+      position: initial; } }
 
 @media only screen and (max-width: 365px) {
   * {
@@ -691,9 +706,9 @@
       margin-right: 2px; }
   .content {
     margin: auto;
-    max-width: 760px; }
+    max-width: 790px; }
     .content p {
-      margin-bottom: 12px; }
+      margin-bottom: -2px; }
   body > .content {
     padding: 12.5px;
     margin-bottom: 34px; }
@@ -778,7 +793,8 @@
       justify-content: space-between;
       background: transparent;
       border: none;
-      padding: 0; }
+      padding: 0;
+      margin-left: 70px; }
       #navbar button span {
         position: relative;
         display: block;
@@ -835,11 +851,13 @@
 				margin-right: $site-margin-fraction;
 			}
 			*/ }
-    .card .buttons {
-      display: flex;
-      flex-direction: row; }
-      .card .buttons .button {
-        margin-right: 25px; }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .buttons .button {
+      margin-right: 25px;
+      margin-top: 14px; }
   footer {
     text-align: center;
     padding: 25px;
@@ -894,13 +912,13 @@
         background: #222222;
         color: #ffffff; }
   #material-nutrition .main, #verton .main {
-    flex: 0 0 439.1px; }
+    flex: 0 0 458.9px; }
   #material-nutrition .img-wrap, #verton .img-wrap {
-    flex: 0 0 195.9px; }
+    flex: 0 0 206.1px; }
   #dfab .main, #wolfson .main {
-    flex: 0 0 393.5px; }
+    flex: 0 0 411.5px; }
   #dfab .img-wrap, #wolfson .img-wrap {
-    flex: 0 0 241.5px; }
+    flex: 0 0 253.5px; }
   .logo-height {
     height: 41.0054174528px;
     background: green; } }

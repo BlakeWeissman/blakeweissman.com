@@ -135,7 +135,7 @@ $card-layout-factor: 2.5 * $site-margin;
 		margin: auto;
 		max-width: $content-width;
 		p {
-			margin-bottom: 12px;
+			margin-bottom: -2px;
 		}
 	}
 
@@ -238,6 +238,7 @@ $card-layout-factor: 2.5 * $site-margin;
 			background: transparent;
 			border: none;
 			padding: 0;
+			margin-left: 70px;
 			span {
 				position: relative;
 				display: block;
@@ -308,12 +309,15 @@ $card-layout-factor: 2.5 * $site-margin;
 			}
 			*/
 		}
-		.buttons {
-			display: flex;
-			flex-direction: row;
-			.button {
-				margin-right: 25px;
-			}
+	}
+
+	.buttons {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		.button {
+			margin-right: 25px;
+			margin-top: 14px;
 		}
 	}
 
@@ -373,10 +377,14 @@ $checkpoint-one: $current-content-width + $site-margin;
 	*/
 }
 
-$current-content-width: 760px;
+$current-content-width: 790px;
 $checkpoint-two: $current-content-width + $site-margin;
 @media only screen and (max-width: $checkpoint-one) {
 	@include page-style(25px, $current-content-width);
+}
+
+.profile.show-mobile {
+	margin-top: 0px !important;
 }
 
 // Mobile layout
@@ -535,6 +543,18 @@ $checkpoint-two: $current-content-width + $site-margin;
 	}
 	.hide-mobile {
 		display: none;
+	}
+	#about .content {
+		//TODO: Refrence navbar height var;
+		padding-top: 17.5px + 17.5px + 60.3px;
+	}
+	#dfab, #wolfson {
+		.img-wrap {
+			flex: auto !important;
+			img {
+				position: initial;
+			}
+		}
 	}
 }
 
