@@ -16,10 +16,8 @@
 		<meta name="author" content="Blake Weissman">
 	</head>
 	<body>
-
 		<div id="navbar">
 			<div class="content">
-				<input type="checkbox" id="menu-check">
 				<div id="logo">
 					<h1>
 						Blake Weissman
@@ -30,6 +28,12 @@
 				</div>
 				<div id="nav-wrapper">
 					<nav>
+						<div>
+							<button onclick="toggleNav()">
+								<span></span>
+								<span></span>
+							</button>
+						</div>
 						<a href="#about">
 							About
 						</a>
@@ -41,11 +45,11 @@
 						</a>
 					</nav>
 				</div>
-				<label for="menu-check">
+				<button onclick="toggleNav()">
 					<span></span>
 					<span></span>
 					<span></span>
-				</label>
+				</button>
 			</div>
 		</div>
 
@@ -200,12 +204,19 @@
 
 			document.getElementsByTagName("footer")[0].getElementsByTagName("p")[0].appendChild(document.createTextNode("\u00A9" + (new Date()).getFullYear() + " Blake Weissman"));
 
+			const navWrapper = document.getElementById("nav-wrapper");
+			const openNavWrapperClassName = "open";
+			function toggleNav() {
+				navWrapper.classList.toggle(openNavWrapperClassName);
+				document.body.classList.toggle("no-scroll");
+			}
 			const menuCheck = document.getElementById("menu-check");
 			document.addEventListener('click', function(e) {
-				if (menuCheck.checked && e.target.tagName === "A" || e.target.id === "nav-wrapper") {
-					menuCheck.checked = false;
+				if (navWrapper.classList.contains(openNavWrapperClassName) && (e.target.tagName === "A" || e.target.id === "nav-wrapper")) {
+					toggleNav();
 				}
-			})
+			});
+
 		</script>
 
 	</body>

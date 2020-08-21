@@ -227,14 +227,17 @@ $card-layout-factor: 2.5 * $site-margin;
 			text-transform: uppercase;
 		}
 		$nav-menu-icon-width: 25px;
-		label {
+		button {
 			display: none;
-			float: right;
+			// float: right;
 			width: $nav-menu-icon-width;
 			height: $nav-menu-icon-width * 0.72;
 			cursor: pointer;
 			flex-direction: column;
 			justify-content: space-between;
+			background: transparent;
+			border: none;
+			padding: 0;
 			span {
 				position: relative;
 				display: block;
@@ -250,7 +253,7 @@ $card-layout-factor: 2.5 * $site-margin;
 		background: #121212 !important;
 		color: #ffffff;
 		box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
-		span {
+		& > .content > button > span {
 			background-color: #ffffff !important;
 		}
 	}
@@ -345,6 +348,12 @@ $card-layout-factor: 2.5 * $site-margin;
 		$main-width: 0.6;
 		@include card-layout($main-width, $content-width);
 	}
+
+	//TODO: Remove below test class
+	.logo-height {
+		height: $logo-height;
+		background: green;
+	}
 }
 
 $current-content-width: 890px;
@@ -383,7 +392,7 @@ $checkpoint-two: $current-content-width + $site-margin;
 	}
 
 	#navbar {
-		label {
+		button {
 			display: flex !important;
 		}
 	}
@@ -392,19 +401,24 @@ $checkpoint-two: $current-content-width + $site-margin;
 		transition: right .5s ease;
 	}
 
+	/*
 	#menu-check:not(:checked) ~ #nav-wrapper {
 		pointer-events: none;
-		opacity: 0;
 		nav {
 			right: -50vw;
 		}
 	}
+	*/
 
-	#menu-check:checked ~ {
-		#nav-wrapper {
-			pointer-events: auto;
-			opacity: 1;
+	#nav-wrapper.open {
+		pointer-events: auto;
+		background: rgba(0, 0, 0, 0.75);
+		nav {
+			right: 0;
 		}
+	}
+
+/*
 
 		& label span {
 			&:first-child {
@@ -417,36 +431,60 @@ $checkpoint-two: $current-content-width + $site-margin;
 			&:last-child {
 				transform: rotate(-45deg) translate(4.4px, -4.4px);
 			}
-			background: #121212 !important;
 		}
-	}
+
+*/
 
 	#nav-wrapper {
 		position: fixed;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0);
     right: 0;
+		//TODO: change based on navbar height
     top: 0;
     width: 100vw;
     height: 100vh;
-		transition: opacity 0.2s ease 0s;
+		pointer-events: none;
+		z-index: 1;
+		transition: background 0.2s ease 0s;
+		span {
+			// background-color: #121212 !important;
+			margin-top: 3px;
+			&:first-child {
+				transform: rotate(45deg) translate(4.4px, 4.4px);
+			}
+			&:last-child {
+				transform: rotate(-45deg) translate(4.4px, -4.4px);
+			}
+		}
 	}
+
+	$nav-width: 213px;
 
 	nav {
 		background: #fff;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 50vw;
+    width: $nav-width;
     height: 100vh;
-
-		right: 0;
+		//TODO: Box shadow factor
+		right: -$nav-width - 29px;
 		position: absolute;
-		padding-top: 97px;
-		padding-right: 25px;
+		// padding-top: 97px;
+		padding: 0 25px;
+		box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
 
 		a {
 			margin-bottom: 8px;
 			color: #121212;
+			margin-left: 0 !important;
+		}
+
+		div {
+			margin: 17.5px 0;
+			height: 60.3020844894px;
+			display: flex;
+			align-items: center;
 		}
 	}
 
