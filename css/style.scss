@@ -170,13 +170,14 @@ $card-layout-factor: 2.5 * $site-margin;
 	.profile {
 		max-width: 150px;
 		border-radius: 100%;
-		box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0,0,0,.12);
+		box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
 	}
 
 	#about {
 		@include element-colors(#121212, #ffffff);
-		box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
 		margin-bottom: 25px;
+		//TODO add border var
+		border-bottom: 1px solid #e0e0e0;
 		hr {
 			margin-bottom: 11px;
 		}
@@ -268,7 +269,8 @@ $card-layout-factor: 2.5 * $site-margin;
 	.card {
 		box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
 		display: flex;
-		padding: 35px $site-margin * 0.5;
+		border-radius: 12px;
+		padding: 35px ($site-margin * 0.5);
 		&:nth-child(odd) {
 			flex-direction: row-reverse;
 		}
@@ -384,7 +386,8 @@ $checkpoint-two: $current-content-width + $site-margin;
 }
 
 .profile.show-mobile {
-	margin-top: 0px !important;
+	//TODO: Implement based on variables.
+	margin-top: 17.5px !important;
 }
 
 // Mobile layout
