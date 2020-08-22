@@ -1,5 +1,40 @@
 $site-margin: 25px;
 $card-layout-factor: 2.5 * $site-margin;
+$transition-values: 0.1s ease 0s;
+$paragraph-font-size: 14.4px;
+$site-margin-fraction: $site-margin * 0.5;
+$navbar-padding: 17.5px;
+$nav-menu-icon-width: 25px;
+$whitespace-border: 1px solid #e0e0e0;
+$box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
+$mobile-nav-width: 213px;
+
+$projects: "#material-nutrition, #verton";
+$freelance: "#dfab, #wolfson";
+
+@function logo-border-width($logo-font-size) {
+	@return $logo-font-size * 0.1;
+}
+
+@function logo-width($logo-font-size) {
+	@return (($logo-font-size * 11.079) * 1.1) + (logo-border-width($logo-font-size) * 2);
+}
+
+@function logo-top-bottom-padding($logo-font-size) {
+	@return $logo-font-size * 0.1;
+}
+
+@function logo-subtext-top-margin($logo-font-size) {
+	@return 0.01614608982069767254 * logo-width($logo-font-size);
+}
+
+@function logo-subtext-font-size($logo-font-size) {
+	@return 0.0395 * logo-width($logo-font-size);
+}
+
+@function logo-height($logo-font-size) {
+	@return ($logo-font-size / 0.833) + (logo-top-bottom-padding($logo-font-size) * 2) + (logo-border-width($logo-font-size) * 2) + logo-subtext-top-margin($logo-font-size) + (logo-subtext-font-size($logo-font-size) / 0.8);
+}
 
 @mixin card-layout($main-width, $content-width) {
 	.main {
@@ -27,129 +62,19 @@ $card-layout-factor: 2.5 * $site-margin;
 	}
 }
 
-.show-mobile {
-	display: none;
-}
-
-
-/*
-#menu-button {
-	display: none;
-	label {
-		float: right;
-		height: 38px;
-		width: 38px;
-		cursor: pointer;
-	}
-	span {
-	  display: block;
-    height: 2px;
-    width: 100%;
-    margin-top: 4px;
-    background-color: #ffffff;
-	}
-}
-*/
-
-/*
-#menu-button {
-	display: inline-block;
-	position: absolute;
-	right: 0px;
-	top: 0px;
-	input {
-		display: inline-block;
-		width: 50px;
-		height: 50px;
-		padding: 13px;
-	}
-
-	span {
-		display: block;
-		width: 25px;
-		height: 10px;
-		border-top: 2px solid #eee;
-	}
-}
-*/
-
-#menu-check {
-	display: none;
-}
-
 @mixin page-style($logo-font-size, $content-width) {
-	$transition-values: 0.1s ease 0s;
-	$logo-border-width: $logo-font-size * 0.1;
-	$logo-width: (($logo-font-size * 11.079) * 1.1) + ($logo-border-width * 2);
-	$paragraph-font-size: 14.4px;
-	$navbar-padding: 17.5px;
-	$site-margin-fraction: $site-margin * 0.5;
-	$logo-top-bottom-padding: $logo-font-size * 0.1;
-	$logo-subtext-top-margin: 0.01614608982069767254 * $logo-width;
-	$logo-subtext-font-size: 0.0395 * $logo-width;
-	$logo-height: ($logo-font-size / 0.833) + ($logo-top-bottom-padding * 2) + ($logo-border-width * 2) + $logo-subtext-top-margin + ($logo-subtext-font-size / 0.8);
-	$top-page-padding: $navbar-padding + $logo-height;
-
-	* {
-		box-sizing: border-box;
-		font-family: 'montserrat', sans-serif;
-		margin: 0;
-		text-decoration: none;
-		font-weight: 600;
-		letter-spacing: 0.1em;
-	}
-
-	body {
-		background: #fafafa;
-	}
-
-	h1, h2, h6 {
-		text-transform: uppercase;
-	}
-
-	p, a, ul, li, i {
-		font-weight: 500;
-		font-size: $paragraph-font-size;
-		line-height: 1.5em;
-	}
-
-	a {
-		color: inherit;
-		&:not(.button):hover {
-			text-decoration: underline;
-		}
-	}
-
-	.button {
-		white-space: nowrap;
-		border-radius: 4px;
-		padding: 7px 13px;
-		transition: background $transition-values, color $transition-values;
-		display: inline-block;
-		i {
-			margin-right: 2px;
-		}
-	}
+	$logo-border-width: logo-border-width($logo-font-size);
+	$logo-width: logo-width($logo-font-size);
+	$logo-top-bottom-padding: logo-top-bottom-padding($logo-font-size);
+	$logo-subtext-top-margin: logo-subtext-top-margin($logo-font-size);
+	$logo-subtext-font-size: logo-subtext-font-size($logo-font-size);
+	$logo-height: logo-height($logo-font-size);
 
 	.content {
 		margin: auto;
 		max-width: $content-width;
 		p {
 			margin-bottom: -2px;
-		}
-	}
-
-	body > .content {
-		padding: $site-margin-fraction;
-		margin-bottom: 34px;
-		.main, .card, .img-wrap, h1 {
-			margin: 0 $site-margin-fraction;
-		}
-		h1 {
-			margin-bottom: 20px;
-		}
-		h2, hr {
-			margin-bottom: 10px;
 		}
 	}
 
@@ -167,17 +92,10 @@ $card-layout-factor: 2.5 * $site-margin;
 		}
 	}
 
-	.profile {
-		max-width: 150px;
-		border-radius: 100%;
-		box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
-	}
-
 	#about {
 		@include element-colors(#121212, #ffffff);
 		margin-bottom: 25px;
-		//TODO add border var
-		border-bottom: 1px solid #e0e0e0;
+		border-bottom: $whitespace-border;
 		hr {
 			margin-bottom: 11px;
 		}
@@ -193,7 +111,7 @@ $card-layout-factor: 2.5 * $site-margin;
 			flex-direction: row;
 			align-items: flex-start;
 			padding: $site-margin;
-			padding-top: $top-page-padding;
+			padding-top: $navbar-padding + $logo-height;
 		}
 		#bio {
 			width: 50%;
@@ -209,188 +127,224 @@ $card-layout-factor: 2.5 * $site-margin;
 		}
 	}
 
-	#navbar {
-		background: transparent;
-		padding: $navbar-padding 0;
-		transition: $transition-values;
-		position: fixed;
-		width: 100%;
-		z-index: 2;
-		.content {
-			padding: 0 $site-margin;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			height: 100%;
-		}
-		a {
-			margin-left: 20px;
-			text-transform: uppercase;
-		}
-		$nav-menu-icon-width: 25px;
-		button {
-			display: none;
-			// float: right;
-			width: $nav-menu-icon-width;
-			height: $nav-menu-icon-width * 0.72;
-			cursor: pointer;
-			flex-direction: column;
-			justify-content: space-between;
-			background: transparent;
-			border: none;
-			padding: 0;
-			margin-left: 70px;
-			span {
-				position: relative;
-				display: block;
-				height: 2px;
-				width: 100%;
-				background-color: #121212;
-				transition: all .25s;
-			}
-		}
-	}
-
-	.scroll {
-		background: #121212 !important;
-		color: #ffffff;
-		box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
-		& > .content > button > span {
-			background-color: #ffffff !important;
-		}
-	}
-
-	hr {
-		width: 19px;
-		height: 2px;
-		border: none;
-	}
-
-	.card {
-		box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
-		display: flex;
-		border-radius: 12px;
-		padding: 35px ($site-margin * 0.5);
-		&:nth-child(odd) {
-			flex-direction: row-reverse;
-		}
-		&:not(:last-child) {
-			margin-bottom: 37px !important;
-		}
-		img {
-			position: absolute;
-			left: 0;
-			right: 0;
-			margin: auto !important;
-			max-width: 100%;
-			max-height: 100%;
-			top: 0;
-			bottom: 0;
-		}
-		.main {
-			display: flex;
-			flex-direction: column;
-		}
-		.img-wrap {
-			padding: 0;
-			position: relative;
-			overflow: hidden;
-			/*
-			&:first-child img {
-				left: 0;
-			}
-			&:last-child img {
-				right: 0;
-			}
-
-			&:first-child {
-				margin-left: $site-margin-fraction;
-			}
-			&:last-child {
-				margin-right: $site-margin-fraction;
-			}
-			*/
-		}
-	}
-
-	.buttons {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		.button {
-			margin-right: 25px;
-			margin-top: 14px;
-		}
-	}
-
-	footer {
-		text-align: center;
-		padding: 25px;
-		border-top: 1px solid #e0e0e0;
-		background: #ffffff;
-	}
-
-	#material-nutrition {
-		@include element-colors(#ffffff, #00695b);
-	}
-
-	#verton {
-		@include element-colors(#ffffff, #252525);
-	}
-
-	#dfab{
-		@include element-colors(#ffffff, #16687D);
-	}
-
-	#wolfson {
-		@include element-colors(#ffffff, #222222);
-	}
-
-	#material-nutrition, #verton {
+	#{$projects} {
 		@include card-layout(0.66, $content-width);
 	}
 
-	#dfab, #wolfson {
-		$main-width: 0.6;
-		@include card-layout($main-width, $content-width);
-	}
-
-	//TODO: Remove below test class
-	.logo-height {
-		height: $logo-height;
-		background: green;
+	#{$freelance} {
+		@include card-layout(0.6, $content-width);
 	}
 }
 
-$current-content-width: 890px;
-$checkpoint-one: $current-content-width + $site-margin;
-@media only screen and (min-width: $checkpoint-one) {
-	@include page-style(25px, $current-content-width);
+* {
+	box-sizing: border-box;
+	font-family: 'montserrat', sans-serif;
+	margin: 0;
+	text-decoration: none;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+}
 
-	/*
-	#dfab, #wolfson {
-		img {
+.show-mobile {
+	display: none;
+}
+
+body {
+	background: #fafafa;
+}
+
+h1, h2, h6 {
+	text-transform: uppercase;
+}
+
+p, a, ul, li, i {
+	font-weight: 500;
+	font-size: $paragraph-font-size;
+	line-height: 1.5em;
+}
+
+a {
+	color: inherit;
+	&:not(.button):hover {
+		text-decoration: underline;
+	}
+}
+
+.button {
+	white-space: nowrap;
+	border-radius: 4px;
+	padding: 7px 13px;
+	transition: background $transition-values, color $transition-values;
+	display: inline-block;
+	i {
+		margin-right: 2px;
+	}
+}
+
+body > .content {
+	padding: $site-margin-fraction;
+	margin-bottom: 34px;
+	.main, .card, .img-wrap, h1 {
+		margin: 0 $site-margin-fraction;
+	}
+	h1 {
+		margin-bottom: 20px;
+	}
+	h2, hr {
+		margin-bottom: 10px;
+	}
+}
+
+.profile {
+	max-width: 150px;
+	border-radius: 100%;
+	box-shadow: $box-shadow;
+}
+
+#navbar {
+	background: transparent;
+	padding: $navbar-padding 0;
+	transition: $transition-values;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	.content {
+		padding: 0 $site-margin;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+	}
+	a {
+		margin-left: 20px;
+		text-transform: uppercase;
+	}
+	button {
+		display: none;
+		height: $nav-menu-icon-width * 0.72;
+		cursor: pointer;
+		flex-direction: column;
+		justify-content: space-between;
+		background: transparent;
+		border: none;
+		padding: 0;
+		margin-left: 70px;
+		width: $nav-menu-icon-width;
+		span {
+			position: relative;
+			display: block;
+			height: 2px;
 			width: 100%;
-			top: 0;
-			bottom: 0;
-			height: auto;
+			background-color: #121212;
+			transition: all .25s;
 		}
 	}
-	*/
+}
+
+.scroll {
+	background: #121212 !important;
+	color: #ffffff;
+	box-shadow: $box-shadow;
+	& > .content > button > span {
+		background-color: #ffffff !important;
+	}
+}
+
+hr {
+	width: 19px;
+	height: 2px;
+	border: none;
+}
+
+.card {
+	box-shadow: $box-shadow;
+	display: flex;
+	border-radius: 12px;
+	padding: 35px ($site-margin * 0.5);
+	&:nth-child(odd) {
+		flex-direction: row-reverse;
+	}
+	&:not(:last-child) {
+		margin-bottom: 37px !important;
+	}
+	img {
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto !important;
+		max-width: 100%;
+		max-height: 100%;
+		top: 0;
+		bottom: 0;
+	}
+	.main {
+		display: flex;
+		flex-direction: column;
+	}
+	.img-wrap {
+		padding: 0;
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	.button {
+		margin-right: 25px;
+		margin-top: 14px;
+	}
+}
+
+footer {
+	text-align: center;
+	padding: 25px;
+	border-top: $whitespace-border;
+	background: #ffffff;
+}
+
+#material-nutrition {
+	@include element-colors(#ffffff, #00695b);
+}
+
+#verton {
+	@include element-colors(#ffffff, #252525);
+}
+
+#dfab{
+	@include element-colors(#ffffff, #16687D);
+}
+
+#wolfson {
+	@include element-colors(#ffffff, #222222);
+}
+
+$current-content-width: 890px;
+$current-logo-size: 25px;
+@function get-checkpoint() {
+	@return $current-content-width + $site-margin;
+}
+
+$checkpoint-one: get-checkpoint();
+@media only screen and (min-width: $checkpoint-one) {
+	@include page-style($current-logo-size, $current-content-width);
 }
 
 $current-content-width: 790px;
 $checkpoint-two: $current-content-width + $site-margin;
 @media only screen and (max-width: $checkpoint-one) {
-	@include page-style(25px, $current-content-width);
+	@include page-style($current-logo-size, $current-content-width);
 }
 
+/*
 .profile.show-mobile {
 	//TODO: Implement based on variables.
-	margin-top: 17.5px !important;
+	margin-top:  !important;
 }
+*/
 
-// Mobile layout
 @media only screen and (max-width: $checkpoint-two) {
 	.card {
 		flex-direction: column-reverse !important;
@@ -408,19 +362,6 @@ $checkpoint-two: $current-content-width + $site-margin;
 		}
 	}
 
-	nav {
-		transition: right .5s ease;
-	}
-
-	/*
-	#menu-check:not(:checked) ~ #nav-wrapper {
-		pointer-events: none;
-		nav {
-			right: -50vw;
-		}
-	}
-	*/
-
 	#nav-wrapper.open {
 		pointer-events: auto;
 		background: rgba(0, 0, 0, 0.75);
@@ -429,28 +370,10 @@ $checkpoint-two: $current-content-width + $site-margin;
 		}
 	}
 
-/*
-
-		& label span {
-			&:first-child {
-				transform: rotate(45deg) translate(4.4px, 4.4px);
-			}
-			&:nth-child(2) {
-				width: 0%;
-				opacity: 0;
-			}
-			&:last-child {
-				transform: rotate(-45deg) translate(4.4px, -4.4px);
-			}
-		}
-
-*/
-
 	#nav-wrapper {
 		position: fixed;
     background: rgba(0, 0, 0, 0);
     right: 0;
-		//TODO: change based on navbar height
     top: 0;
     width: 100vw;
     height: 100vh;
@@ -458,7 +381,6 @@ $checkpoint-two: $current-content-width + $site-margin;
 		z-index: 1;
 		transition: background 0.2s ease 0s;
 		span {
-			// background-color: #121212 !important;
 			margin-top: 3px;
 			&:first-child {
 				transform: rotate(45deg) translate(4.4px, 4.4px);
@@ -469,69 +391,32 @@ $checkpoint-two: $current-content-width + $site-margin;
 		}
 	}
 
-	$nav-width: 213px;
-
 	nav {
+		transition: right .5s ease;
 		background: #fff;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: $nav-width;
+    width: $mobile-nav-width;
     height: 100vh;
 		//TODO: Box shadow factor
-		right: -$nav-width - 29px;
+		right: -$mobile-nav-width - 29px;
 		position: absolute;
-		// padding-top: 97px;
 		padding: 0 25px;
-		box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
-
+		box-shadow: $box-shadow;
 		a {
 			margin-bottom: 8px;
 			color: #121212;
 			margin-left: 0 !important;
 		}
-
 		div {
-			margin: 17.5px 0;
-			height: 60.3020844894px;
+			//TODO: logo height var;
+			margin: $navbar-padding 0;
+			height: logo-height($current-logo-size);
 			display: flex;
 			align-items: center;
 		}
 	}
-
-/*
-	#menu-button {
-		display: block !important;
-	}
-	// nav > a:not(#menu-button) {
-		// display: none;
-	// }
-*/
-/*
-
-	nav {
-		position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-	}
-	#menu-check:not(:checked) ~ nav {
-    height: 0px;
-  }
-  #menu-check:checked ~ nav {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
-
-	#menu-check:checked {
-		background: red;
-	}
-	*/
 }
 
 @media only screen and (max-width: 630px) {
@@ -548,10 +433,10 @@ $checkpoint-two: $current-content-width + $site-margin;
 		display: none;
 	}
 	#about .content {
-		//TODO: Refrence navbar height var;
-		padding-top: 17.5px + 17.5px + 60.3px;
+		//TODO: Logo-height height var;
+		padding-top: ($navbar-padding * 2) + logo-height($current-logo-size);
 	}
-	#dfab, #wolfson {
+	#{$freelance} {
 		.img-wrap {
 			flex: auto !important;
 			img {
