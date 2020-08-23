@@ -1,6 +1,6 @@
 $site-margin: 25px;
 $card-layout-factor: 2.5 * $site-margin;
-$transition-values: 0.1s ease 0s;
+$main-transition-values: 0.2s ease 0s;
 $paragraph-font-size: 14.4px;
 $site-margin-fraction: $site-margin * 0.5;
 $navbar-padding: 17.5px;
@@ -15,9 +15,23 @@ $first-logo-font-size: 25px;
 $first-content-width: nth($content-widths, 1);
 $text-color: #121212;
 $background-color: #ffffff;
+$intro-animation-height: 10px;
 
 $projects: "#material-nutrition, #verton";
 $freelance: "#dfab, #wolfson";
+
+@keyframes intro {
+	from {
+		opacity: 0;
+		margin-top: -10px;
+		margin-bottom: 10px;
+	}
+	to {
+		opacity: 1;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+}
 
 @function logo-border-width($logo-font-size) {
 	@return $logo-font-size * 0.1;
@@ -41,6 +55,15 @@ $freelance: "#dfab, #wolfson";
 
 @function logo-height($logo-font-size) {
 	@return ($logo-font-size / 0.833) + (logo-top-bottom-padding($logo-font-size) * 2) + (logo-border-width($logo-font-size) * 2) + logo-subtext-top-margin($logo-font-size) + (logo-subtext-font-size($logo-font-size) / 0.8);
+}
+
+@mixin intro-animation($index) {
+	$animation-length: 0.5s;
+	$delay: 0.1s;
+	@if $index != 0 {
+		$delay: -0.1s;
+	}
+	animation: intro $animation-length ease ($delay + ($index * $animation-length)) 1 backwards;
 }
 
 @mixin card-layout($main-width, $content-width) {
@@ -183,7 +206,7 @@ h1, h2, h6 {
 	text-transform: uppercase;
 }
 
-p, a, ul, li, i {
+p, a, ul, li {
 	font-weight: 500;
 	font-size: $paragraph-font-size;
 	line-height: 1.5em;
@@ -197,14 +220,28 @@ a {
 }
 
 .button {
+	$transition: 0.1s ease 0s;
 	white-space: nowrap;
 	border-radius: 4px;
 	padding: 7px 13px;
-	transition: background $transition-values, color $transition-values;
+	transition: background $transition, color $transition;
 	display: inline-block;
 	i {
 		margin-right: 2px;
 	}
+}
+
+.animate {
+	#bio, .profile-wrap, #navbar .content {
+		@include intro-animation(0);
+	}
+	& > .content {
+		@include intro-animation(1);
+	}
+}
+
+.no-scroll {
+	overflow: hidden;
 }
 
 body > .content {
@@ -231,7 +268,7 @@ body > .content {
 #navbar {
 	background: transparent;
 	padding: $navbar-padding 0;
-	transition: $transition-values;
+	transition: all $main-transition-values;
 	position: fixed;
 	width: 100%;
 	z-index: 2;
@@ -249,7 +286,8 @@ body > .content {
 	}
 	button {
 		display: none;
-		height: $nav-menu-icon-width * 0.72;
+		outline: none;
+		height: $nav-menu-icon-width * 0.64;
 		cursor: pointer;
 		flex-direction: column;
 		justify-content: space-between;
@@ -264,7 +302,7 @@ body > .content {
 			height: 2px;
 			width: 100%;
 			background-color: $text-color;
-			transition: all .25s;
+			transition: all $main-transition-values;
 		}
 	}
 }
@@ -420,7 +458,7 @@ footer {
     height: 100vh;
 		pointer-events: none;
 		z-index: 1;
-		transition: background 0.2s ease 0s;
+		transition: background $main-transition-values;
 		span {
 			margin-top: 3px;
 			&:first-child {
@@ -433,7 +471,7 @@ footer {
 	}
 
 	nav {
-		transition: right .5s ease;
+		transition: right 0.5s ease 0s;
 		background: $background-color;
     display: flex;
     flex-direction: column;

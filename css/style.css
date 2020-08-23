@@ -1,3 +1,13 @@
+@keyframes intro {
+  from {
+    opacity: 0;
+    margin-top: -10px;
+    margin-bottom: 10px; }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+    margin-bottom: 0px; } }
+
 * {
   box-sizing: border-box;
   font-family: 'montserrat', sans-serif;
@@ -15,7 +25,7 @@ body {
 h1, h2, h6 {
   text-transform: uppercase; }
 
-p, a, ul, li, i {
+p, a, ul, li {
   font-weight: 500;
   font-size: 14.4px;
   line-height: 1.5em; }
@@ -33,6 +43,15 @@ a {
   display: inline-block; }
   .button i {
     margin-right: 2px; }
+
+.animate #bio, .animate .profile-wrap, .animate #navbar .content {
+  animation: intro 0.5s ease 0.1s 1 backwards; }
+
+.animate > .content {
+  animation: intro 0.5s ease 0.4s 1 backwards; }
+
+.no-scroll {
+  overflow: hidden; }
 
 body > .content {
   padding: 12.5px;
@@ -53,7 +72,7 @@ body > .content {
 #navbar {
   background: transparent;
   padding: 17.5px 0;
-  transition: 0.1s ease 0s;
+  transition: all 0.2s ease 0s;
   position: fixed;
   width: 100%;
   z-index: 2;
@@ -69,7 +88,8 @@ body > .content {
     text-transform: uppercase; }
   #navbar button {
     display: none;
-    height: 18px;
+    outline: none;
+    height: 16px;
     cursor: pointer;
     flex-direction: column;
     justify-content: space-between;
@@ -84,7 +104,7 @@ body > .content {
       height: 2px;
       width: 100%;
       background-color: #121212;
-      transition: all .25s; }
+      transition: all 0.2s ease 0s; }
 
 .scroll {
   background: #121212 !important;
@@ -667,7 +687,7 @@ footer {
       #nav-wrapper span:last-child {
         transform: rotate(-45deg) translate(4.4px, -4.4px); }
   nav {
-    transition: right .5s ease;
+    transition: right 0.5s ease 0s;
     background: #ffffff;
     display: flex;
     flex-direction: column;

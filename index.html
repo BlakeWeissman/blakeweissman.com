@@ -84,7 +84,9 @@
 						</a>
 					</div>
 				</div>
-				<img class="profile hide-mobile" src="img/profile.png">
+				<div class="profile-wrap">
+					<img class="profile hide-mobile" src="img/profile.png">
+				</div>
 			</div>
 		</div>
 
@@ -195,7 +197,13 @@
 		</footer>
 
 		<script>
-			changeNavbar = function() {
+			var bodyClassList = document.body.classList;
+
+			if (!window.scrollY) {
+				bodyClassList.add("animate");
+			}
+
+			onScroll = function() {
 				var navbar = document.getElementById("navbar");
 				if (window.scrollY) {
 					navbar.classList.add("scroll");
@@ -203,18 +211,18 @@
 					navbar.classList.remove("scroll");
 				}
 			}
-			changeNavbar();
-			window.addEventListener('scroll', changeNavbar);
+			onScroll();
+			window.addEventListener('scroll', onScroll);
 
 			document.getElementsByTagName("footer")[0].getElementsByTagName("p")[0].appendChild(document.createTextNode("\u00A9" + (new Date()).getFullYear() + " Blake Weissman"));
 
-			const navWrapper = document.getElementById("nav-wrapper");
-			const openNavWrapperClassName = "open";
+			var navWrapper = document.getElementById("nav-wrapper");
+			var openNavWrapperClassName = "open";
 			function toggleNav() {
 				navWrapper.classList.toggle(openNavWrapperClassName);
-				document.body.classList.toggle("no-scroll");
+				bodyClassList.toggle("no-scroll");
 			}
-			const menuCheck = document.getElementById("menu-check");
+			var menuCheck = document.getElementById("menu-check");
 			document.addEventListener('click', function(e) {
 				if (navWrapper.classList.contains(openNavWrapperClassName) && (e.target.tagName === "A" || e.target.id === "nav-wrapper")) {
 					toggleNav();
