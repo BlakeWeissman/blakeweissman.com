@@ -5,9 +5,14 @@ $paragraph-font-size: 14.4px;
 $site-margin-fraction: $site-margin * 0.5;
 $navbar-padding: 17.5px;
 $nav-menu-icon-width: 25px;
+$nav-menu-icon-margin: 70px;
 $whitespace-border: 1px solid #e0e0e0;
 $box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26);
 $mobile-nav-width: 213px;
+$content-widths: 890px, 790px;
+$last-content-width: nth($content-widths, length($content-widths));
+$first-logo-font-size: 25px;
+$first-content-width: nth($content-widths, 1);
 
 $projects: "#material-nutrition, #verton";
 $freelance: "#dfab, #wolfson";
@@ -62,21 +67,13 @@ $freelance: "#dfab, #wolfson";
 	}
 }
 
-@mixin page-style($logo-font-size, $content-width) {
+@mixin set-logo-font-size($logo-font-size) {
 	$logo-border-width: logo-border-width($logo-font-size);
 	$logo-width: logo-width($logo-font-size);
 	$logo-top-bottom-padding: logo-top-bottom-padding($logo-font-size);
 	$logo-subtext-top-margin: logo-subtext-top-margin($logo-font-size);
 	$logo-subtext-font-size: logo-subtext-font-size($logo-font-size);
 	$logo-height: logo-height($logo-font-size);
-
-	.content {
-		margin: auto;
-		max-width: $content-width;
-		p {
-			margin-bottom: -2px;
-		}
-	}
 
 	#logo {
 		width: $logo-width;
@@ -92,6 +89,26 @@ $freelance: "#dfab, #wolfson";
 		}
 	}
 
+	#about .content {
+		padding-top: $navbar-padding + $logo-height !important;
+	}
+
+	@media only screen and (max-width: content-width-checkpoint($last-content-width)) {
+		nav div {
+			height: $logo-height;
+		}
+	}
+}
+
+@mixin set-content-width($content-width) {
+	.content {
+		margin: auto;
+		max-width: $content-width;
+		p {
+			margin-bottom: -2px;
+		}
+	}
+
 	#about {
 		@include element-colors(#121212, #ffffff);
 		margin-bottom: 25px;
@@ -99,7 +116,7 @@ $freelance: "#dfab, #wolfson";
 		hr {
 			margin-bottom: 11px;
 		}
-		hr, .profile {
+		hr, .profile:not(.show-mobile) {
 			margin-top: 13px;
 		}
 		h2 {
@@ -111,7 +128,6 @@ $freelance: "#dfab, #wolfson";
 			flex-direction: row;
 			align-items: flex-start;
 			padding: $site-margin;
-			padding-top: $navbar-padding + $logo-height;
 		}
 		#bio {
 			width: 50%;
@@ -228,7 +244,7 @@ body > .content {
 		background: transparent;
 		border: none;
 		padding: 0;
-		margin-left: 70px;
+		margin-left: $nav-menu-icon-margin;
 		width: $nav-menu-icon-width;
 		span {
 			position: relative;
@@ -321,37 +337,48 @@ footer {
 	@include element-colors(#ffffff, #222222);
 }
 
-$current-content-width: 890px;
-$current-logo-size: 25px;
-@function get-checkpoint() {
-	@return $current-content-width + $site-margin;
+@function content-width-checkpoint($content-width) {
+	@return $content-width + $site-margin;
 }
 
-$checkpoint-one: get-checkpoint();
-@media only screen and (min-width: $checkpoint-one) {
-	@include page-style($current-logo-size, $current-content-width);
+@function logo-font-size-checkpoint($logo-font-size) {
+	@return ($site-margin * 2) + logo-width($logo-font-size) + $nav-menu-icon-width + $nav-menu-icon-margin;
 }
 
-$current-content-width: 790px;
-$checkpoint-two: $current-content-width + $site-margin;
-@media only screen and (max-width: $checkpoint-one) {
-	@include page-style($current-logo-size, $current-content-width);
+@for $i from 1 through length($content-widths) {
+	@if $i != length($content-widths) {
+		$content-width: nth($content-widths, $i);
+		@media only screen and (max-width: content-width-checkpoint($content-width)) {
+			@include set-content-width(nth($content-widths, $i + 1));
+		}
+	}
 }
 
-/*
-.profile.show-mobile {
-	//TODO: Implement based on variables.
-	margin-top:  !important;
+@for $i from -1px through $first-logo-font-size {
+	@if $i % 2px != 0px {
+		$current-logo-font-size: $first-logo-font-size - $i;
+		@media only screen and (max-width: logo-font-size-checkpoint($current-logo-font-size)) {
+			@include set-logo-font-size($current-logo-font-size - 2px);
+		}
+	}
 }
-*/
 
-@media only screen and (max-width: $checkpoint-two) {
+@media only screen and (min-width: logo-font-size-checkpoint($first-logo-font-size)) {
+	@include set-logo-font-size($first-logo-font-size);
+}
+
+@media only screen and (min-width: content-width-checkpoint($first-content-width)) {
+	@include set-content-width($first-content-width);
+}
+
+@media only screen and (max-width: content-width-checkpoint($last-content-width)) {
 	.card {
 		flex-direction: column-reverse !important;
 		.img-wrap {
 			margin-bottom: $site-margin !important;
 		}
 	}
+
 	.main {
 		flex: auto !important;
 	}
@@ -410,9 +437,7 @@ $checkpoint-two: $current-content-width + $site-margin;
 			margin-left: 0 !important;
 		}
 		div {
-			//TODO: logo height var;
 			margin: $navbar-padding 0;
-			height: logo-height($current-logo-size);
 			display: flex;
 			align-items: center;
 		}
@@ -423,19 +448,20 @@ $checkpoint-two: $current-content-width + $site-margin;
 	#bio {
 		width: 100% !important;
 	}
+
 	.profile {
 		max-width: 125px !important;
+		margin-top: $navbar-padding;
 	}
+
 	.show-mobile {
 		display: block;
 	}
+
 	.hide-mobile {
 		display: none;
 	}
-	#about .content {
-		//TODO: Logo-height height var;
-		padding-top: ($navbar-padding * 2) + logo-height($current-logo-size);
-	}
+
 	#{$freelance} {
 		.img-wrap {
 			flex: auto !important;
@@ -444,8 +470,4 @@ $checkpoint-two: $current-content-width + $site-margin;
 			}
 		}
 	}
-}
-
-@media only screen and (max-width: 365px) {
-	@include page-style(17px, $current-content-width);
 }

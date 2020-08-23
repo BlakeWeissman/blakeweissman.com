@@ -188,83 +188,12 @@ footer {
       background: #222222;
       color: #ffffff; }
 
-@media only screen and (min-width: 915px) {
-  .content {
-    margin: auto;
-    max-width: 890px; }
-    .content p {
-      margin-bottom: -2px; }
-  #logo {
-    width: 309.6725px;
-    text-align: center; }
-    #logo h1 {
-      border: 2.5px solid;
-      font-size: 25px;
-      padding: 2.5px 0; }
-    #logo h6 {
-      margin-top: 5px;
-      font-size: 12.23206375px; }
-  #about {
-    background: #ffffff;
-    color: #121212;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #e0e0e0; }
-    #about hr {
-      background: #121212; }
-    #about .button {
-      border: 1px solid #121212;
-      background: #121212;
-      color: #ffffff; }
-      #about .button:hover {
-        background: #ffffff;
-        color: #121212; }
-    #about hr {
-      margin-bottom: 11px; }
-    #about hr, #about .profile {
-      margin-top: 13px; }
-    #about h2 {
-      margin-top: 13px; }
-    #about .content {
-      justify-content: space-between;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      padding: 25px;
-      padding-top: 77.8020844894px; }
-    #about #bio {
-      width: 50%; }
-    #about #social {
-      display: flex;
-      flex-direction: column;
-      margin-top: 17px; }
-      #about #social a {
-        margin-bottom: 5px;
-        white-space: nowrap; }
-  #material-nutrition .main, #verton .main {
-    flex: 0 0 524.9px; }
-  #material-nutrition .img-wrap, #verton .img-wrap {
-    flex: 0 0 240.1px; }
-  #dfab .main, #wolfson .main {
-    flex: 0 0 471.5px; }
-  #dfab .img-wrap, #wolfson .img-wrap {
-    flex: 0 0 293.5px; } }
-
 @media only screen and (max-width: 915px) {
   .content {
     margin: auto;
     max-width: 790px; }
     .content p {
       margin-bottom: -2px; }
-  #logo {
-    width: 309.6725px;
-    text-align: center; }
-    #logo h1 {
-      border: 2.5px solid;
-      font-size: 25px;
-      padding: 2.5px 0; }
-    #logo h6 {
-      margin-top: 5px;
-      font-size: 12.23206375px; }
   #about {
     background: #ffffff;
     color: #121212;
@@ -281,7 +210,7 @@ footer {
         color: #121212; }
     #about hr {
       margin-bottom: 11px; }
-    #about hr, #about .profile {
+    #about hr, #about .profile:not(.show-mobile) {
       margin-top: 13px; }
     #about h2 {
       margin-top: 13px; }
@@ -290,8 +219,7 @@ footer {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      padding: 25px;
-      padding-top: 77.8020844894px; }
+      padding: 25px; }
     #about #bio {
       width: 50%; }
     #about #social {
@@ -310,12 +238,326 @@ footer {
   #dfab .img-wrap, #wolfson .img-wrap {
     flex: 0 0 253.5px; } }
 
-/*
-.profile.show-mobile {
-	//TODO: Implement based on variables.
-	margin-top:  !important;
-}
-*/
+@media only screen and (max-width: 467.0594px) {
+  #logo {
+    width: 297.2856px;
+    text-align: center; }
+    #logo h1 {
+      border: 2.4px solid;
+      font-size: 24px;
+      padding: 2.4px 0; }
+    #logo h6 {
+      margin-top: 4.8px;
+      font-size: 11.7427812px; }
+  #about .content {
+    padding-top: 75.3900011098px !important; } }
+
+@media only screen and (max-width: 467.0594px) and (max-width: 815px) {
+  nav div {
+    height: 57.8900011098px; } }
+
+@media only screen and (max-width: 442.2856px) {
+  #logo {
+    width: 272.5118px;
+    text-align: center; }
+    #logo h1 {
+      border: 2.2px solid;
+      font-size: 22px;
+      padding: 2.2px 0; }
+    #logo h6 {
+      margin-top: 4.4px;
+      font-size: 10.7642161px; }
+  #about .content {
+    padding-top: 70.5658343507px !important; } }
+
+@media only screen and (max-width: 442.2856px) and (max-width: 815px) {
+  nav div {
+    height: 53.0658343507px; } }
+
+@media only screen and (max-width: 417.5118px) {
+  #logo {
+    width: 247.738px;
+    text-align: center; }
+    #logo h1 {
+      border: 2px solid;
+      font-size: 20px;
+      padding: 2px 0; }
+    #logo h6 {
+      margin-top: 4px;
+      font-size: 9.785651px; }
+  #about .content {
+    padding-top: 65.7416675915px !important; } }
+
+@media only screen and (max-width: 417.5118px) and (max-width: 815px) {
+  nav div {
+    height: 48.2416675915px; } }
+
+@media only screen and (max-width: 392.738px) {
+  #logo {
+    width: 222.9642px;
+    text-align: center; }
+    #logo h1 {
+      border: 1.8px solid;
+      font-size: 18px;
+      padding: 1.8px 0; }
+    #logo h6 {
+      margin-top: 3.6px;
+      font-size: 8.8070859px; }
+  #about .content {
+    padding-top: 60.9175008324px !important; } }
+
+@media only screen and (max-width: 392.738px) and (max-width: 815px) {
+  nav div {
+    height: 43.4175008324px; } }
+
+@media only screen and (max-width: 367.9642px) {
+  #logo {
+    width: 198.1904px;
+    text-align: center; }
+    #logo h1 {
+      border: 1.6px solid;
+      font-size: 16px;
+      padding: 1.6px 0; }
+    #logo h6 {
+      margin-top: 3.2px;
+      font-size: 7.8285208px; }
+  #about .content {
+    padding-top: 56.0933340732px !important; } }
+
+@media only screen and (max-width: 367.9642px) and (max-width: 815px) {
+  nav div {
+    height: 38.5933340732px; } }
+
+@media only screen and (max-width: 343.1904px) {
+  #logo {
+    width: 173.4166px;
+    text-align: center; }
+    #logo h1 {
+      border: 1.4px solid;
+      font-size: 14px;
+      padding: 1.4px 0; }
+    #logo h6 {
+      margin-top: 2.8px;
+      font-size: 6.8499557px; }
+  #about .content {
+    padding-top: 51.2691673141px !important; } }
+
+@media only screen and (max-width: 343.1904px) and (max-width: 815px) {
+  nav div {
+    height: 33.7691673141px; } }
+
+@media only screen and (max-width: 318.4166px) {
+  #logo {
+    width: 148.6428px;
+    text-align: center; }
+    #logo h1 {
+      border: 1.2px solid;
+      font-size: 12px;
+      padding: 1.2px 0; }
+    #logo h6 {
+      margin-top: 2.4px;
+      font-size: 5.8713906px; }
+  #about .content {
+    padding-top: 46.4450005549px !important; } }
+
+@media only screen and (max-width: 318.4166px) and (max-width: 815px) {
+  nav div {
+    height: 28.9450005549px; } }
+
+@media only screen and (max-width: 293.6428px) {
+  #logo {
+    width: 123.869px;
+    text-align: center; }
+    #logo h1 {
+      border: 1px solid;
+      font-size: 10px;
+      padding: 1px 0; }
+    #logo h6 {
+      margin-top: 2px;
+      font-size: 4.8928255px; }
+  #about .content {
+    padding-top: 41.6208337958px !important; } }
+
+@media only screen and (max-width: 293.6428px) and (max-width: 815px) {
+  nav div {
+    height: 24.1208337958px; } }
+
+@media only screen and (max-width: 268.869px) {
+  #logo {
+    width: 99.0952px;
+    text-align: center; }
+    #logo h1 {
+      border: 0.8px solid;
+      font-size: 8px;
+      padding: 0.8px 0; }
+    #logo h6 {
+      margin-top: 1.6px;
+      font-size: 3.9142604px; }
+  #about .content {
+    padding-top: 36.7966670366px !important; } }
+
+@media only screen and (max-width: 268.869px) and (max-width: 815px) {
+  nav div {
+    height: 19.2966670366px; } }
+
+@media only screen and (max-width: 244.0952px) {
+  #logo {
+    width: 74.3214px;
+    text-align: center; }
+    #logo h1 {
+      border: 0.6px solid;
+      font-size: 6px;
+      padding: 0.6px 0; }
+    #logo h6 {
+      margin-top: 1.2px;
+      font-size: 2.9356953px; }
+  #about .content {
+    padding-top: 31.9725002775px !important; } }
+
+@media only screen and (max-width: 244.0952px) and (max-width: 815px) {
+  nav div {
+    height: 14.4725002775px; } }
+
+@media only screen and (max-width: 219.3214px) {
+  #logo {
+    width: 49.5476px;
+    text-align: center; }
+    #logo h1 {
+      border: 0.4px solid;
+      font-size: 4px;
+      padding: 0.4px 0; }
+    #logo h6 {
+      margin-top: 0.8px;
+      font-size: 1.9571302px; }
+  #about .content {
+    padding-top: 27.1483335183px !important; } }
+
+@media only screen and (max-width: 219.3214px) and (max-width: 815px) {
+  nav div {
+    height: 9.6483335183px; } }
+
+@media only screen and (max-width: 194.5476px) {
+  #logo {
+    width: 24.7738px;
+    text-align: center; }
+    #logo h1 {
+      border: 0.2px solid;
+      font-size: 2px;
+      padding: 0.2px 0; }
+    #logo h6 {
+      margin-top: 0.4px;
+      font-size: 0.9785651px; }
+  #about .content {
+    padding-top: 22.3241667592px !important; } }
+
+@media only screen and (max-width: 194.5476px) and (max-width: 815px) {
+  nav div {
+    height: 4.8241667592px; } }
+
+@media only screen and (max-width: 169.7738px) {
+  #logo {
+    width: 0px;
+    text-align: center; }
+    #logo h1 {
+      border: 0px solid;
+      font-size: 0px;
+      padding: 0px 0; }
+    #logo h6 {
+      margin-top: 0px;
+      font-size: 0px; }
+  #about .content {
+    padding-top: 17.5px !important; } }
+
+@media only screen and (max-width: 169.7738px) and (max-width: 815px) {
+  nav div {
+    height: 0px; } }
+
+@media only screen and (max-width: 145px) {
+  #logo {
+    width: -24.7738px;
+    text-align: center; }
+    #logo h1 {
+      border: -0.2px solid;
+      font-size: -2px;
+      padding: -0.2px 0; }
+    #logo h6 {
+      margin-top: -0.4px;
+      font-size: -0.9785651px; }
+  #about .content {
+    padding-top: 12.6758332408px !important; } }
+
+@media only screen and (max-width: 145px) and (max-width: 815px) {
+  nav div {
+    height: -4.8241667592px; } }
+
+@media only screen and (min-width: 454.6725px) {
+  #logo {
+    width: 309.6725px;
+    text-align: center; }
+    #logo h1 {
+      border: 2.5px solid;
+      font-size: 25px;
+      padding: 2.5px 0; }
+    #logo h6 {
+      margin-top: 5px;
+      font-size: 12.23206375px; }
+  #about .content {
+    padding-top: 77.8020844894px !important; } }
+
+@media only screen and (min-width: 454.6725px) and (max-width: 815px) {
+  nav div {
+    height: 60.3020844894px; } }
+
+@media only screen and (min-width: 915px) {
+  .content {
+    margin: auto;
+    max-width: 890px; }
+    .content p {
+      margin-bottom: -2px; }
+  #about {
+    background: #ffffff;
+    color: #121212;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e0e0e0; }
+    #about hr {
+      background: #121212; }
+    #about .button {
+      border: 1px solid #121212;
+      background: #121212;
+      color: #ffffff; }
+      #about .button:hover {
+        background: #ffffff;
+        color: #121212; }
+    #about hr {
+      margin-bottom: 11px; }
+    #about hr, #about .profile:not(.show-mobile) {
+      margin-top: 13px; }
+    #about h2 {
+      margin-top: 13px; }
+    #about .content {
+      justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 25px; }
+    #about #bio {
+      width: 50%; }
+    #about #social {
+      display: flex;
+      flex-direction: column;
+      margin-top: 17px; }
+      #about #social a {
+        margin-bottom: 5px;
+        white-space: nowrap; }
+  #material-nutrition .main, #verton .main {
+    flex: 0 0 524.9px; }
+  #material-nutrition .img-wrap, #verton .img-wrap {
+    flex: 0 0 240.1px; }
+  #dfab .main, #wolfson .main {
+    flex: 0 0 471.5px; }
+  #dfab .img-wrap, #wolfson .img-wrap {
+    flex: 0 0 293.5px; } }
+
 @media only screen and (max-width: 815px) {
   .card {
     flex-direction: column-reverse !important; }
@@ -364,7 +606,6 @@ footer {
       margin-left: 0 !important; }
     nav div {
       margin: 17.5px 0;
-      height: 60.3020844894px;
       display: flex;
       align-items: center; } }
 
@@ -372,75 +613,13 @@ footer {
   #bio {
     width: 100% !important; }
   .profile {
-    max-width: 125px !important; }
+    max-width: 125px !important;
+    margin-top: 17.5px; }
   .show-mobile {
     display: block; }
   .hide-mobile {
     display: none; }
-  #about .content {
-    padding-top: 95.3020844894px; }
   #dfab .img-wrap, #wolfson .img-wrap {
     flex: auto !important; }
     #dfab .img-wrap img, #wolfson .img-wrap img {
       position: initial; } }
-
-@media only screen and (max-width: 365px) {
-  .content {
-    margin: auto;
-    max-width: 790px; }
-    .content p {
-      margin-bottom: -2px; }
-  #logo {
-    width: 210.5773px;
-    text-align: center; }
-    #logo h1 {
-      border: 1.7px solid;
-      font-size: 17px;
-      padding: 1.7px 0; }
-    #logo h6 {
-      margin-top: 3.4px;
-      font-size: 8.31780335px; }
-  #about {
-    background: #ffffff;
-    color: #121212;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #e0e0e0; }
-    #about hr {
-      background: #121212; }
-    #about .button {
-      border: 1px solid #121212;
-      background: #121212;
-      color: #ffffff; }
-      #about .button:hover {
-        background: #ffffff;
-        color: #121212; }
-    #about hr {
-      margin-bottom: 11px; }
-    #about hr, #about .profile {
-      margin-top: 13px; }
-    #about h2 {
-      margin-top: 13px; }
-    #about .content {
-      justify-content: space-between;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      padding: 25px;
-      padding-top: 58.5054174528px; }
-    #about #bio {
-      width: 50%; }
-    #about #social {
-      display: flex;
-      flex-direction: column;
-      margin-top: 17px; }
-      #about #social a {
-        margin-bottom: 5px;
-        white-space: nowrap; }
-  #material-nutrition .main, #verton .main {
-    flex: 0 0 458.9px; }
-  #material-nutrition .img-wrap, #verton .img-wrap {
-    flex: 0 0 206.1px; }
-  #dfab .main, #wolfson .main {
-    flex: 0 0 411.5px; }
-  #dfab .img-wrap, #wolfson .img-wrap {
-    flex: 0 0 253.5px; } }
