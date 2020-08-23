@@ -246,7 +246,7 @@ a {
 
 body > .content {
 	padding: $site-margin-fraction;
-	margin-bottom: 34px;
+	padding-bottom: $site-margin-fraction + 34px;
 	.main, .card, .img-wrap, h1 {
 		margin: 0 $site-margin-fraction;
 	}
