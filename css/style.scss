@@ -13,6 +13,8 @@ $content-widths: 890px, 790px;
 $last-content-width: nth($content-widths, length($content-widths));
 $first-logo-font-size: 25px;
 $first-content-width: nth($content-widths, 1);
+$text-color: #121212;
+$background-color: #ffffff;
 
 $projects: "#material-nutrition, #verton";
 $freelance: "#dfab, #wolfson";
@@ -74,6 +76,7 @@ $freelance: "#dfab, #wolfson";
 	$logo-subtext-top-margin: logo-subtext-top-margin($logo-font-size);
 	$logo-subtext-font-size: logo-subtext-font-size($logo-font-size);
 	$logo-height: logo-height($logo-font-size);
+	$anchor-height: ($navbar-padding * 2) + $logo-height + 20px;
 
 	#logo {
 		width: $logo-width;
@@ -93,6 +96,13 @@ $freelance: "#dfab, #wolfson";
 		padding-top: $navbar-padding + $logo-height !important;
 	}
 
+	.anchor {
+		display: block;
+		height: $anchor-height;
+		margin-top: -$anchor-height;
+		visibility: hidden;
+	}
+
 	@media only screen and (max-width: content-width-checkpoint($last-content-width)) {
 		nav div {
 			height: $logo-height;
@@ -110,7 +120,7 @@ $freelance: "#dfab, #wolfson";
 	}
 
 	#about {
-		@include element-colors(#121212, #ffffff);
+		@include element-colors($text-color, $background-color);
 		margin-bottom: 25px;
 		border-bottom: $whitespace-border;
 		hr {
@@ -205,6 +215,7 @@ body > .content {
 	}
 	h1 {
 		margin-bottom: 20px;
+		color: $text-color;
 	}
 	h2, hr {
 		margin-bottom: 10px;
@@ -224,6 +235,7 @@ body > .content {
 	position: fixed;
 	width: 100%;
 	z-index: 2;
+	color: $text-color;
 	.content {
 		padding: 0 $site-margin;
 		display: flex;
@@ -251,18 +263,19 @@ body > .content {
 			display: block;
 			height: 2px;
 			width: 100%;
-			background-color: #121212;
+			background-color: $text-color;
 			transition: all .25s;
 		}
 	}
 }
 
 .scroll {
-	background: #121212 !important;
-	color: #ffffff;
+	//TODO: Graident?
+	background: $text-color !important;
+	color: $background-color !important;
 	box-shadow: $box-shadow;
 	& > .content > button > span {
-		background-color: #ffffff !important;
+		background-color: $background-color !important;
 	}
 }
 
@@ -318,23 +331,24 @@ footer {
 	text-align: center;
 	padding: 25px;
 	border-top: $whitespace-border;
-	background: #ffffff;
+	background: $background-color;
+	color: $text-color;
 }
 
 #material-nutrition {
-	@include element-colors(#ffffff, #00695b);
+	@include element-colors($background-color, #00695b);
 }
 
 #verton {
-	@include element-colors(#ffffff, #252525);
+	@include element-colors($background-color, #252525);
 }
 
 #dfab{
-	@include element-colors(#ffffff, #16687D);
+	@include element-colors($background-color, #16687D);
 }
 
 #wolfson {
-	@include element-colors(#ffffff, #222222);
+	@include element-colors($background-color, #222222);
 }
 
 @function content-width-checkpoint($content-width) {
@@ -420,20 +434,20 @@ footer {
 
 	nav {
 		transition: right .5s ease;
-		background: #fff;
+		background: $background-color;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     width: $mobile-nav-width;
     height: 100vh;
-		//TODO: Box shadow factor
+		// Pixel value = box shadow area
 		right: -$mobile-nav-width - 29px;
 		position: absolute;
 		padding: 0 25px;
 		box-shadow: $box-shadow;
 		a {
 			margin-bottom: 8px;
-			color: #121212;
+			color: $text-color;
 			margin-left: 0 !important;
 		}
 		div {
