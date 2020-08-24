@@ -69,7 +69,7 @@ $freelance: "#dfab, #wolfson";
 
 @mixin intro-animation($index) {
 	$animation-length: 0.5s;
-	$delay: 0.4s;
+	$delay: 0.3s;
 	@if $index != 0 {
 		$delay: $delay - 0.2s;
 	}
