@@ -94,7 +94,7 @@ body > .content {
     background: transparent;
     border: none;
     padding: 0;
-    margin-left: 70px;
+    margin-left: 45px;
     width: 25px; }
     #navbar button span {
       position: relative;
@@ -261,7 +261,7 @@ footer {
   #dfab .img-wrap, #wolfson .img-wrap {
     flex: 0 0 253.5px; } }
 
-@media only screen and (max-width: 467.0594px) {
+@media only screen and (max-width: 442.0594px) {
   #logo {
     width: 297.2856px;
     text-align: center; }
@@ -280,11 +280,11 @@ footer {
     margin-top: -112.7041976098px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 467.0594px) and (max-width: 815px) {
+@media only screen and (max-width: 442.0594px) and (max-width: 815px) {
   nav div {
     height: 57.7041976098px; } }
 
-@media only screen and (max-width: 442.2856px) {
+@media only screen and (max-width: 417.2856px) {
   #logo {
     width: 272.5118px;
     text-align: center; }
@@ -303,11 +303,11 @@ footer {
     margin-top: -107.8955144757px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 442.2856px) and (max-width: 815px) {
+@media only screen and (max-width: 417.2856px) and (max-width: 815px) {
   nav div {
     height: 52.8955144757px; } }
 
-@media only screen and (max-width: 417.5118px) {
+@media only screen and (max-width: 392.5118px) {
   #logo {
     width: 247.738px;
     text-align: center; }
@@ -326,11 +326,11 @@ footer {
     margin-top: -103.0868313415px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 417.5118px) and (max-width: 815px) {
+@media only screen and (max-width: 392.5118px) and (max-width: 815px) {
   nav div {
     height: 48.0868313415px; } }
 
-@media only screen and (max-width: 392.738px) {
+@media only screen and (max-width: 367.738px) {
   #logo {
     width: 222.9642px;
     text-align: center; }
@@ -349,11 +349,11 @@ footer {
     margin-top: -98.2781482074px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 392.738px) and (max-width: 815px) {
+@media only screen and (max-width: 367.738px) and (max-width: 815px) {
   nav div {
     height: 43.2781482074px; } }
 
-@media only screen and (max-width: 367.9642px) {
+@media only screen and (max-width: 342.9642px) {
   #logo {
     width: 198.1904px;
     text-align: center; }
@@ -372,11 +372,11 @@ footer {
     margin-top: -93.4694650732px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 367.9642px) and (max-width: 815px) {
+@media only screen and (max-width: 342.9642px) and (max-width: 815px) {
   nav div {
     height: 38.4694650732px; } }
 
-@media only screen and (max-width: 343.1904px) {
+@media only screen and (max-width: 318.1904px) {
   #logo {
     width: 173.4166px;
     text-align: center; }
@@ -395,11 +395,11 @@ footer {
     margin-top: -88.6607819391px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 343.1904px) and (max-width: 815px) {
+@media only screen and (max-width: 318.1904px) and (max-width: 815px) {
   nav div {
     height: 33.6607819391px; } }
 
-@media only screen and (max-width: 318.4166px) {
+@media only screen and (max-width: 293.4166px) {
   #logo {
     width: 148.6428px;
     text-align: center; }
@@ -418,11 +418,11 @@ footer {
     margin-top: -83.8520988049px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 318.4166px) and (max-width: 815px) {
+@media only screen and (max-width: 293.4166px) and (max-width: 815px) {
   nav div {
     height: 28.8520988049px; } }
 
-@media only screen and (max-width: 293.6428px) {
+@media only screen and (max-width: 268.6428px) {
   #logo {
     width: 123.869px;
     text-align: center; }
@@ -441,11 +441,11 @@ footer {
     margin-top: -79.0434156708px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 293.6428px) and (max-width: 815px) {
+@media only screen and (max-width: 268.6428px) and (max-width: 815px) {
   nav div {
     height: 24.0434156708px; } }
 
-@media only screen and (max-width: 268.869px) {
+@media only screen and (max-width: 243.869px) {
   #logo {
     width: 99.0952px;
     text-align: center; }
@@ -464,11 +464,11 @@ footer {
     margin-top: -74.2347325366px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 268.869px) and (max-width: 815px) {
+@media only screen and (max-width: 243.869px) and (max-width: 815px) {
   nav div {
     height: 19.2347325366px; } }
 
-@media only screen and (max-width: 244.0952px) {
+@media only screen and (max-width: 219.0952px) {
   #logo {
     width: 74.3214px;
     text-align: center; }
@@ -487,11 +487,11 @@ footer {
     margin-top: -69.4260494025px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 244.0952px) and (max-width: 815px) {
+@media only screen and (max-width: 219.0952px) and (max-width: 815px) {
   nav div {
     height: 14.4260494025px; } }
 
-@media only screen and (max-width: 219.3214px) {
+@media only screen and (max-width: 194.3214px) {
   #logo {
     width: 49.5476px;
     text-align: center; }
@@ -510,11 +510,11 @@ footer {
     margin-top: -64.6173662683px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 219.3214px) and (max-width: 815px) {
+@media only screen and (max-width: 194.3214px) and (max-width: 815px) {
   nav div {
     height: 9.6173662683px; } }
 
-@media only screen and (max-width: 194.5476px) {
+@media only screen and (max-width: 169.5476px) {
   #logo {
     width: 24.7738px;
     text-align: center; }
@@ -533,11 +533,11 @@ footer {
     margin-top: -59.8086831342px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 194.5476px) and (max-width: 815px) {
+@media only screen and (max-width: 169.5476px) and (max-width: 815px) {
   nav div {
     height: 4.8086831342px; } }
 
-@media only screen and (max-width: 169.7738px) {
+@media only screen and (max-width: 144.7738px) {
   #logo {
     width: 0px;
     text-align: center; }
@@ -556,11 +556,11 @@ footer {
     margin-top: -55px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 169.7738px) and (max-width: 815px) {
+@media only screen and (max-width: 144.7738px) and (max-width: 815px) {
   nav div {
     height: 0px; } }
 
-@media only screen and (max-width: 145px) {
+@media only screen and (max-width: 120px) {
   #logo {
     width: -24.7738px;
     text-align: center; }
@@ -579,11 +579,11 @@ footer {
     margin-top: -50.1913168658px;
     visibility: hidden; } }
 
-@media only screen and (max-width: 145px) and (max-width: 815px) {
+@media only screen and (max-width: 120px) and (max-width: 815px) {
   nav div {
     height: -4.8086831342px; } }
 
-@media only screen and (min-width: 454.6725px) {
+@media only screen and (min-width: 429.6725px) {
   #logo {
     width: 309.6725px;
     text-align: center; }
@@ -602,7 +602,7 @@ footer {
     margin-top: -115.1085391769px;
     visibility: hidden; } }
 
-@media only screen and (min-width: 454.6725px) and (max-width: 815px) {
+@media only screen and (min-width: 429.6725px) and (max-width: 815px) {
   nav div {
     height: 60.1085391769px; } }
 
@@ -710,7 +710,8 @@ footer {
 
 @media only screen and (max-width: 630px) {
   #bio {
-    width: 100% !important; }
+    width: 100% !important;
+    padding-top: 18.5px; }
   .profile {
     max-width: 125px !important;
     margin-top: 17.5px; }
@@ -718,6 +719,20 @@ footer {
     display: block; }
   .hide-mobile {
     display: none; }
+  #navbar {
+    background: #121212 !important;
+    color: #ffffff !important;
+    box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26); }
+    #navbar > .content > button > span {
+      background-color: #ffffff !important; }
+  .animate #navbar {
+    animation: intro 0.5s ease 0.1s 1 backwards; }
+  .animate #bio, .animate .profile-wrap {
+    animation: intro 0.5s ease 0.4s 1 backwards; }
+  .animate > .content {
+    animation: intro 0.5s ease 0.9s 1 backwards; }
+  .animate #navbar .content {
+    animation: none; }
   #dfab .img-wrap, #wolfson .img-wrap {
     flex: auto !important; }
     #dfab .img-wrap img, #wolfson .img-wrap img {
