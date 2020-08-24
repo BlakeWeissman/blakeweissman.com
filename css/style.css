@@ -89,10 +89,8 @@ body > .content {
   #navbar button {
     display: none;
     outline: none;
-    height: 16px;
     cursor: pointer;
     flex-direction: column;
-    justify-content: space-between;
     background: transparent;
     border: none;
     padding: 0;
@@ -104,7 +102,8 @@ body > .content {
       height: 2px;
       width: 100%;
       background-color: #121212;
-      transition: all 0.2s ease 0s; }
+      transition: all 0.2s ease 0s;
+      margin: 2.5px 0; }
 
 .scroll {
   background: #121212 !important;
@@ -248,6 +247,7 @@ footer {
     #about #social {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       margin-top: 17px; }
       #about #social a {
         margin-bottom: 5px;
@@ -271,18 +271,18 @@ footer {
       padding: 2.4px 0; }
     #logo h6 {
       margin-top: 4.8px;
-      font-size: 11.7427812px; }
+      font-size: 11.5941384px; }
   #about .content {
-    padding-top: 75.3900011098px !important; }
+    padding-top: 75.2041976098px !important; }
   .anchor {
     display: block;
-    height: 112.8900011098px;
-    margin-top: -112.8900011098px;
+    height: 112.7041976098px;
+    margin-top: -112.7041976098px;
     visibility: hidden; } }
 
 @media only screen and (max-width: 467.0594px) and (max-width: 815px) {
   nav div {
-    height: 57.8900011098px; } }
+    height: 57.7041976098px; } }
 
 @media only screen and (max-width: 442.2856px) {
   #logo {
@@ -294,18 +294,18 @@ footer {
       padding: 2.2px 0; }
     #logo h6 {
       margin-top: 4.4px;
-      font-size: 10.7642161px; }
+      font-size: 10.6279602px; }
   #about .content {
-    padding-top: 70.5658343507px !important; }
+    padding-top: 70.3955144757px !important; }
   .anchor {
     display: block;
-    height: 108.0658343507px;
-    margin-top: -108.0658343507px;
+    height: 107.8955144757px;
+    margin-top: -107.8955144757px;
     visibility: hidden; } }
 
 @media only screen and (max-width: 442.2856px) and (max-width: 815px) {
   nav div {
-    height: 53.0658343507px; } }
+    height: 52.8955144757px; } }
 
 @media only screen and (max-width: 417.5118px) {
   #logo {
@@ -317,18 +317,18 @@ footer {
       padding: 2px 0; }
     #logo h6 {
       margin-top: 4px;
-      font-size: 9.785651px; }
+      font-size: 9.661782px; }
   #about .content {
-    padding-top: 65.7416675915px !important; }
+    padding-top: 65.5868313415px !important; }
   .anchor {
     display: block;
-    height: 103.2416675915px;
-    margin-top: -103.2416675915px;
+    height: 103.0868313415px;
+    margin-top: -103.0868313415px;
     visibility: hidden; } }
 
 @media only screen and (max-width: 417.5118px) and (max-width: 815px) {
   nav div {
-    height: 48.2416675915px; } }
+    height: 48.0868313415px; } }
 
 @media only screen and (max-width: 392.738px) {
   #logo {
@@ -340,18 +340,18 @@ footer {
       padding: 1.8px 0; }
     #logo h6 {
       margin-top: 3.6px;
-      font-size: 8.8070859px; }
+      font-size: 8.6956038px; }
   #about .content {
-    padding-top: 60.9175008324px !important; }
+    padding-top: 60.7781482074px !important; }
   .anchor {
     display: block;
-    height: 98.4175008324px;
-    margin-top: -98.4175008324px;
+    height: 98.2781482074px;
+    margin-top: -98.2781482074px;
     visibility: hidden; } }
 
 @media only screen and (max-width: 392.738px) and (max-width: 815px) {
   nav div {
-    height: 43.4175008324px; } }
+    height: 43.2781482074px; } }
 
 @media only screen and (max-width: 367.9642px) {
   #logo {
@@ -363,18 +363,18 @@ footer {
       padding: 1.6px 0; }
     #logo h6 {
       margin-top: 3.2px;
-      font-size: 7.8285208px; }
+      font-size: 7.7294256px; }
   #about .content {
-    padding-top: 56.0933340732px !important; }
+    padding-top: 55.9694650732px !important; }
   .anchor {
     display: block;
-    height: 93.5933340732px;
-    margin-top: -93.5933340732px;
+    height: 93.4694650732px;
+    margin-top: -93.4694650732px;
     visibility: hidden; } }
 
 @media only screen and (max-width: 367.9642px) and (max-width: 815px) {
   nav div {
-    height: 38.5933340732px; } }
+    height: 38.4694650732px; } }
 
 @media only screen and (max-width: 343.1904px) {
   #logo {
@@ -386,18 +386,18 @@ footer {
       padding: 1.4px 0; }
     #logo h6 {
       margin-top: 2.8px;
-      font-size: 6.8499557px; }
+      font-size: 6.7632474px; }
   #about .content {
-    padding-top: 51.2691673141px !important; }
+    padding-top: 51.1607819391px !important; }
   .anchor {
     display: block;
-    height: 88.7691673141px;
-    margin-top: -88.7691673141px;
+    height: 88.6607819391px;
+    margin-top: -88.6607819391px;
     visibility: hidden; } }
 
 @media only screen and (max-width: 343.1904px) and (max-width: 815px) {
   nav div {
-    height: 33.7691673141px; } }
+    height: 33.6607819391px; } }
 
 @media only screen and (max-width: 318.4166px) {
   #logo {
@@ -409,18 +409,18 @@ footer {
       padding: 1.2px 0; }
     #logo h6 {
       margin-top: 2.4px;
-      font-size: 5.8713906px; }
+      font-size: 5.7970692px; }
   #about .content {
-    padding-top: 46.4450005549px !important; }
+    padding-top: 46.3520988049px !important; }
   .anchor {
     display: block;
-    height: 83.9450005549px;
-    margin-top: -83.9450005549px;
+    height: 83.8520988049px;
+    margin-top: -83.8520988049px;
     visibility: hidden; } }
 
 @media only screen and (max-width: 318.4166px) and (max-width: 815px) {
   nav div {
-    height: 28.9450005549px; } }
+    height: 28.8520988049px; } }
 
 @media only screen and (max-width: 293.6428px) {
   #logo {
@@ -432,18 +432,18 @@ footer {
       padding: 1px 0; }
     #logo h6 {
       margin-top: 2px;
-      font-size: 4.8928255px; }
+      font-size: 4.830891px; }
   #about .content {
-    padding-top: 41.6208337958px !important; }
+    padding-top: 41.5434156708px !important; }
   .anchor {
     display: block;
-    height: 79.1208337958px;
-    margin-top: -79.1208337958px;
+    height: 79.0434156708px;
+    margin-top: -79.0434156708px;
     visibility: hidden; } }
 
 @media only screen and (max-width: 293.6428px) and (max-width: 815px) {
   nav div {
-    height: 24.1208337958px; } }
+    height: 24.0434156708px; } }
 
 @media only screen and (max-width: 268.869px) {
   #logo {
@@ -455,18 +455,18 @@ footer {
       padding: 0.8px 0; }
     #logo h6 {
       margin-top: 1.6px;
-      font-size: 3.9142604px; }
+      font-size: 3.8647128px; }
   #about .content {
-    padding-top: 36.7966670366px !important; }
+    padding-top: 36.7347325366px !important; }
   .anchor {
     display: block;
-    height: 74.2966670366px;
-    margin-top: -74.2966670366px;
+    height: 74.2347325366px;
+    margin-top: -74.2347325366px;
     visibility: hidden; } }
 
 @media only screen and (max-width: 268.869px) and (max-width: 815px) {
   nav div {
-    height: 19.2966670366px; } }
+    height: 19.2347325366px; } }
 
 @media only screen and (max-width: 244.0952px) {
   #logo {
@@ -478,18 +478,18 @@ footer {
       padding: 0.6px 0; }
     #logo h6 {
       margin-top: 1.2px;
-      font-size: 2.9356953px; }
+      font-size: 2.8985346px; }
   #about .content {
-    padding-top: 31.9725002775px !important; }
+    padding-top: 31.9260494025px !important; }
   .anchor {
     display: block;
-    height: 69.4725002775px;
-    margin-top: -69.4725002775px;
+    height: 69.4260494025px;
+    margin-top: -69.4260494025px;
     visibility: hidden; } }
 
 @media only screen and (max-width: 244.0952px) and (max-width: 815px) {
   nav div {
-    height: 14.4725002775px; } }
+    height: 14.4260494025px; } }
 
 @media only screen and (max-width: 219.3214px) {
   #logo {
@@ -501,18 +501,18 @@ footer {
       padding: 0.4px 0; }
     #logo h6 {
       margin-top: 0.8px;
-      font-size: 1.9571302px; }
+      font-size: 1.9323564px; }
   #about .content {
-    padding-top: 27.1483335183px !important; }
+    padding-top: 27.1173662683px !important; }
   .anchor {
     display: block;
-    height: 64.6483335183px;
-    margin-top: -64.6483335183px;
+    height: 64.6173662683px;
+    margin-top: -64.6173662683px;
     visibility: hidden; } }
 
 @media only screen and (max-width: 219.3214px) and (max-width: 815px) {
   nav div {
-    height: 9.6483335183px; } }
+    height: 9.6173662683px; } }
 
 @media only screen and (max-width: 194.5476px) {
   #logo {
@@ -524,18 +524,18 @@ footer {
       padding: 0.2px 0; }
     #logo h6 {
       margin-top: 0.4px;
-      font-size: 0.9785651px; }
+      font-size: 0.9661782px; }
   #about .content {
-    padding-top: 22.3241667592px !important; }
+    padding-top: 22.3086831342px !important; }
   .anchor {
     display: block;
-    height: 59.8241667592px;
-    margin-top: -59.8241667592px;
+    height: 59.8086831342px;
+    margin-top: -59.8086831342px;
     visibility: hidden; } }
 
 @media only screen and (max-width: 194.5476px) and (max-width: 815px) {
   nav div {
-    height: 4.8241667592px; } }
+    height: 4.8086831342px; } }
 
 @media only screen and (max-width: 169.7738px) {
   #logo {
@@ -570,18 +570,18 @@ footer {
       padding: -0.2px 0; }
     #logo h6 {
       margin-top: -0.4px;
-      font-size: -0.9785651px; }
+      font-size: -0.9661782px; }
   #about .content {
-    padding-top: 12.6758332408px !important; }
+    padding-top: 12.6913168658px !important; }
   .anchor {
     display: block;
-    height: 50.1758332408px;
-    margin-top: -50.1758332408px;
+    height: 50.1913168658px;
+    margin-top: -50.1913168658px;
     visibility: hidden; } }
 
 @media only screen and (max-width: 145px) and (max-width: 815px) {
   nav div {
-    height: -4.8241667592px; } }
+    height: -4.8086831342px; } }
 
 @media only screen and (min-width: 454.6725px) {
   #logo {
@@ -593,18 +593,18 @@ footer {
       padding: 2.5px 0; }
     #logo h6 {
       margin-top: 5px;
-      font-size: 12.23206375px; }
+      font-size: 12.0772275px; }
   #about .content {
-    padding-top: 77.8020844894px !important; }
+    padding-top: 77.6085391769px !important; }
   .anchor {
     display: block;
-    height: 115.3020844894px;
-    margin-top: -115.3020844894px;
+    height: 115.1085391769px;
+    margin-top: -115.1085391769px;
     visibility: hidden; } }
 
 @media only screen and (min-width: 454.6725px) and (max-width: 815px) {
   nav div {
-    height: 60.3020844894px; } }
+    height: 60.1085391769px; } }
 
 @media only screen and (min-width: 915px) {
   .content {
@@ -643,6 +643,7 @@ footer {
     #about #social {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       margin-top: 17px; }
       #about #social a {
         margin-bottom: 5px;
@@ -683,18 +684,18 @@ footer {
     #nav-wrapper span {
       margin-top: 3px; }
       #nav-wrapper span:first-child {
-        transform: rotate(45deg) translate(4.4px, 4.4px); }
+        transform: rotate(45deg) translate(2.5px, 2.5px); }
       #nav-wrapper span:last-child {
-        transform: rotate(-45deg) translate(4.4px, -4.4px); }
+        transform: rotate(-45deg) translate(2.5px, -2.5px); }
   nav {
     transition: right 0.5s ease 0s;
     background: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 213px;
+    width: 214px;
     height: 100vh;
-    right: -242px;
+    right: -243px;
     position: absolute;
     padding: 0 25px;
     box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.26); }
