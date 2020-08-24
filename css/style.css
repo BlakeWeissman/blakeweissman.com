@@ -100,7 +100,7 @@ body > .content {
       position: relative;
       display: block;
       height: 2px;
-      width: 100%;
+      width: 25px;
       background-color: #121212;
       transition: all 0.2s ease 0s;
       margin: 2.5px 0; }

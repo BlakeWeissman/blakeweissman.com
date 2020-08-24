@@ -299,7 +299,7 @@ body > .content {
 			position: relative;
 			display: block;
 			height: 2px;
-			width: 100%;
+			width: $nav-menu-icon-width;
 			background-color: $text-color;
 			transition: all $main-transition-values;
 			margin: 2.5px 0;
