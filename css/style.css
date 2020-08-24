@@ -45,10 +45,10 @@ a {
     margin-right: 2px; }
 
 .animate #bio, .animate .profile-wrap, .animate #navbar .content {
-  animation: intro 0.5s ease 0.1s 1 backwards; }
+  animation: intro 0.5s ease 0.4s 1 backwards; }
 
 .animate > .content {
-  animation: intro 0.5s ease 0.4s 1 backwards; }
+  animation: intro 0.5s ease 0.7s 1 backwards; }
 
 .no-scroll {
   overflow: hidden; }
@@ -157,6 +157,14 @@ footer {
   border-top: 1px solid #e0e0e0;
   background: #ffffff;
   color: #121212; }
+
+::selection {
+  background: #121212;
+  color: #ffffff; }
+
+::-moz-selection {
+  background: #121212;
+  color: #ffffff; }
 
 #material-nutrition {
   background: #00695b;
@@ -711,7 +719,7 @@ footer {
 @media only screen and (max-width: 630px) {
   #bio {
     width: 100% !important;
-    padding-top: 18.5px; }
+    padding-top: 20px; }
   .profile {
     max-width: 125px !important;
     margin-top: 17.5px; }
@@ -726,11 +734,11 @@ footer {
     #navbar > .content > button > span {
       background-color: #ffffff !important; }
   .animate #navbar {
-    animation: intro 0.5s ease 0.1s 1 backwards; }
-  .animate #bio, .animate .profile-wrap {
     animation: intro 0.5s ease 0.4s 1 backwards; }
+  .animate #bio, .animate .profile-wrap {
+    animation: intro 0.5s ease 0.7s 1 backwards; }
   .animate > .content {
-    animation: intro 0.5s ease 0.9s 1 backwards; }
+    animation: intro 0.5s ease 1.2s 1 backwards; }
   .animate #navbar .content {
     animation: none; }
   #dfab .img-wrap, #wolfson .img-wrap {

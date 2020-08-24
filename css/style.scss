@@ -69,9 +69,9 @@ $freelance: "#dfab, #wolfson";
 
 @mixin intro-animation($index) {
 	$animation-length: 0.5s;
-	$delay: 0.1s;
+	$delay: 0.4s;
 	@if $index != 0 {
-		$delay: -0.1s;
+		$delay: $delay - 0.2s;
 	}
 	animation: intro $animation-length ease ($delay + ($index * $animation-length)) 1 backwards;
 }
@@ -377,6 +377,16 @@ footer {
 	color: $text-color;
 }
 
+::selection {
+  background: $text-color;
+	color: $background-color;
+}
+
+::-moz-selection {
+  background: $text-color;
+	color: $background-color;
+}
+
 #material-nutrition {
 	@include element-colors($background-color, #00695b);
 }
@@ -504,7 +514,7 @@ footer {
 @media only screen and (max-width: 630px) {
 	#bio {
 		width: 100% !important;
-		padding-top: 18.5px;
+		padding-top: 20px;
 	}
 
 	.profile {
