@@ -745,3 +745,9 @@ footer {
     flex: auto !important; }
     #dfab .img-wrap img, #wolfson .img-wrap img {
       position: initial; } }
+
+@media only screen and (max-width: 325px) {
+  #about #social a {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%; } }
